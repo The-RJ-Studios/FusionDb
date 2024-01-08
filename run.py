@@ -1,2 +1,2 @@
 print("Hello World")
-print("nigga man")
+print("Uzair love dicks")
