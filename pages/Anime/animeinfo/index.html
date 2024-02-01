@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="AnimeInfo.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/pics/Tab.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js">  </script>
+    <script type="text/javascript" src="https://pyodide-cdn2.iodide.io/v0.17.0/full/pyodide.js"></script>
+</head>
+
+
+<body>
+    <script type="py" src="./main.py" config="./pyscript.json" terminal></script>
+    <py-script>
+        import js
+    </py-script>
+    <div id="nav">
+        <img src="/pics/Logo.png" alt="" />
+        <h4><a href="#page1">Home</a></h4>
+        <h4><a href="/pages/Anime/index.html">Anime</a></h4>
+        <form id="form">
+            <input type="text" placeholder="Type to search" id="Search">
+        </form>
+        <div id="nav2">
+            <a href="/pages/registration/index.html">
+                <i class="fa-solid fa-circle-user"></i>
+            </a>
+        </div>
+    </div>
+    <DIV id="page1">
+        <img src="/pics/manga4.jpg" alt="">
+        <div id="part2">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+            <div id="Anime-info">
+                <h2 class="Anime-name" id="title">Loading....</h2>
+
+                <p class="Anime-Info">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi vero adipisci labore praesentium tenetur impedit voluptatem doloremque. Cumque natus error ipsam exercitationem excepturi soluta? Alias quas id cumque, aliquam odit molestias labore recusandae, tempora modi sequi ut, ratione totam porro laudantium fuga odio? Magnam a expedita vel consequatur animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error dolores culpa harum voluptatum. Modi quam inventore ipsam unde earum sunt debitis, explicabo necessitatibus quae qui dolor dolore, vel nemo.<span id="dots">...</span><span id="more"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sequi, distinctio voluptate odio veritatis praesentium, saepe voluptatum ipsa dicta excepturi, earum soluta ad inventore omnis asperiores assumenda! Amet veniam voluptatibus quia fugiat quisquam? At pariatur libero recusandae, iusto molestiae, consequatur tempore reiciendis delectus, debitis ducimus aliquam suscipit? Consectetur, consequuntur. <br> <br>Nemo, consequuntur repudiandae, magni modi quisquam placeat fuga voluptas ipsa illum cum rem! Libero accusamus est quas ipsum atque sequi perferendis optio, animi magnam perspiciatis accusantium dolorum distinctio error nesciunt a impedit labore praesentium quo soluta natus quibusdam nemo deserunt expedita? Minus inventore fugiat tempora impedit assumenda odit a molestias exercitationem.</span></p>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+            </div>
+        </div>
+    </DIV>
+    <script src="/pages/Anime/anime2/AnimeInfo.js"></script>
+    <py-script src="./main.py"></py-script> 
+</body>
+
+</html>
