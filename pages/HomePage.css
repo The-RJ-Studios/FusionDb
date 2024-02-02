@@ -225,8 +225,6 @@ a:active {
   width: 100%;
   object-fit: cover;
   transition: all ease 2s;
-
-
 }
 
 .elem:hover h2 {
