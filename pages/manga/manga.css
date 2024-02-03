@@ -220,6 +220,7 @@ body {
     top: 14px;
     right: 92px;
 }
+
 #Menu-Btn {
     position: absolute;
     right: 0;
@@ -366,6 +367,39 @@ body {
     font-size: 1.6em;
     font-weight: bold;
 
+}
+
+a:link {
+    color: white;
+}
+
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: white;
+}
+
+:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }
 
 .viewAll {

@@ -1,82 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anime</title>
-   <link rel="stylesheet" href="Anime.css">
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="icon" type="image/x-icon" href="/pics/Tab.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <navbar id="Navbar">
-    <img src="/pics/Logo.png" alt="" id="logo">
-    <ul>
-        <li><a href="/pages/index.html">HOME</a> </li>
-        <li><a href="#">ABOUT</a> </li>
+    <link rel="stylesheet" href="Anime.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/pics/Tab.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <navbar id="Navbar">
+      <img src="/pics/Logo.png" alt="" id="logo" />
+      <ul>
+        <li><a href="/index.html">HOME</a></li>
 
         <div id="categories">
-            <li><a href="#">CATEGORIES <i class="fas fa-caret-down"></i></a></li>
-            <div id="drop-down-box">
-                <a href="#">Shonen</a>
-                <a href="#">Shojo</a>
-                <a href="#">Seinen</a>
-                <a href="#">Josei</a>
-                <a href="#">Kodomomuke</a>
-            </div>
+          <li>
+            <a href="#">CATEGORIES <i class="fas fa-caret-down"></i></a>
+          </li>
+          <div id="drop-down-box">
+            <a href="#">Shonen</a>
+            <a href="#">Shojo</a>
+            <a href="#">Seinen</a>
+            <a href="#">Josei</a>
+            <a href="#">Kodomomuke</a>
+          </div>
         </div>
-        <li><a href="#">CONTACT</a></li>
-    </ul>
-    <div id="other-opt">
+      </ul>
+      <div id="other-opt">
         <div class="search">
-            <form id="form">
-            <input type="text" placeholder="Type to search" id="Search">
-            </form>
-            <i class="fas fa-search"></i>
+          <form id="form">
+            <input type="text" placeholder="Type to search" id="Search" />
+          </form>
+          <i class="fas fa-search"></i>
         </div>
-         <a href="/pages/registration/index.html"><button id="signIn">Sign in</button></a>
-    </div>
-    <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
-</navbar>
-<div class="slides-box">
- 
-  <div class="slider">
-      <div class="slides">
+        <a href="/pages/registration/index.html"
+          ><button id="signIn">Sign in</button></a
+        >
+      </div>
+      <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
+    </navbar>
+    <div class="slides-box">
+      <div class="slider">
+        <div class="slides">
           <div class="slide first" id="first">
-              <img src="/pics/Anime1.jpg" alt="">
+            <img src="/pics/Anime1.jpg" alt="" />
           </div>
           <div class="slide second">
-              <img src="/pics/JJk.jpg" alt="">
+            <img src="/pics/JJk.jpg" alt="" />
           </div>
           <div class="slide third">
-              <img src="/pics/Ghoul.jpg" alt="">
+            <img src="/pics/Ghoul.jpg" alt="" />
           </div>
+        </div>
       </div>
-  </div>
-</div>
-
-<div id="card-layout">
-    <div class=card>
-        <h2 class=" "card-title>Something
-        awesome</h2>
-    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fugit.
-    </p>
-       <a href="#" class="button">Learn More</a>
-</div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="/Home/Anime/Anime.js"></script>
-</body>
+    </div>
+        <div id="all-card-layout">
+          <h2 class="Type">Popular shows</h2>
+              <div id="card-layout">
+                <div class="card card-1">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-2">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-3">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-4">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-5">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-6">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-7">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-8">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-9">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-10">
+                  <div id="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="#" class="button">Read More</a>
+                  </div>
+                </div>
+        </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/Home/Anime/Anime.js"></script>
+  </body>
 </html>

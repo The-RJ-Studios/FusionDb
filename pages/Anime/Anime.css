@@ -9,8 +9,9 @@ body {
   background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
   background: #0B0C2A;
   color: white;
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
+  /* width: 100vw; */
+  /* overflow-x: hidden; */
   font-family: 'Roboto', sans-serif;
 
 }
@@ -356,3 +357,148 @@ body {
 
 
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#card-layout {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 355vw;
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0 5px;
+  padding-left: 10px;
+  gap: 15px;
+  /* padding: 15px 0px; */
+}
+
+a:link {
+  color: white;
+}
+
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: white;
+}
+
+:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.Type {
+  margin: 4rem 5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-left: 5px solid red;
+  padding: 0 12px;
+}
+
+.card {
+  color: var(--clr-neutral-100);
+  background-image: url(https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+  padding: 7rem 0 0;
+  width: 15rem;
+  height: 17rem;
+  border-radius: 1rem;
+  /* overflow: hidden; */
+  transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.07);
+}
+
+.card-content {
+  --padding: 2rem;
+  padding: var(--padding);
+  background: linear-gradient(hsl(0, 0%, 0% / 0),
+      hsl(20, 0%, 0% /0.3) 20%,
+      hsl(0, 0%, 0% / 0));
+  transform: translateY(70%);
+  transition: transform 500ms ease;
+  transition-delay: 500ms;
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+
+.card-content> {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+
+.card:hover .card-content>*:not(.card-title) {
+  opacity: 1;
+  transition-delay: 500ms;
+}
+
+.card-title {
+  position: relative;
+  /* width: ; */
+  height: 5rem;
+
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: calc(var(--padding) * -1);
+  bottom: -4px;
+  width: calc(100% + var(--padding));
+  background: var(--clr-neutral-100);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after {
+  transform: scaleX(1);
+}
+
+.button {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+  padding: 1em 0.25em;
+  border-radius: 0.25em;
+
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--clr-neutral-100);
+
+}
