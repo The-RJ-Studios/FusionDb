@@ -96,7 +96,7 @@ a:active {
   color: white;
 }
 
-:link {
+a:link {
   text-decoration: none;
 }
 

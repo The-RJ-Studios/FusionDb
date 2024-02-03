@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    overflow-x: hidden;
+    /* background-color: #c9d6ff;
+      background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
+    /* background: #0B0C2A; */
+    background-color: #0B0C2A;
+}
+
+/* ::-webkit-scrollbar{
+    width: 0;
+  } */
+::selection {
+    background: rgb(255, 188, 188);
+    color: black;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #5338AC;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.678); */
+    margin: 0;
+    padding: 0;
+
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+    background-color: #4343ea;
+    display: flex;
+    align-items: center;
+    /* padding: 0 120px; */
+    gap: 85px;
+    font-weight: 700;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#nav img {
+    height: 4.5vw;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    /* font-weight: 400; */
+    cursor: pointer;
+    font-size: 1.35vw;
+}
+
+a:link {
+    color: white;
+}
+
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#Search {
+    background-color: transparent;
+    border: 1px solid #f0e7e7;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+#Search:focus {
+    outline: 0;
+    /* background-color: #0f0fae; */
+    background-color: #7575ff00;
+}
+
+#Search::placeholder {
+    color: white;
+}
+
+#nav i {
+    font-size: 3vw;
+
+    color: white;
+}
+
+#nav i:hover {
+    font-size: 3.5vw;
+    transition: all ease 0.5s;
+    color: #1d1616;
+}
+#page1-part2{
+    position: relative;
+    z-index: 111;
+}
+.container{
+    height: 75px;
+    width: 100px;
+    border: red;
+}
