@@ -9,7 +9,8 @@ body {
   background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
   background: #0B0C2A;
   color: white;
-  width: 100vw;
+  width: 100%;
+  /* width: 100vw; */
   /* overflow-x: hidden; */
   font-family: 'Roboto', sans-serif;
 
@@ -364,13 +365,49 @@ body {
 
 #card-layout {
   min-height: 70vh;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 355vw;
   font-family: sans-serif;
   line-height: 1.6;
   margin: 0 5px;
+  padding-left: 10px;
+  gap: 15px;
   /* padding: 15px 0px; */
+}
+
+a:link {
+  color: white;
+}
+
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: white;
+}
+
+:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 .Type {
@@ -389,7 +426,7 @@ body {
   width: 15rem;
   height: 17rem;
   border-radius: 1rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: transform 500ms ease;
 }
 
