@@ -54,7 +54,7 @@ body {
 #nav {
     height: 100px;
     width: 100%;
-    background-color: #4343ea;
+    background-color: #5338AC;
     display: flex;
     align-items: center;
     /* padding: 0 120px; */
@@ -138,9 +138,16 @@ a:active {
     color: #1d1616;
 }
 #page1-part2{
-    position: relative;
+    /* position: relative; */
     margin: 15px 15px;
     height: 40vh;
     background: white;
     width: 15vw;
+}
+.container i {
+    position: absolute;
+    top: 60%;
+    font-size: 2rem;
+    left: 14%;
+    color: white;
 }

@@ -149,7 +149,7 @@ a:active {
 }
 #page1 img {
     position: absolute;
-    height: 103vh;
+    
     width: 100%;
     /* margin-top: 75px; */
     border-radius: 5px;
@@ -158,7 +158,7 @@ a:active {
   
 }
 #part2{
-    height: 100vh;
+    height: 83vh;
     width: 100%;
     margin-top: 600px;
     z-index: 1;

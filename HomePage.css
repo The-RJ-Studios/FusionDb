@@ -59,7 +59,7 @@ body {
   display: flex;
   align-items: center;
   /* padding: 0 120px; */
-  gap: 85px;
+  gap: 69px;
   font-weight: 900;
   position: fixed;
   justify-content: flex-start;
@@ -141,7 +141,7 @@ a:active {
 #nav i:hover {
   font-size: 3.5vw;
   transition: all ease 0.5s;
-  color: #1d1616;
+  color: #0b1aeb;
 }
 
 .container {
