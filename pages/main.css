@@ -480,7 +480,7 @@ a:active {
     border-radius: 0.25em;
 }
 .card a{
-    color: #000;
+    background: transparent;
     color: white;
     position: relative;
     text-decoration: none;
@@ -492,6 +492,7 @@ a:active {
 }
 .card a:hover{
     letter-spacing: 0.25em;
+    color: var(--clr);
     background: var(--clr);
     box-shadow: 0 0 35px var(--clr);
 }
@@ -499,7 +500,7 @@ a:active {
     content: '';
     position: absolute;
     inset: 2px;
-    background: #063cee;
+    background: transparent;
 }
 .slider-wrapper {
     position: relative;
