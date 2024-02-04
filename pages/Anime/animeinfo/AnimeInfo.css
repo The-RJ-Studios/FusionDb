@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 
 }
 
@@ -28,7 +29,7 @@ body {
   } */
 ::selection {
     background: rgb(255, 188, 188);
-    color: black;
+    color: rgb(233, 7, 195);
 }
 
 ::-webkit-scrollbar-track {
@@ -45,17 +46,15 @@ body {
 }
 
 #nav {
-    height: 100px;
+    height: 105px;
     width: 100%;
-    background-color: #5338ac00;
+    background-color: #5338ac9a;
     display: flex;
     align-items: center;
     /* padding: 0 120px; */
     gap: flex;
     gap: 80px;
     font-weight: 900;
-    position: fixed;
-    background-color: #000000;
     justify-content: center;
     color: white;
     z-index: 1;
@@ -151,8 +150,8 @@ a:active {
     position: absolute;
     
     width: 100%;
-    /* margin-top: 75px; */
-    border-radius: 5px;
+    margin-top: -381px;
+    border-radius: 0px;
     transition: 0.8s;
     z-index: 0;
   
@@ -160,7 +159,7 @@ a:active {
 #part2{
     height: 83vh;
     width: 100%;
-    margin-top: 600px;
+    margin-top: 430px;
     z-index: 1;
     background: #FAFAFA;
 }
@@ -189,19 +188,4 @@ a:active {
     margin-inline-start: 360px;
     margin-inline-end: 0px;
     line-height: 25px;
-}
-#more {display: none;}
-
-#myBtn{
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 360px;
-    margin-inline-end: 0px;
-    height: 30px;
-    width: 80px;
-    font: bold;
-    font-weight: 600;
-    background-color: aqua;
-    border: none;
-    cursor: pointer;
 }
