@@ -141,7 +141,7 @@ a:active {
     /* position: relative; */
     margin: 15px 15px;
     height: 40vh;
-    background: white;
+    background: rgb(240, 238, 238);
     width: 15vw;
 }
 .container i {

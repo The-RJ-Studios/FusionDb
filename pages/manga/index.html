@@ -1,168 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manga</title>
-   <link rel="stylesheet" href="manga.css">
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="icon" type="image/x-icon" href="/pics/Tab.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="/pages/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <navbar id="Navbar">
-    <img src="/pics/Logo.png" alt="" id="logo">
-    <ul>
-       <h4> <li><a href="/index.html">HOME</a> </li></h4>
-      <h4><li><a href="/pages/User/User.html">Profile</a></li></h4>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/pics/Tab.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <navbar id="Navbar">
+        <img src="/pics/Logo.png" alt="" id="logo" />
+        <h4><a href="/index.html">HOME</a></h4>
+        <h4><a href="/pages/User/User.html">Profile</a></h4>
         <div id="categories">
-          <h4>  <li><a href="#">CATEGORIES <i class="fas fa-caret-down"></i></a></li></h4>
-            <div id="drop-down-box">
-                <a href="#">Shonen</a>
-                <a href="#">Shojo</a>
-                <a href="#">Seinen</a>
-                <a href="#">Josei</a>
-                <a href="#">Kodomomuke</a>
-            </div>
+        <h4><a><button  class="dropbtn" onclick="myFunction()"> CATEGORIES <i class="fas fa-caret-down cat"></i></button></a></h4>
+          <div id="drop-down-box" class="dropdown-content">
+            <a href="/pages/Anime/index.html">Anime</a>
+            <a href="/pages/movies/index.html">Movies</a>
+            <a href="#all-card-layout">Popular</a>
+            <a href="#all-card-layout-Latest">Latest</a>
+            <a href="#all-card-layout-Random">Random</a>
+          </div>
         </div>
-    </ul>
-    <div id="other-opt">
         <div class="search">
-            <form id="form">
-            <input type="text" placeholder="Type to search" id="Search">
-            </form>
-            <i class="fas fa-search"></i>
+          <form id="form">
+            <input type="text" placeholder="Type to search" id="Search" />
+          </form>
+          <i class="fas fa-search"></i>
         </div>
-         <a href="/pages/registration/index.html"><button id="signIn">Sign in</button></a>
-    </div>
-    <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
-</navbar>
-<div class="slides-box">
- 
-  <div class="slider">
-      <div class="slides">
+        <a href="/pages/registration/index.html"
+          ><button id="signIn"><i id= "Acc" class="fa-solid fa-circle-user"></i></button></a
+        >
+      <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
+    </navbar>
+    <div class="slides-box">
+      <div class="slider">
+        <div class="slides">
           <div class="slide first" id="first">
-              <img src="/pics/anime1.webp" alt="">
+            <img src="/pics/manga1.1.jpg" alt="" />
           </div>
           <div class="slide second">
-              <img src="/pics/anime2.jpg" alt="">
+            <img src="/pics/manga1.2.jpg" alt="" />
           </div>
           <div class="slide third">
-              <img src="/pics/anime3.webp" alt="">
+            <img src="/pics/manga1.3.jpg" alt="" />
           </div>
+        </div>
       </div>
+    </div>
+        <div id="all-card-layout"  >
+          <h2 class="Type">Popular Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+          <!-- media scroller -->
+          <button id="prev-slide" class="slide-button material-symbols-outlined">chevron_left</button>
+          <div class="card-layout slider-wrapper"> 
+            <!-- element -->
+                <div class="card card-1"> 
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-2">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-3">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-4">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-5">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-6">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-7">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-8">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-9">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-10">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
+                  </div>
+                </div>
+                
+              </div>
+              <button id="next-slide" class="slide-button material-symbols-outlined">chevron_right</button>
+      <div id="page2">
+        <div id="all-card-layout-Latest"  >
+          <h2 class="Type">Latest Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+          <!-- media scroller -->
+          <button id="prev-slide-2" class="slide-button-2 material-symbols-outlined">chevron_left</button>
+          <div class="card-layout slider-wrapper card-layout-latest"> 
+            <!-- element -->
+                <div class="card card-1"> 
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-2">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-3">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-4">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-5">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-6">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-7">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-8">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-9">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                <div class="card card-10">
+                  <div class="card-content">
+                    <h2 class="card-title">Something awesome</h2>
+                    <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                  </div>
+                </div>
+                
+              </div>
+              <button id="next-slide-2" class="slide-button-2 material-symbols-outlined">chevron_right</button>
+      </div>
+      <div id="all-card-layout-Random"  >
+        <h2 class="Type">Latest Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+        <!-- media scroller -->
+        <button id="prev-slide-3" class="slide-button-3 material-symbols-outlined">chevron_left</button>
+        <div class="card-layout slider-wrapper card-layout-Random"> 
+          <!-- element -->
+              <div class="card card-1"> 
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-2">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-3">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-4">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-5">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-6">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-7">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-8">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-9">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              <div class="card card-10">
+                <div class="card-content">
+                  <h2 class="card-title">Something awesome</h2>
+                  <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+                </div>
+              </div>
+              
+            </div>
+            <button id="next-slide-3" class="slide-button-3 material-symbols-outlined">chevron_right</button>
+    </div>
   </div>
-</div>
- <div id="AllBanners">
-  <div id="primaryMainContainer">
-
-      <div id="contentBanners">
-              <div id="MainContainer">
-                      <div id="Heading-box">
-                          <div class="heading">Trending Now</div>
-                          <div class="viewAll">view all
-                              <i class="fas fa-arrow-right"></i>
-                          </div>
-                     </div>
-
-                      <div id="Banners-container">
-                          <div class="Image-Name">
-                            <a href="/pages/Anime/animeinfo/index.html">
-                              <img src="https://avatarfiles.alphacoders.com/922/92262.png" alt="Fate stye night">
-                              <!-- <span class="ep">06/16</span> -->
-                              <!-- <span class="comments"><i class="fas fa-comments"></i>11</span> -->
-                              <!-- <span class="watch"><i class="far fa-eye"></i> 9987</span> -->
-                              <div class="content-type">
-                                  <!-- <span class="action">Action</span> -->
-                                  <!-- <span class="adventure">Adventure</span> -->
-                              </div>
-                            </a>
-                          </div>
-                          <!-- <div class="Image-Name">
-                              <img src="./image/future diary.jpg" alt="">
-                              <span class="ep">06/16</span>
-                              <span class="comments"><i class="fas fa-comments"></i>11</span>
-                              <span class="watch"><i class="far fa-eye"></i> 9987</span>
-                              <div class="content-type">
-                                  <span class="action">Action</span>
-                                  <span class="adventure">Adventure</span>
-                              </div>
-                              <div class="show-name">
-                                  Future diary
-                              </div>
-                          </div>
-                          <div class="Image-Name">
-                              <img src="./image/DAB.jpg" alt="">
-                              <span class="ep">06/16</span>
-                              <span class="comments"><i class="fas fa-comments"></i>11</span>
-                              <span class="watch"><i class="far fa-eye"></i> 9987</span>
-                              <div class="content-type">
-                                  <span class="action">Action</span>
-                                  <span class="adventure">Adventure</span>
-                              </div>
-                              <div class="show-name">
-                                  Date a bullet
-                              </div>
-                          </div>
-
-                          <div class="Image-Name">
-                              <img src="./image/erased.jpeg" alt="">
-                              <span class="ep">06/16</span>
-                              <span class="comments"><i class="fas fa-comments"></i>11</span>
-                              <span class="watch"><i class="far fa-eye"></i> 9987</span>
-                              <div class="content-type">
-                                  <span class="action">Action</span>
-                                  <span class="adventure">Adventure</span>
-                              </div>
-                              <div class="show-name">
-                                  Erased
-                              </div>
-                          </div>
-                          <div class="Image-Name">
-                              <img src="./image/MHA.jpg" alt="">
-                              <span class="ep">06/16</span>
-                              <span class="comments"><i class="fas fa-comments"></i>11</span>
-                              <span class="watch"><i class="far fa-eye"></i> 9987</span>
-                              <div class="content-type">
-                                  <span class="action">Action</span>
-                                  <span class="adventure">Adventure</span>
-                              </div>
-                              <div class="show-name">
-                                  My Hero Acadmia
-                              </div>
-                          </div>
-                          <div class="Image-Name">
-                              <img src="./image/death note.jfif" alt="">
-                              <span class="ep">06/16</span>
-                              <span class="comments"><i class="fas fa-comments"></i>11</span>
-                              <span class="watch"><i class="far fa-eye"></i> 9987</span>
-                              <div class="content-type">
-                                  <span class="action">Action</span>
-                                  <span class="adventure">Adventure</span>
-                              </div>
-                              <div class="show-name">
-                                  Death Note
-                              </div> 
-                          </div> -->
-                      </div>
-                 </div>
-              <!-- For Trending Now  -->
-
-
-</div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="manga.js"></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./movies.js"></script>
+  </body>
 </html>
