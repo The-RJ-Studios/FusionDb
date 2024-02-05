@@ -3,26 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="./reglog.css">
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <title>Login</title>
 </head>
 <body>
+    <div id="nav">
+        <img src="/pics/Logo.png" alt="" />
+        <h4><a class="link" href="/index.html">Home</a></h4>
+        <h4><a class="link" href="/pages/Users/User.html">Profile</a></h4>
+        <h4><a class="link" href="/pages/Anime/index.html">Anime</a></h4>
+        <h4><a class="link" href="/pages/manga/index.html">Manga</a></h4>
+        <h4><a class="link" href="/pages/movies/index.html">Movies</a></h4>
+        <button class="register-btn"><a class="link" href="./register.html">Register Now</a></button>
+    </div> 
+<section>
     <form id="sign-in">  
-        <h1>Log In your self</h1>
-        <div class="social-icons">
-            <!-- <a href="#" class="icon"><button><i class="fa-brands fa-google-plus-g"></i></button></a>
+        <h1>Login</h1>
+        <!-- <div class="social-icons">
+            <a href="#" class="icon"><button><i class="fa-brands fa-google-plus-g"></i></button></a>
             <a href="#" class="icon"><button><i class="fa-brands fa-facebook-f"></i></button></a>
             <a href="#" class="icon"><button><i class="fa-brands fa-github"></i></button></a>
-            <a href="#" class="icon"><button><i class="fa-brands fa-linkedin-in"></i></button></a> -->
+            <a href="#" class="icon"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+        </div> -->    
+        <!-- <span>or use your email password</span> -->
+
+        <div class="inputbox">
+         <ion-icon name="mail-outline"></ion-icon>
+         <input type="email" required id="email" autocomplete="username">
+         <label for="">Email</label>
         </div>
-        <div>
-        <span>or use your email password</span></div>
-        <div><input type="email" placeholder="Email" id="email" autocomplete="username"></div><br>
-        <div><input type="password" placeholder="Password" id="pass" autocomplete="current-password"></div>
-        <a href="#">Forget Your Password?</a>
-        <button type="submit" onclick="">Log In</button>
+
+        <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" required id="pass" autocomplete="current-password">
+            <label for="">Password</label>
+        </div>
+
+        <div class="forget">
+          <a href="#">Forget Password</a>
+        </div>
+        <button class="stylish-btn" type="submit" onclick="">Log In</button>
     </form>
-    <button><a href="./register.html"> Register form</a></button>
+</section>    
+   
+
+    
     <script type="module" defer>
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getDatabase, get, ref, child} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
@@ -82,6 +108,5 @@
         signInForm.addEventListener('submit',setCookie("user-info",name));
 
     </script>
-    naman1234
 </body>
 </html>
