@@ -1,0 +1,39 @@
+{
+    "user": {
+        "uid": "C7SU5nKQ91T8MnWM7Jj3v0AsQCp1",
+        "email": "namanshupardikar@gmail.com",
+        "emailVerified": false,
+        "isAnonymous": false,
+        "providerData": [
+            {
+                "providerId": "password",
+                "uid": "namanshupardikar@gmail.com",
+                "displayName": null,
+                "email": "namanshupardikar@gmail.com",
+                "phoneNumber": null,
+                "photoURL": null
+            }
+        ],
+        "stsTokenManager": {
+            "refreshToken": "AMf-vBw2bSrSq669-eVdmYFD1W8McDXua89BKrm82XYS7f4OTmrX5akQUBbX4isnvHGMMEDln5f1jmWdSKPxvsKScPEbA-sUka-w7x91Y4Ll511wtz2uHPFTAZvwLXm8Oykyn15stZktSVIOGRZSm-_bT0LFdyw2oqbFuGJBoJDivuFEBpEN4X113Sh3RtYbX4UraagmvO2TUJ2f5rf5Ne_0q5Wbg-SCxA",
+            "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NjI5NzU5NmJiNWQ4N2NjOTc2Y2E2YmY0Mzc3NGE3YWE5OTMxMjkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbTJhZGIyNTM3IiwiYXVkIjoibTJhZGIyNTM3IiwiYXV0aF90aW1lIjoxNzA3MTE4NjA5LCJ1c2VyX2lkIjoiQzdTVTVuS1E5MVQ4TW5XTTdKajN2MEFzUUNwMSIsInN1YiI6IkM3U1U1bktROTFUOE1uV003SmozdjBBc1FDcDEiLCJpYXQiOjE3MDcxMTg2MDksImV4cCI6MTcwNzEyMjIwOSwiZW1haWwiOiJuYW1hbnNodXBhcmRpa2FyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJuYW1hbnNodXBhcmRpa2FyQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.Nwn5fLcx5cVY3WL-63L_9QMCnoMdJoju1q8Ul03iqXTYpQ7BoqzD3-oX_aHRL9enL4WTW7jVDcbjNFAU62OroaJt0XBOJfxGB5sgI5cNz_kURK7kzRZAHGcqWve6pUiS42U4DFWa9mf5-IzrEGoy_F6wSSYt3NphchS5Psat0EgDd6gwIyoSPEBwHPppXMb4DWZx4yn7b1PhpXkeEdzM36md4m4aSegyULjfOAaIDoLAa5HnwUZAH-Hyoxc9jh4lbltaV8VFjyVuOcIWpIUiEj9m3uRAB7CpRpFJbkmx6B2huhdXGq7FhlE1v9-RtBADgl3eE5zU9E7J9mrwFSnsCw",
+            "expirationTime": 1707122221599
+        },
+        "createdAt": "1707118221517",
+        "lastLoginAt": "1707118609305",
+        "apiKey": "AIzaSyABQtlWaFpJhoOqPNRYUFS_tFRtQnPKMaQ",
+        "appName": "[DEFAULT]"
+    },
+    "providerId": null,
+    "_tokenResponse": {
+        "kind": "identitytoolkit#VerifyPasswordResponse",
+        "localId": "C7SU5nKQ91T8MnWM7Jj3v0AsQCp1",
+        "email": "namanshupardikar@gmail.com",
+        "displayName": "",
+        "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NjI5NzU5NmJiNWQ4N2NjOTc2Y2E2YmY0Mzc3NGE3YWE5OTMxMjkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbTJhZGIyNTM3IiwiYXVkIjoibTJhZGIyNTM3IiwiYXV0aF90aW1lIjoxNzA3MTE4NjA5LCJ1c2VyX2lkIjoiQzdTVTVuS1E5MVQ4TW5XTTdKajN2MEFzUUNwMSIsInN1YiI6IkM3U1U1bktROTFUOE1uV003SmozdjBBc1FDcDEiLCJpYXQiOjE3MDcxMTg2MDksImV4cCI6MTcwNzEyMjIwOSwiZW1haWwiOiJuYW1hbnNodXBhcmRpa2FyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJuYW1hbnNodXBhcmRpa2FyQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.Nwn5fLcx5cVY3WL-63L_9QMCnoMdJoju1q8Ul03iqXTYpQ7BoqzD3-oX_aHRL9enL4WTW7jVDcbjNFAU62OroaJt0XBOJfxGB5sgI5cNz_kURK7kzRZAHGcqWve6pUiS42U4DFWa9mf5-IzrEGoy_F6wSSYt3NphchS5Psat0EgDd6gwIyoSPEBwHPppXMb4DWZx4yn7b1PhpXkeEdzM36md4m4aSegyULjfOAaIDoLAa5HnwUZAH-Hyoxc9jh4lbltaV8VFjyVuOcIWpIUiEj9m3uRAB7CpRpFJbkmx6B2huhdXGq7FhlE1v9-RtBADgl3eE5zU9E7J9mrwFSnsCw",
+        "registered": true,
+        "refreshToken": "AMf-vBw2bSrSq669-eVdmYFD1W8McDXua89BKrm82XYS7f4OTmrX5akQUBbX4isnvHGMMEDln5f1jmWdSKPxvsKScPEbA-sUka-w7x91Y4Ll511wtz2uHPFTAZvwLXm8Oykyn15stZktSVIOGRZSm-_bT0LFdyw2oqbFuGJBoJDivuFEBpEN4X113Sh3RtYbX4UraagmvO2TUJ2f5rf5Ne_0q5Wbg-SCxA",
+        "expiresIn": "3600"
+    },
+    "operationType": "signIn"
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Login</title>
 </head>
 <body>
@@ -19,22 +20,23 @@
         <div><input type="email" placeholder="Email" id="email" autocomplete="username"></div><br>
         <div><input type="password" placeholder="Password" id="pass" autocomplete="current-password"></div>
         <a href="#">Forget Your Password?</a>
-        <button type="submit">Log In</button>
+        <button type="submit" onclick="">Log In</button>
     </form>
     <button><a href="./register.html"> Register form</a></button>
     <script type="module" defer>
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getDatabase, get, ref, child} from "https://www.gstatic.com/firebasejs/10.8.0/auth-test-fusiondb.asia-southeast1.firebase-database.js";
+        import { getDatabase, get, ref, child} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
         import { getAuth, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
         const firebaseConfig = {
-          apiKey: "AIzaSyCvlm1Pd6fqmcCLUKz58tAwq3vF5ubh-oo",
-          authDomain: "auth-test-fusiondb.firebaseapp.com",
-          projectId: "auth-test-fusiondb",
-          storageBucket: "auth-test-fusiondb.appspot.com",
-          messagingSenderId: "305624572546",
-          appId: "1:305624572546:web:0ab2962a63f9fdd0020a9b",
-          measurementId: "G-52KRFE3LGN"
+            apiKey: "AIzaSyABQtlWaFpJhoOqPNRYUFS_tFRtQnPKMaQ",
+            authDomain: "m2adb2537.firebaseapp.com",
+            databaseURL: "https://m2adb2537-default-rtdb.firebaseio.com",
+            projectId: "m2adb2537",
+            storageBucket: "m2adb2537.appspot.com",
+            messagingSenderId: "89155231634",
+            appId: "1:89155231634:web:c826df5eb93b18cabb2b4b",
+            measurementId: "G-P0KGHPKMCK"
         };
         
         const app = initializeApp(firebaseConfig);
@@ -46,27 +48,40 @@
         let EmailInp = document.getElementById("email");
         let PassInp = document.getElementById("pass");
         let signInForm = document.getElementById("sign-in");
+        function setCookie(name,value,exp_days) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exp_days*24*60*60*1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+        
         let SignUser = evt => {
             evt.preventDefault();
-        
+        // The below funtion checks if user's authenticated or not aand if yes it goes inside the then function
             signInWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
-                get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
+
+               get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
                     if(snapshot.exist){
                         sessionStorage.setItem("user-info", JSON.stringify({
                             name: snapshot.val().Name
-                        }))
+                        })).
                         sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
                         window.location.href = './Users/User.html';
+
                     }
-                })
+                })       
+                console.log(credentials)
+                console.log(credentials.user.uid);
             }).catch((error)=>{
                 alert(error.code);
                 console.log(error.code);
                 console.log(error.message);
             })
-        }
-
+        };
         signInForm.addEventListener('submit',SignUser);
+        signInForm.addEventListener('submit',setCookie("user-info",name));
+
     </script>
+    naman1234
 </body>
 </html>

@@ -4,5 +4,6 @@
     "fiveServer.injectBody": true,
     "fiveServer.browser": [
         
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

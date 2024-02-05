@@ -492,7 +492,7 @@ a:active {
 }
 .card a:hover{
     letter-spacing: 0.25em;
-    color: var(--clr);
+    /* color: var(--clr); */
     background: var(--clr);
     box-shadow: 0 0 35px var(--clr);
 }
