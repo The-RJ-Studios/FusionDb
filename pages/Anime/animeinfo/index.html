@@ -53,6 +53,31 @@
         </div>
     </div>
     <script src="/pages/Anime/anime2/AnimeInfo.js"></script>
+    <script type="module">
+        let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
+        let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));
+        let MsgHead =document.getElementById('head');
+        let GreetHead = document.getElementById('greet');
+        let signOutBtn =  document.getElementById('sign-out');
+
+        
+        let Signout=() =>{
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-info");
+            window.location.href ='login.html';
+        }
+        let CheckCred=()=>{
+            if(!sessionStorage.getItem('user-creds'))
+                window.location.href = 'login.html';
+            else{
+                MsgHead.innerText = `User with email  "${UserCreds.email}"Logged`;
+                GreetHead.innerText = `Welcome ${UserInfo.name}!`;
+            }
+        }
+        window.addEventListener('load,Check',CheckCred);
+        signOutBtn.addEventListener('click',Signout);
+
+    </script>
 </body>
 
 </html>

@@ -49,6 +49,7 @@
             evt.preventDefault();
         
             createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
+                
                 set(ref(db, 'UserAuthList/' + credentials.user),{
                     Name: name.value
                 })

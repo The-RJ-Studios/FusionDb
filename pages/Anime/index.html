@@ -48,10 +48,10 @@
           </form>
           <i class="fas fa-search"></i>
         </div>
-        <a href="/pages/registration/index.html"
-          ><button id="signIn"><i id= "Acc" class="fa-solid fa-circle-user"></i></button></a
-        >
-      <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
+        <button id="signIn" onclick="CheckCred()"><a id="signin-Location" href=""
+          ><i id= "Acc" class="fa-solid fa-circle-user"></i>></a
+        ></button>
+      <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn">
     </navbar>
     <div class="slides-box">
       <div class="slider">
@@ -293,5 +293,30 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/pages/Anime/Anime.js"></script>
+    <script type="module">
+      let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
+      let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));
+      let MsgHead =document.getElementById('head');
+      let GreetHead = document.getElementById('greet');
+      let signOutBtn =  document.getElementById('sign-out');
+      let signLocation = document.getElementById('signin-Location');
+
+      
+      let Signout=() =>{
+          sessionStorage.removeItem("user-creds");
+          sessionStorage.removeItem("user-info");
+          window.location.href ='login.html';
+      }
+      let CheckCred=()=>{
+          if(sessionStorage.getItem('user-creds'))
+              signLocation.href = "/pages/Users/Users.html"
+          else{
+              signLocation.href = "</pages/registration/login.html>"
+          }
+      }
+      window.addEventListener('load,Check',CheckCred);
+      signOutBtn.addEventListener('click',Signout);
+
+  </script>
   </body>
 </html>
