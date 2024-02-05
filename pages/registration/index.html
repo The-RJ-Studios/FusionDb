@@ -16,7 +16,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="sign-up">
                 <h1>Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -25,26 +25,26 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registeration</span>
-                <input type="text" placeholder="Name" id="name">
-                <input type="email" placeholder="Email" id="email">
-                <input type="password" placeholder="Password" id="pass">
-                <button onclick="loginEmailPass">Sign Up</button>
+                <input type="text" placeholder="Name" id="name" >
+                <input type="email" placeholder="Email" id="email" autocomplete="username">
+                <input type="password" placeholder="Password" id="pass" autocomplete="current-password">
+                <button type="submit">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form id="sign-in">  
                 <h1>Log In</h1>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><button><i class="fa-brands fa-google-plus-g"></i></button></a>
+                    <a href="#" class="icon"><button><i class="fa-brands fa-facebook-f"></i></button></a>
+                    <a href="#" class="icon"><button><i class="fa-brands fa-github"></i></button></a>
+                    <a href="#" class="icon"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Email" id="lemail" autocomplete="username">
+                <input type="password" placeholder="Password" id="lpass" autocomplete="current-password">
                 <a href="#">Forget Your Password?</a>
-                <button>Log In</button>
+                <button type="submit">Log In</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -63,9 +63,71 @@
         </div>
 
     </div>
-
+    <script type="module" class="hidejs">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, get, set, ref, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        //import {signInUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        //https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCvlm1Pd6fqmcCLUKz58tAwq3vF5ubh-oo",
+          authDomain: "auth-test-fusiondb.firebaseapp.com",
+          projectId: "auth-test-fusiondb",
+          storageBucket: "auth-test-fusiondb.appspot.com",
+          messagingSenderId: "305624572546",
+          appId: "1:305624572546:web:0ab2962a63f9fdd0020a9b",
+          measurementId: "G-52KRFE3LGN"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db =getDatabase();
+        const auth =getAuth(app);
+        const dbref = ref(db);
+        
+        let name = document.getElementById("name");
+        let EmailInp = document.getElementById("email");
+        let PassInp = document.getElementById("pass");
+        let lEmailInp = document.getElementById('lemail')
+        let lPass = document.getElementById("lpass")
+        let registerForm = document.getElementById("sign-up");
+        let signInForm =  document.getElementById("sign-in");
+        
+        
+        let RegisterUser = evt => {
+            evt.preventDefault();
+        
+            createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
+                console.log(credentials);
+            }).catch((error)=>{
+                alert(error.code);
+                console.log(error.code);
+                console.log(error.message);
+            })
+        }
+        let SignUser = evt => {
+            evt.preventDefault();
+        
+            signInUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
+                console.log(credentials);
+            }).catch((error)=>{
+                alert(error.code);
+                console.log(error.code);
+                console.log(error.message);
+            })
+        }
+        
+        registerForm.addEventListener('submit',RegisterUser);
+       signInForm.addEventListener('submit', SignUser);
+        </script>
     <script src="./login.js"></script>
-    <script src="./auth.js"></script>
+    <!-- <script src="./auth.js"></script> -->
 </body>
 
 </html>

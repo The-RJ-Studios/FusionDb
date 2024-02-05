@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form id="sign-in">  
+        <h1>Log In your self</h1>
+        <div class="social-icons">
+            <!-- <a href="#" class="icon"><button><i class="fa-brands fa-google-plus-g"></i></button></a>
+            <a href="#" class="icon"><button><i class="fa-brands fa-facebook-f"></i></button></a>
+            <a href="#" class="icon"><button><i class="fa-brands fa-github"></i></button></a>
+            <a href="#" class="icon"><button><i class="fa-brands fa-linkedin-in"></i></button></a> -->
+        </div>
+        <div>
+        <span>or use your email password</span></div>
+        <div><input type="email" placeholder="Email" id="email" autocomplete="username"></div><br>
+        <div><input type="password" placeholder="Password" id="pass" autocomplete="current-password"></div>
+        <a href="#">Forget Your Password?</a>
+        <button type="submit">Log In</button>
+    </form>
+    <button><a href="./register.html"> Register form</a></button>
+    <script type="module" defer>
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, get, ref, child} from "https://www.gstatic.com/firebasejs/10.8.0/auth-test-fusiondb.asia-southeast1.firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCvlm1Pd6fqmcCLUKz58tAwq3vF5ubh-oo",
+          authDomain: "auth-test-fusiondb.firebaseapp.com",
+          projectId: "auth-test-fusiondb",
+          storageBucket: "auth-test-fusiondb.appspot.com",
+          messagingSenderId: "305624572546",
+          appId: "1:305624572546:web:0ab2962a63f9fdd0020a9b",
+          measurementId: "G-52KRFE3LGN"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const db =getDatabase();
+        const auth =getAuth(app);
+        const dbref = ref(db);
+        
+        let name = document.getElementById("name");
+        let EmailInp = document.getElementById("email");
+        let PassInp = document.getElementById("pass");
+        let signInForm = document.getElementById("sign-in");
+        let SignUser = evt => {
+            evt.preventDefault();
+        
+            signInWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
+                get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
+                    if(snapshot.exist){
+                        sessionStorage.setItem("user-info", JSON.stringify({
+                            name: snapshot.val().Name
+                        }))
+                        sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+                        window.location.href = './Users/User.html';
+                    }
+                })
+            }).catch((error)=>{
+                alert(error.code);
+                console.log(error.code);
+                console.log(error.message);
+            })
+        }
+
+        signInForm.addEventListener('submit',SignUser);
+    </script>
+</body>
+</html>

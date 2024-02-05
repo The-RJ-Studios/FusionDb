@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register Yourself!</h2>
+    <form id="sign-up">
+        <h1>Create Account</h1>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registeration</span>
+        <input type="text" placeholder="Name" id="name" >
+        <input type="email" placeholder="Email" id="email" autocomplete="username">
+        <input type="password" placeholder="Password" id="pass" autocomplete="current-password">
+        <button type="submit">Sign Up</button>
+    </form>
+    <button><a href="./login.html">Login form</a></button>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCvlm1Pd6fqmcCLUKz58tAwq3vF5ubh-oo",
+          authDomain: "auth-test-fusiondb.firebaseapp.com",
+          projectId: "auth-test-fusiondb",
+          storageBucket: "auth-test-fusiondb.appspot.com",
+          messagingSenderId: "305624572546",
+          appId: "1:305624572546:web:0ab2962a63f9fdd0020a9b",
+          measurementId: "G-52KRFE3LGN"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const db =getDatabase();
+        const auth =getAuth(app);
+        
+        let name = document.getElementById("name");
+        let EmailInp = document.getElementById("email");
+        let PassInp = document.getElementById("pass");
+        let registerForm = document.getElementById("sign-up");
+        let RegisterUser = evt => {
+            evt.preventDefault();
+        
+            createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
+                set(ref(db, 'UserAuthList/' + credentials.user),{
+                    Name: name.value
+                })
+            }).catch((error)=>{
+                alert(error.code);
+                console.log(error.code);
+                console.log(error.message);
+            })
+        }
+
+        registerForm.addEventListener('submit',RegisterUser);
+    </script>
+</body>
+</html>
