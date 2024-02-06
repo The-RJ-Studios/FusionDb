@@ -426,6 +426,7 @@ a:active {
             hsl(0, 0%, 0% / 0));
     transform: translateY(70%);
     transition: transform 500ms ease;
+    z-index: -1;
     transition-delay: 500ms;
 }
 

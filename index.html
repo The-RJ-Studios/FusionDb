@@ -22,17 +22,33 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="/pics/284/loding.js"></script>
     <link rel="icon" type="image/x-icon" href="/pics/Tab.png" />
   </head>
 
   <body>
+    <h1 id="mkc" class="counter"><div id="loaderImage"></div></h1>
+<div id="mkc-2" class="overlay">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+
     <div id="page1">
       <!-- nav section -->
       <div id="nav">
         <img src="/pics/Logo.png" alt="" />
         <h4><a href="#page1">Home</a></h4>
         <h4><a href="#page3">About</a></h4>
-        <h4><a href="/pages/User/User.html">Profile</a></h4>
+        <h4><a href="pages/profile-page-main/index.html">Profile</a></h4>
         <h4><a href="/pages/Anime/index.html">Anime</a></h4>
         <h4><a href="/pages/manga/index.html">Manga</a></h4>
         <h4><a href="/pages/movies/index.html">Movies</a></h4>
@@ -41,17 +57,23 @@
         </form>
         <div id="nav2">
           <a href="/pages/registration/register.html">
-            <i class="fa-solid fa-circle-user"></i>
+            <button class="Nav_btn"><span>Register</span></button>
+            <!-- <i class="fa-solid fa-circle-user"></i> -->
           </a>
         </div>
+        
       </div>
       <div class="container">
-        <img
+       <video loop autoplay muted>
+        <!-- <source src="/videos/gate-torii-sunset-moewalls-com.mp4"> -->
+        <source src="/videos/18.mp4">
+       </video>
+      <!-- <img
           src="/pics/lone.png"
           alt="anime image"
           class="sliderimg img-1 show"
-        />
-        <img
+        /> -->
+        <!-- <img
           src="/pics/manga4.jpg "
           alt="Manga image"
           id="mangI"
@@ -63,11 +85,11 @@
           id="mov"
           class="sliderimg img-3"
         />
-      </div>
+      </div> -->
     </div>
     <br /><br /><br /><br /><br /><br />
     <div id="page2">
-      <div class="elem">
+      <div class="elem elem-1">
         <a href="/pages/Anime/index.html">
           <h2>Anime</h2>
           <img
@@ -170,6 +192,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="HomePage.js"></script>
+    <script src="./HomePage.js"></script>
   </body>
 </html>

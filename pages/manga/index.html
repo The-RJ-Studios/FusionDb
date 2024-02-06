@@ -51,6 +51,7 @@
         <a href="/pages/registration/register.html"
           ><button id="signIn"><i id= "Acc" class="fa-solid fa-circle-user"></i></button></a
         >
+      
       <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
     </navbar>
     <div class="slides-box">
@@ -68,73 +69,72 @@
         </div>
       </div>
     </div>
-        <div id="all-card-layout"  >
+        <div id="all-card-layout" class="all-card-place"  >
           <h2 class="Type">Popular Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
           <!-- media scroller -->
           <button id="prev-slide" class="slide-button material-symbols-outlined">chevron_left</button>
-          <div class="card-layout slider-wrapper"> 
+          <div class="card-layout card-layout-pop slider-wrapper"> 
             <!-- element -->
-                <div class="card card-1"> 
+                <div class="card card-1 popu"> 
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-2">
+                <div class="card card-2 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-3">
+                <div class="card card-3 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-4">
+                <div class="card card-4 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-5">
+                <div class="card card-5 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-6">
+                <div class="card card-6 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-7">
+                <div class="card card-7 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-8">
+                <div class="card card-8 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-9">
+                <div class="card card-9 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
                   </div>
                 </div>
-                <div class="card card-10">
+                <div class="card card-10 popu">
                   <div class="card-content">
                     <h2 class="card-title">Something awesome</h2>
                     <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
                   </div>
-                </div>
-                
+                </div>        
               </div>
               <button id="next-slide" class="slide-button material-symbols-outlined">chevron_right</button>
       <div id="page2">
@@ -292,7 +292,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="./movies.js"></script>
+    <script src="./manga.js"></script>
     <script type="module">
       let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
       let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));
