@@ -82,3 +82,31 @@ const initSliderRan = () => {
 
 
 window.addEventListener("load", initSliderRan)
+
+let sections = gsap.utils.toArray(".popu");
+
+gsap.to(sections,{
+
+    xPercent: -100 * (sections.length-5),
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+        trigger: ".card-layout-pop",
+        pin: true,
+        start: "-300px",
+        end:"100px",
+        markers: true,
+        scrub: 1,
+        snap: 1 / (sections.length-1),
+        end: () => "+=" + 
+        document.querySelector(".card-layout-pop").offsetWidth
+
+    }
+});
+
+document.getElementsByClassName(".type");
+
+gsap.to(type, {
+    duration: 2,
+    text: "This is the new text",
+    ease: "none",
+  });
