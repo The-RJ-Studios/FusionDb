@@ -17,12 +17,12 @@
 
 
 const btn = document.querySelector(".Nav_btn");
-btn.onmouseover = function(e){
+btn.onmousemove = function(e){
   const x = e.pageX - btn.offsetLeft;
   const y = e.pageY - btn.offsetTop;
 
-  btn.computedStyleMap.setProperty("--x", x + "px");
-  btn.computedStyleMap.setProperty("--y", y + "px");
+  btn.style.setProperty("--x",x + "px");
+  btn.style.setProperty("--y",y + "px");
 }
 
 
