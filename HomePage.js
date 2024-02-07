@@ -1,6 +1,3 @@
-window.onload = function () {
-  window.scrollTo(0, 0);
-}
 // let counter = 1
 
 
@@ -104,7 +101,7 @@ setTimeout(() => {
   var a = document.getElementById("mkc-2");
   a.style.zIndex=-100;
   clearTimeout(setTimeout);
-}, 10000);
+}, 3000);
 // let yourElement = document.getElementsByClassName(".title-h");
 let yourElement = document.getElementById("mkc-3");
 //replaces yourElement's text with "This is the new text" over the course of 2 seconds
