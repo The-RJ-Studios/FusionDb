@@ -28,7 +28,22 @@
     />
   </head>
   <body>
-    <navbar id="Navbar">
+    <h1 id="mkc" class="counter">
+      <img src="/pics/icons8-loading-circle.gif" alt="">
+    </h1>
+<div id="mkc-2" class="overlay">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+    <!-- <navbar id="Navbar">
         <img src="/pics/Logo.png" alt="" id="logo" />
         <h4><a href="/index.html">HOME</a></h4>
         <h4><a href="/pages/User/User.html">Profile</a></h4>
@@ -51,27 +66,38 @@
         <button id="signIn" onclick="CheckCred()"><a id="signin-Location" href="/pages/registration/register.html"
           ><i id= "Acc" class="fa-solid fa-circle-user"></i></a
         ></button>
-      <!-- <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn"> -->
-    </navbar>
-    <div class="slides-box">
-      <div class="slider">
-        <div class="slides">
-          <div class="slide first" id="first">
-            <img src="/pics/Anime1.jpg" alt="" />
-          </div>
-          <div class="slide second">
-            <img src="/pics/JJk.jpg" alt="" />
-          </div>
-          <div class="slide third">
-            <img src="/pics/Ghoul.jpg" alt="" />
-          </div>
+      <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn">
+    </navbar> -->
+    <div id="page1">
+      <!-- nav section -->
+      <div id="nav">
+        <img src="/pics/Logo.png" alt="" />
+        <h4><a href="/index.html">Home</a></h4>
+        <h4><a href="pages/profile-page-main/index.html">Profile</a></h4>
+        <h4><a href="/pages/manga/index.html">Manga</a></h4>
+        <h4><a href="/pages/movies/index.html">Movies</a></h4>
+        <form id="form">
+          <input type="text" placeholder="Type to search" id="Search" />
+        </form>
+        <div id="nav2">
+          <a href="/pages/registration/register.html">
+            <button class="Nav_btn"><span>Register</span></button>
+            <!-- <i class="fa-solid fa-circle-user"></i> -->
+          </a>
         </div>
+        
       </div>
+      <div class="container">
+       <video loop autoplay muted>
+        <source src="/videos/gate-torii-sunset-moewalls-com.mp4">
+        <!-- <source src="/videos/18.mp4"> -->
+       </video>
     </div>
+
     <div id="all-card-layout" class="all-card-pop"  >
+      <br><br><br><br><br>
       <h2 class="Type">Popular Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
-      <button id="prev-slide" class="slide-button material-symbols-outlined">chevron_left</button>
       <div class="card-layout card-layout-pop slider-wrapper"> 
         <!-- element -->
             <div class="card card-1 popu"> 
@@ -135,7 +161,6 @@
               </div>
             </div>        
           </div>
-          <button id="next-slide" class="slide-button material-symbols-outlined">chevron_right</button>
    </div>       
   <div id="page2">
     <div id="all-card-layout-Latest" class="all-card-lat"  >
@@ -282,6 +307,7 @@
 <div id="page3">
 Hello
 </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

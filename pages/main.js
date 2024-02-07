@@ -13,8 +13,7 @@
 //         counter = 1
 //     }
 
-// },3000)
-;
+// },3000);
 
 
 const btn = document.querySelector(".Nav_btn");
@@ -26,20 +25,6 @@ btn.onmouseover = function(e){
   btn.computedStyleMap.setProperty("--y", y + "px");
 }
 
-
-gsap.to("#nav", {
-    backgroundColor: "transparent",
-    duration: 0.5,
-    height: "80px",
-    scrollTrigger: {
-      trigger: "#nav",
-      scroller: "body",
-      // markers:true,
-      start: "top -10%",
-      end: "top -11%",
-      scrub: 1,
-    },
-  });
 
 // function startLoader() {
 //    let counterElement = document.querySelector(".counter");
@@ -87,7 +72,7 @@ gsap.to(".bar",1.5,{
   ease: "power4.inOut",
 
 });
-gsap.from("#h1",1.5,{
+gsap.from("#mkc",1.5,{
   delay: 1.5, 
   y: 700,
   stagger: {
@@ -102,36 +87,3 @@ setTimeout(() => {
   a.style.zIndex=-100;
   clearTimeout(setTimeout);
 }, 3000);
-// let yourElement = document.getElementsByClassName(".title-h");
-let yourElement = document.getElementById("mkc-3");
-//replaces yourElement's text with "This is the new text" over the course of 2 seconds
-gsap.to(yourElement, {
-  duration: 2,
-  text: "This is the new text",
-  ease: "none",
-});
-
-// document.getElementById("page1").style.zIndex = 100000;
-
-// snap all of the properties in the comma-delimited list ("x,y" in this case) to the closest whole number:
-// gsap.to(".elem", {
-//   x: 100,
-//   y: 250,
-//   snap: "x,y",
-// });
-
-// // snap to an increment:
-// gsap.to(".elem-2", {
-//   x: 1000,
-//   snap: {
-//     x: 20, // x snaps to the closest increment of 20 (0, 20, 40, 60, etc.)
-//   },
-// });
-
-// // snap to the closest value in an array:
-// gsap.to(".elem-3", {
-//   x: 1000,
-//   snap: {
-//     x: [0, 50, 150, 500], // x snaps to the closest value in this array
-//   },
-// });
