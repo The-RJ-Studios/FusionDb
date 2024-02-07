@@ -104,6 +104,7 @@ top: 30%;
   border: 1px solid white;
   background: none;
   padding: 10px 30px;
+  display: inline-flex;
   font-size: 15px;
   text-transform: uppercase;
   font-family: inherit;
@@ -118,8 +119,8 @@ top: 30%;
 .Nav_btn::before{
   content: "";
   position: absolute;
-  left: var(--x);
   top: var(--y);
+  left: var(--x);
   transform: translate(-50%,-50%);
   width: 0px;
   height: 0px;
