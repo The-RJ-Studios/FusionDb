@@ -17,6 +17,8 @@ window.onload = function () {
 //     }
 
 // },3000)
+;
+
 
 const btn = document.querySelector(".Nav_btn");
 btn.onmouseover = function(e){
@@ -26,6 +28,7 @@ btn.onmouseover = function(e){
   btn.computedStyleMap.setProperty("--x", x + "px");
   btn.computedStyleMap.setProperty("--y", y + "px");
 }
+
 
 gsap.to("#nav", {
     backgroundColor: "transparent",

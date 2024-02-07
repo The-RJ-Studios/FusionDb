@@ -90,23 +90,55 @@ gsap.to(sections,{
     xPercent: -100 * (sections.length-6),
     ease: "slow(0.7,0.7,false)",
     scrollTrigger: {
-        trigger: "#all-card-layout",
+        trigger: ".all-card-pop",
         pin: true,
-        start: "-300px",
-        end:"100px",
+        // start: "top",
+        // end:"100px",
         markers: true,
         scrub: 1,
         snap: 1 / (sections.length-1),
         end: () => "+=" + 
-        document.querySelector("#all-card-layout").offsetWidth
+        document.querySelector(".all-card-pop").offsetWidth
 
     }
 });
 
-document.getElementsByClassName(".type");
 
-gsap.to(type, {
-    duration: 2,
-    text: "This is the new text",
-    ease: "none",
-  });
+let sectionsL = gsap.utils.toArray(".popi");
+
+gsap.to(sectionsL,{
+
+    xPercent: -100 * (sectionsL.length-6),
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+        trigger: ".all-card-lat",
+        pin: true,
+        // start: "top",
+        // end:"100px",
+        markers: true,
+        scrub: 1,
+        snap: 1 / (sectionsL.length-1),
+        end: () => "+=" + 
+        document.querySelector(".all-card-lat").offsetWidth
+
+    }
+});
+let sectionsR = gsap.utils.toArray(".popo");
+
+gsap.to(sectionsL,{
+
+    xPercent: -100 * (sectionsL.length-6),
+    ease: "slow(0.7,0.7,false)",
+    scrollTrigger: {
+        trigger: ".all-card-ran",
+        pin: true,
+        // start: "top",
+        // end:"100px",
+        markers: true,
+        scrub: 1,
+        snap: 1 / (sectionsR.length-1),
+        end: () => "+=" + 
+        document.querySelector(".all-card-ran").offsetWidth
+
+    }
+});

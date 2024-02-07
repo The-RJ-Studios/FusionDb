@@ -118,8 +118,8 @@ top: 30%;
 .Nav_btn::before{
   content: "";
   position: absolute;
-  top: var(--y);
   left: var(--x);
+  top: var(--y);
   transform: translate(-50%,-50%);
   width: 0px;
   height: 0px;
