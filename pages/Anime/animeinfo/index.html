@@ -17,12 +17,11 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js">  </script>
-    <script type="text/javascript" src="https://pyodide-cdn2.iodide.io/v0.17.0/full/pyodide.js"></script>
 </head>
 
 
 <body>
-    <!-- <script type="py" src="./main.py" config="./pyscript.json" terminal></script> -->
+    <script type="py" src="./main.py" config="./pyscript.json" terminal></script>
     <py-script>
         import js
     </py-script>
@@ -52,8 +51,8 @@
             </div>
         </div>
     </div>
-    <script src="/pages/Anime/anime2/AnimeInfo.js"></script>
-    <script type="module">
+    <script src="/pages/Anime/animeinfo/AnimeInfo.js"></script>
+    <!-- <script type="module">
         let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
         let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));
         let MsgHead =document.getElementById('head');
@@ -75,9 +74,9 @@
             }
         }
         window.addEventListener('load,Check',CheckCred);
-        signOutBtn.addEventListener('click',Signout);
+        signOutBtn.addEventListener('click',Signout); 
 
-    </script>
+    </script> -->
 </body>
 
 </html>
