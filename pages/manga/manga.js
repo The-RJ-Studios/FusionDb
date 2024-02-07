@@ -87,10 +87,10 @@ let sections = gsap.utils.toArray(".popu");
 
 gsap.to(sections,{
 
-    xPercent: -100 * (sections.length-5),
+    xPercent: -100 * (sections.length-6),
     ease: "slow(0.7,0.7,false)",
     scrollTrigger: {
-        trigger: ".card-layout-pop",
+        trigger: "#all-card-layout",
         pin: true,
         start: "-300px",
         end:"100px",
@@ -98,7 +98,7 @@ gsap.to(sections,{
         scrub: 1,
         snap: 1 / (sections.length-1),
         end: () => "+=" + 
-        document.querySelector(".card-layout-pop").offsetWidth
+        document.querySelector("#all-card-layout").offsetWidth
 
     }
 });

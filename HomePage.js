@@ -1,3 +1,6 @@
+window.onload = function () {
+  window.scrollTo(0, 0);
+}
 // let counter = 1
 
 
@@ -54,7 +57,7 @@ function startLoader() {
     }
 
     counterElement.textContext = currentValue;
-    let delay = Math.floor(Math.random() * 300) + 50; 
+    let delay = Math.floor(Math.random() * 200) + 50; 
     setTimeout(updateCounter, delay);
   }
 
@@ -72,11 +75,11 @@ function startLoader() {
 startLoader();
 
 gsap.to(".counter",0.25,{
-  delay: 3.5,
+  delay: 1.5,
   opacity: 0,
 });
 gsap.to(".bar",1.5,{
-  delay: 3.5,
+  delay: 1.5,
   height: 0,
   stagger: {
     amount: 0.5,
@@ -85,25 +88,28 @@ gsap.to(".bar",1.5,{
 
 });
 gsap.from("#h1",1.5,{
-  delay: 4,
+  delay: 1.5, 
   y: 700,
   stagger: {
     amount: 0.5,
   },
   ease : "power4.inOut",
 });
-gsap.from(".container",2,{
-  delay: 4.5,
-  y: 700,
-  ease : "power4.inOut",
-});
 setTimeout(() => {
-  var a = document.getElementById("mkc-2");
-  a.style.zIndex=-100;
   var a = document.getElementById("mkc");
   a.style.zIndex=-100; 
-}, 5000);
-
+  var a = document.getElementById("mkc-2");
+  a.style.zIndex=-100;
+  clearTimeout(setTimeout);
+}, 10000);
+// let yourElement = document.getElementsByClassName(".title-h");
+let yourElement = document.getElementById("mkc-3");
+//replaces yourElement's text with "This is the new text" over the course of 2 seconds
+gsap.to(yourElement, {
+  duration: 2,
+  text: "This is the new text",
+  ease: "none",
+});
 
 // document.getElementById("page1").style.zIndex = 100000;
 
