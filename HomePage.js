@@ -1,5 +1,7 @@
 // let counter = 1
 
+// const { default: gsap } = require("gsap");
+
 
 
 // setInterval(()=>{
@@ -13,8 +15,7 @@
 //         counter = 1
 //     }
 
-// },3000)
-;
+// },3000);
 
 
 const btn = document.querySelector(".Nav_btn");
@@ -74,7 +75,8 @@ gsap.to("#nav", {
 
 // startLoader();
 
-gsap.to(".counter",0.25,{
+gsap.to(".counter",{
+  duration: 0.25,
   delay: 1.5,
   opacity: 0,
 });
@@ -87,29 +89,60 @@ gsap.to(".bar",1.5,{
   ease: "power4.inOut",
 
 });
-gsap.from("#h1",1.5,{
+gsap.from("#vid",2.5,{
   delay: 1.5, 
-  y: 700,
+  x: 700,
   stagger: {
     amount: 0.5,
   },
   ease : "power4.inOut",
 });
+// let lastKnownScrollPosition = 0;
+// function gand(){
+
+//   document.addEventListener("scroll", (event) => {
+    
+//     lastKnownScrollPosition = window.scrollY;
+//     // console.log(lastKnownScrollPosition);
+    
+//     if(lastKnownScrollPosition>=100){
+//       window.scrollTo(0, 0);
+//     }
+//   }
+//   )
+// }
+// document.removeEventListener("scroll",gand);
+
+
+
+
+
+// setTimeout(()=>{
+//   document.addEventListener("scroll", (event) => {
+
+//     lastKnownScrollPosition = window.scrollY;
+//     // console.log(lastKnownScrollPosition);
+
+//     if(lastKnownScrollPosition>=100){
+//       window.scrollTo(0, 0);
+//     }
+//   }
+//   )
+  
+// },0)
+
 setTimeout(() => {
   var a = document.getElementById("mkc");
   a.style.zIndex=-100; 
+  a.scrollTop = 0;
   var a = document.getElementById("mkc-2");
   a.style.zIndex=-100;
   clearTimeout(setTimeout);
-}, 3000);
-// let yourElement = document.getElementsByClassName(".title-h");
-let yourElement = document.getElementById("mkc-3");
-//replaces yourElement's text with "This is the new text" over the course of 2 seconds
-gsap.to(yourElement, {
-  duration: 2,
-  text: "This is the new text",
-  ease: "none",
-});
+}, 4000);
+
+function tope(){
+  window.scrollTo(0,0);
+}
 
 // document.getElementById("page1").style.zIndex = 100000;
 

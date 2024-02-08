@@ -83,62 +83,62 @@
 
 // window.addEventListener("load", initSliderRan)
 
-let sections = gsap.utils.toArray(".popu");
+// let sections = gsap.utils.toArray(".popu");
 
-gsap.to(sections,{
+// gsap.to(sections,{
 
-    xPercent: -100 * (sections.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-pop",
-        pin: true,
-        // start: "top",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sections.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-pop").offsetWidth
+//     xPercent: -100 * (sections.length-6),
+//     ease: "slow(0.7,0.7,false)",
+//     scrollTrigger: {
+//         trigger: ".all-card-pop",
+//         pin: true,
+//         // start: "top",
+//         // end:"100px",
+//         markers: true,
+//         scrub: 1,
+//         snap: 1 / (sections.length-1),
+//         end: () => "+=" + 
+//         document.querySelector(".all-card-pop").offsetWidth
 
-    }
-});
+//     }
+// });
 
 
-let sectionsL = gsap.utils.toArray(".popi");
+// let sectionsL = gsap.utils.toArray(".popi");
 
-gsap.to(sectionsL,{
+// gsap.to(sectionsL,{
 
-    xPercent: -100 * (sectionsL.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-lat",
-        pin: true,
-        // start: "top",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sectionsL.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-lat").offsetWidth
+//     xPercent: -100 * (sectionsL.length-6),
+//     ease: "slow(0.7,0.7,false)",
+//     scrollTrigger: {
+//         trigger: ".all-card-lat",
+//         pin: true,
+//         // start: "top",
+//         // end:"100px",
+//         markers: true,
+//         scrub: 1,
+//         snap: 1 / (sectionsL.length-1),
+//         end: () => "+=" + 
+//         document.querySelector(".all-card-lat").offsetWidth
 
-    }
-});
-let sectionsR = gsap.utils.toArray(".popo");
+//     }
+// });
+// let sectionsR = gsap.utils.toArray(".popo");
 
-gsap.to(sectionsR,{
+// gsap.to(sectionsR,{
 
-    xPercent: -100 * (sectionsR.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-ran",
-        pin: true,
-        // start: "top",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sectionsR.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-ran").offsetWidth
+//     xPercent: -100 * (sectionsR.length-6),
+//     ease: "slow(0.7,0.7,false)",
+//     scrollTrigger: {
+//         trigger: ".all-card-ran",
+//         pin: true,
+//         // start: "top",
+//         // end:"100px",
+//         markers: true,
+//         scrub: 1,
+//         snap: 1 / (sectionsR.length-1),
+//         end: () => "+=" + 
+//         document.querySelector(".all-card-ran").offsetWidth
 
-    }
-});
+//     }
+// });

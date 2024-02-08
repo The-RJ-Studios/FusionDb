@@ -82,92 +82,95 @@
 
 
 // window.addEventListener("load", initSliderRan)
+// function tope(){
+//   window.scrollTo(0,0);
+// }
 
-let sections = gsap.utils.toArray(".popu");
+// let sections = gsap.utils.toArray(".popu");
 
-gsap.to(sections,{
+// gsap.to(sections,{
 
-    xPercent: -100 * (sections.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-pop",
-        pin: true,
-        // start: "top",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sections.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-pop").offsetWidth
+//     xPercent: -100 * (sections.length-4.5),
+//     ease: "slow(0.7,0.7,false)",
+//     scrollTrigger: {
+//         trigger: ".all-card-pop",
+//         pin: true,
+//         // start: "top",
+//         // end:"100px",
+//         markers: true,
+//         scrub: 1,
+//         snap: 1 / (sections.length-4.5),
+//         end: () => "+=" + 
+//         document.querySelector(".all-card-pop").offsetWidth
 
-    }
-});
+//     }
+// });
 
 
-let sectionsL = gsap.utils.toArray(".popi");
+// let sectionsL = gsap.utils.toArray(".popi");
 
-gsap.to(sectionsL,{
+// gsap.to(sectionsL,{
 
-    xPercent: -100 * (sectionsL.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-lat",
-        pin: true,
-        // start: "top",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sectionsL.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-lat").offsetWidth
+//     xPercent: -100 * (sectionsL.length-4.5),
+//     ease: "slow(0.7,0.7,false)",
+//     scrollTrigger: {
+//         trigger: ".all-card-lat",
+//         pin: true,
+//         // start: "top",
+//         // end:"100px",
+//         markers: true,
+//         scrub: 1,
+//         snap: 1 / (sectionsL.length-4.5),
+//         end: () => "+=" + 
+//         document.querySelector(".all-card-lat").offsetWidth
 
-    }
-});
-let sectionsR = gsap.utils.toArray(".popo");
+//     }
+// });
+// let sectionsR = gsap.utils.toArray(".popo");
 
-gsap.to(sectionsR,{
+// gsap.to(sectionsR,{
 
-    xPercent: -100 * (sectionsR.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-ran",
-        pin: true,
-        // start: "top",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sectionsR.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-ran").offsetWidth
+//     xPercent: -100 * (sectionsR.length-4.5),
+//     ease: "slow(0.7,0.7,false)",
+//     scrollTrigger: {
+//         trigger: ".all-card-ran",
+//         pin: true,
+//         // start: "top",
+//         // end:"100px",
+//         markers: true,
+//         scrub: 1,
+//         snap: 1 / (sectionsR.length-4.5),
+//         end: () => "+=" + 
+//         document.querySelector(".all-card-ran").offsetWidth
 
-    }
-});
+//     }
+// });
 
-gsap.to(".counter",0.25,{
-    delay: 1.5,
-    opacity: 0,
-  });
-  gsap.to(".bar",1.5,{
-    delay: 1.5,
-    height: 0,
-    stagger: {
-      amount: 0.5,
-    },
-    ease: "power4.inOut",
+// gsap.to(".counter",0.25,{
+//     delay: 1.5,
+//     opacity: 0,
+//   });
+//   gsap.to(".bar",1.5,{
+//     delay: 1.5,
+//     height: 0,
+//     stagger: {
+//       amount: 0.5,
+//     },
+//     ease: "power4.inOut",
   
-  });
-  gsap.from("#h1",1.5,{
-    delay: 1.5, 
-    y: 700,
-    stagger: {
-      amount: 0.5,
-    },
-    ease : "power4.inOut",
-  });
-  setTimeout(() => {
-    var a = document.getElementById("mkc");
-    a.style.zIndex=-100; 
-    var a = document.getElementById("mkc-2");
-    a.style.zIndex=-100;
-    clearTimeout(setTimeout);
-  }, 5000);
+//   });
+//   gsap.from("#h1",1.5,{
+//     delay: 1.5, 
+//     y: 700,
+//     stagger: {
+//       amount: 0.5,
+//     },
+//     ease : "power4.inOut",
+//   });
+//   setTimeout(() => {
+//     var a = document.getElementById("mkc");
+//     a.style.zIndex=-100; 
+//     var a = document.getElementById("mkc-2");
+//     a.style.zIndex=-100;
+//     clearTimeout(setTimeout);
+//   }, 5000);
