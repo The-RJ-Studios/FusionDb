@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="tope()">
     <h1 id="mkc" class="counter">
       <img src="/pics/icons8-loading-circle.gif" alt="">
     </h1>
@@ -97,7 +97,7 @@
 
     <div id="all-card-layout" class="all-card-pop"  >
       <br><br><br><br><br>
-      <h2 class="Type">Popular Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+      <h2 class="Type">Popular Anime<a href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
       <div class="card-layout card-layout-pop slider-wrapper"> 
         <!-- element -->
@@ -162,12 +162,13 @@
               </div>
             </div>        
           </div>
-   </div>       
+   </div>
+ 
   <div id="page2">
     <div id="all-card-layout-Latest" class="all-card-lat"  >
-      <h2 class="Type">Latest Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+      <br><br><br><br><br>      
+      <h2 class="Type">Latest Anime<a href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
-      <button id="prev-slide-2" class="slide-button-2 material-symbols-outlined">chevron_left</button>
       <div class="card-layout slider-wrapper card-layout-latest"> 
         <!-- element -->
             <div class="card card-1 popi"> 
@@ -232,12 +233,12 @@
             </div>
             
           </div>
-          <button id="next-slide-2" class="slide-button-2 material-symbols-outlined">chevron_right</button>
   </div>
+
   <div id="all-card-layout-Random"class="all-card-ran"  >
-    <h2 class="Type">Random Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+    <br><br><br><br><br>
+    <h2 class="Type">Random Anime<a href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
     <!-- media scroller -->
-    <button id="prev-slide-3" class="slide-button-3 material-symbols-outlined">chevron_left</button>
     <div class="card-layout slider-wrapper card-layout-Random"> 
       <!-- element -->
           <div class="card card-1 popo"> 
@@ -302,11 +303,11 @@
           </div>
           
         </div>
-        <button id="next-slide-3" class="slide-button-3 material-symbols-outlined">chevron_right</button>
 </div>
 </div>
+<br><br><br><br><br>
 <div id="page3">
-Hello
+
 </div>
 
     <script
@@ -322,6 +323,7 @@ Hello
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/pages/main.js"></script>
     <script src="/pages/Anime/Anime.js"></script>
     <script type="module">
       let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));

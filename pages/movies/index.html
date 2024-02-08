@@ -27,16 +27,31 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <navbar id="Navbar">
+  <body onload="tope()">
+    <h1 id="mkc" class="counter">
+      <img src="/pics/icons8-loading-circle.gif" alt="">
+    </h1>
+<div id="mkc-2" class="overlay">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+    <!-- <navbar id="Navbar">
         <img src="/pics/Logo.png" alt="" id="logo" />
         <h4><a href="/index.html">HOME</a></h4>
         <h4><a href="/pages/User/User.html">Profile</a></h4>
         <div id="categories">
-        <h4><a><button  class="dropbtn" onclick="myFunction()"> CATEGORIES <i class="fas fa-caret-down cat"></i></button></a></h4>
+        <h4><a><button class="dropbtn"> CATEGORIES <i class="fas fa-caret-down cat"></i></button></a></h4>
           <div id="drop-down-box" class="dropdown-content">
-            <a href="/pages/Anime/index.html">Anime</a>
             <a href="/pages/manga/index.html">Manga</a>
+            <a href="/pages/movies/index.html">Movies</a>
             <a href="#all-card-layout">Popular</a>
             <a href="#all-card-layout-Latest">Latest</a>
             <a href="#all-card-layout-Random">Random</a>
@@ -48,28 +63,41 @@
           </form>
           <i class="fas fa-search"></i>
         </div>
-        <a href="/pages/registration/register.html"
-          ><button id="signIn"><i id= "Acc" class="fa-solid fa-circle-user"></i></button></a>
-    </navbar>
-    <div class="slides-box">
-      <div class="slider">
-        <div class="slides">
-          <div class="slide first" id="first">
-            <img src="/pics/movie2.1.jpg" alt="" />
-          </div>
-          <div class="slide second">
-            <img src="/pics/movie2.2.jpg" alt="" />
-          </div>
-          <div class="slide third">
-            <img src="/pics/Movies2.3.jpg" alt="" />
-          </div>
+        <button id="signIn" onclick="CheckCred()"><a id="signin-Location" href="/pages/registration/register.html"
+          ><i id= "Acc" class="fa-solid fa-circle-user"></i></a
+        ></button>
+      <img src="./image/menu.png" alt="Menu Png" id="Menu-Btn">
+    </navbar> -->
+    <div id="page1">
+      <!-- nav section -->
+      <div id="nav">
+        <img src="/pics/Logo.png" alt="" />
+        <h4><a href="/index.html">Home</a></h4>
+        <h4><a href="pages/profile-page-main/index.html">Profile</a></h4>
+        <h4><a href="/pages/Anime/index.html">Anime</a></h4>
+        <h4><a href="/pages/manga/index.html">Manga</a></h4>
+        <form id="form">
+          <input type="text" placeholder="Type to search" id="Search" />
+        </form>
+        <div id="nav2">
+          <a href="/pages/registration/register.html">
+            <button class="Nav_btn"><span>Register</span></button>
+            <!-- <i class="fa-solid fa-circle-user"></i> -->
+          </a>
         </div>
+        
       </div>
+      <div class="container">
+       <video loop autoplay muted>
+        <source src="/videos/18.mp4">
+        <source src="/videos/gate-torii-sunset-moewalls-com.mp4">
+        <!-- <source src="/videos/18.mp4"> -->
+       </video>
     </div>
     <div id="all-card-layout" class="all-card-pop"  >
-      <h2 class="Type">Popular Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+      <br><br><br><br><br>
+      <h2 class="Type">Popular Movies<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
-      <button id="prev-slide" class="slide-button material-symbols-outlined">chevron_left</button>
       <div class="card-layout card-layout-pop slider-wrapper"> 
         <!-- element -->
             <div class="card card-1 popu"> 
@@ -133,13 +161,13 @@
               </div>
             </div>        
           </div>
-          <button id="next-slide" class="slide-button material-symbols-outlined">chevron_right</button>
-   </div>       
+   </div>    
+
   <div id="page2">
+    <br><br><br><br><br>   
     <div id="all-card-layout-Latest" class="all-card-lat"  >
-      <h2 class="Type">Latest Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+      <h2 class="Type">Latest Movies<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
-      <button id="prev-slide-2" class="slide-button-2 material-symbols-outlined">chevron_left</button>
       <div class="card-layout slider-wrapper card-layout-latest"> 
         <!-- element -->
             <div class="card card-1 popi"> 
@@ -204,12 +232,12 @@
             </div>
             
           </div>
-          <button id="next-slide-2" class="slide-button-2 material-symbols-outlined">chevron_right</button>
   </div>
+
   <div id="all-card-layout-Random"class="all-card-ran"  >
-    <h2 class="Type">Random Manga<a><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+    <br><br><br><br><br>
+    <h2 class="Type">Random Movies<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
     <!-- media scroller -->
-    <button id="prev-slide-3" class="slide-button-3 material-symbols-outlined">chevron_left</button>
     <div class="card-layout slider-wrapper card-layout-Random"> 
       <!-- element -->
           <div class="card card-1 popo"> 
@@ -274,12 +302,12 @@
           </div>
           
         </div>
-        <button id="next-slide-3" class="slide-button-3 material-symbols-outlined">chevron_right</button>
 </div>
 </div>
+<br><br><br><br><br>
 <div id="page3">
-Hello
 </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -293,6 +321,32 @@ Hello
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="./movies.js"></script>
+    <script src="/pages/main.js"></script>
+    <script src="/pages/Anime/Anime.js"></script>
+    <script type="module">
+      let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
+      let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));
+      let MsgHead =document.getElementById('head');
+      let GreetHead = document.getElementById('greet');
+      let signOutBtn =  document.getElementById('sign-out');
+      let signLocation = document.getElementById('signin-Location');
+
+      
+      let Signout=() =>{
+          sessionStorage.removeItem("user-creds");
+          sessionStorage.removeItem("user-info");
+          window.location.href ='login.html';
+      }
+      let CheckCred=()=>{
+          if(sessionStorage.getItem('user-creds'))
+              signLocation.href = "/pages/Users/Users.html"
+          else{
+              signLocation.href = "</pages/registration/login.html>"
+          }
+      }
+      window.addEventListener('load,Check',CheckCred);
+      signOutBtn.addEventListener('click',Signout);
+
+  </script>
   </body>
 </html>

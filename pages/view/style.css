@@ -20,7 +20,7 @@ body {
     /* overflow-y: hidden; */
     /* background-color: #c9d6ff;
       background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
-    background: #0E100F;
+    background: #0e100f;
 }
 
 .overlay {
@@ -56,7 +56,7 @@ body {
   } */
 ::selection {
     background: rgb(255, 188, 188);
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-track {
@@ -75,7 +75,7 @@ body {
 #page1 {
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: #0e100f;
     margin: 0;
     padding: 0;
 
@@ -89,11 +89,11 @@ body {
     display: flex;
     align-items: center;
     /* padding: 0 120px; */
-    gap: 80px;
-    font-weight: 400;
+    gap: 50px;
+    font-weight: 900;
     position: fixed;
     justify-content: flex-start;
-    color: #ffffff;
+    color: #292b23;
     z-index: 99;
     border-bottom: .0625rem solid #42433d;
 }
@@ -106,6 +106,7 @@ body {
     border: 1px solid white;
     background: none;
     padding: 10px 30px;
+    display: inline-flex;
     font-size: 15px;
     text-transform: uppercase;
     font-family: inherit;
@@ -121,8 +122,8 @@ body {
 .Nav_btn::before {
     content: "";
     position: absolute;
-    left: var(--x);
     top: var(--y);
+    left: var(--x);
     transform: translate(-50%, -50%);
     width: 0px;
     height: 0px;
@@ -133,12 +134,12 @@ body {
 
 .Nav_btn:hover {
     color: black;
-    transition: all linear 0.8s;
+    transition: all linear 1s;
 }
 
 .Nav_btn span {
     position: relative;
-    z-index: 100;
+    z-index: 98;
 }
 
 .Nav_btn:hover::before {
@@ -162,12 +163,12 @@ body {
 }
 
 a:link {
-    color: #ffffff;
+    color: #292b23;
     text-decoration: none;
 }
 
 a:visited {
-    color: #ffffff;
+    color: #292b23;
     text-decoration: none;
 }
 
@@ -178,7 +179,7 @@ a:active {
 
 #Search {
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #292b23;
     border-radius: 50px;
     font-size: 1rem;
     font-family: inherit;
@@ -199,31 +200,21 @@ a:active {
 #Search::placeholder {
     color: white;
 }
-.container {
-    height: 97vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+#nav i {
+    font-size: 3vw;
+    color: #292b23;
 }
 
-video {
-    position: absolute;
-    height: 103vh;
-    width: 100%;
-    object-fit: cover;
-    filter: brightness(140%);
-
-    border-radius: 5px;
+#nav i:hover {
+    font-size: 3.5vw;
+    transition: all ease 0.5s;
+    color: white;
 }
-
 .card-layout {
     min-height: 52vh;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     min-width: 100%;
     font-family: sans-serif;
     overflow-x: auto;
@@ -263,8 +254,8 @@ video {
     color: var(--clr-neutral-100);
     padding: 5rem 0 0;
     margin-top: 30px;
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 9rem;
     border-radius: 1rem;
     color: black;
     overflow: hidden;
@@ -412,106 +403,4 @@ video {
     position: absolute;
     inset: 2px;
     background: transparent;
-}
-
-.slider-wrapper {
-    position: relative;
-}
-
-.slide-button {
-    position: absolute;
-    top: 133%;
-    height: 50px;
-    width: 50px;
-    color: #fff;
-    background: #000;
-    font-size: 2.2rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-.slide-button:hover {
-    background: #444;
-}
-
-.slide-button#prev-slide {
-    left: 5px;
-    z-index: 100;
-    display: none;
-}
-
-.slide-button#next-slide {
-    right: -5px;
-    z-index: 100;
-}
-
-.slide-button-2 {
-    position: absolute;
-    top: 200%;
-    height: 50px;
-    width: 50px;
-    color: #fff;
-    background: #000;
-    font-size: 2.2rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-.slide-button-2:hover {
-    background: #444;
-}
-
-.slide-button-2#prev-slide-2 {
-    left: -5px;
-    z-index: 100;
-    display: none;
-}
-
-.slide-button-2#next-slide-2 {
-    right: -5px;
-    z-index: 100;
-}
-
-
-.slide-button-3 {
-    position: absolute;
-    top: 265%;
-    height: 50px;
-    width: 50px;
-    color: #fff;
-    background: #000;
-    font-size: 2.2rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-.slide-button-3:hover {
-    background: #444;
-}
-
-.slide-button-3#prev-slide-3 {
-    left: -5px;
-    z-index: 100;
-    display: none;
-}
-
-.slide-button-3#next-slide-3 {
-    right: -5px;
-    z-index: 100;
-}
-
-#page2 {
-    height: 580vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
