@@ -1,3 +1,3 @@
-cd \project\Scripts
+cd Scripts
+echo "I dont know what i am doing.... (╯‵□′)╯︵┻━┻"
 activate.bat
-@REM I dont know what i am doing.... (╯‵□′)╯︵┻━┻

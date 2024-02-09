@@ -17,11 +17,11 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js">  </script>
+    <script type="py" src="./main.py" config="./pyscript.json" terminal></script>
 </head>
 
 
 <body>
-    <script type="py" src="./main.py" config="./pyscript.json" terminal></script>
     <py-script>
         import js
     </py-script>
@@ -40,14 +40,14 @@
         </div>
     </div>
     <div id="page1">
-        <img src="https://s4.anilist.co/file/anilistcdn/media/anime/banner/151807-37yfQA3ym8PA.jpg" alt="">
+        <img id="back-cover" src="https://s4.anilist.co/file/anilistcdn/media/anime/banner/151807-37yfQA3ym8PA.jpg" alt="">
         <div id="part2">
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151807-m1gX3iwfIsLu.png"
+            <img id="cover" src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151807-m1gX3iwfIsLu.png"
                 alt="">
             <div id="Anime-info">
                 <h2 class="Anime-name" id="title">Ore dake Level Up na Ken...</h2>
 
-                <p class="Anime-Info">They say whatever doesn’t kill you makes you stronger, but that’s not the case for the world’s weakest hunter Sung Jinwoo. After being brutally slaughtered by monsters in a high-ranking dungeon, Jinwoo came back with the System, a program only he could see, that’s leveling him up in every way. Now, he’s inspired to discover the secrets behind his powers and the dungeon that spawned them....</p>
+                <p class="Anime-Info" id="info">They say whatever doesn’t kill you makes you stronger, but that’s not the case for the world’s weakest hunter Sung Jinwoo. After being brutally slaughtered by monsters in a high-ranking dungeon, Jinwoo came back with the System, a program only he could see, that’s leveling him up in every way. Now, he’s inspired to discover the secrets behind his powers and the dungeon that spawned them....</p>
             </div>
         </div>
     </div>
