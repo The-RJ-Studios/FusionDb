@@ -327,7 +327,7 @@ video {
 }
 
 .card-content {
-    --padding: 35%;
+    --padding: 30%;
     padding: var(--padding);
     padding-left: 15px;
     background: linear-gradient(hsl(0, 0%, 0% / 0),
