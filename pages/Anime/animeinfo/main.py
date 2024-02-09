@@ -1,5 +1,4 @@
 # from bs4 import BeautifulSoup
-import pyjson5 as json5
 import urllib3
 import json 
 import requests
