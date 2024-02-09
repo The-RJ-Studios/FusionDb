@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 body {
   width: 100%;
   margin: 0;
@@ -7,6 +8,145 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
+
+::selection {
+  background: rgb(255, 188, 188);
+  color: black;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #5338AC;
+}
+
+#nav {
+  height: 100px;
+  width: 95%;
+  margin: 0 1em 0 2em;
+  /* background-color: #4343ea; */
+  display: flex;
+  align-items: center;
+  /* padding: 0 120px; */
+  gap: 80px;
+  font-weight: 400;
+  position: fixed;
+  justify-content: flex-start;
+  color: #000000;
+  z-index: 99;
+  border-bottom: .0625rem solid #42433d;
+}
+
+#nav img {
+  height: 4.5vw;
+  filter: brightness(200%);
+}
+
+.Nav_btn {
+  border: 1px solid white;
+  background: none;
+  padding: 10px 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 10px;
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Nav_btn::before {
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  background: white;
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
+}
+
+.Nav_btn:hover {
+  color: black;
+  transition: all linear 0.8s;
+}
+
+.Nav_btn span {
+  position: relative;
+  z-index: 100;
+}
+
+.Nav_btn:hover::before {
+  width: 300px;
+  height: 300px;
+
+}
+
+#nav h4 {
+  text-transform: uppercase;
+  /* font-weight: 400; */
+  cursor: pointer;
+  font-size: 1.35vw;
+}
+
+#nav h4 :hover {
+  color: rgb(255, 0, 0);
+  transition: all linear 0.5s;
+  letter-spacing: 0.1rem;
+
+}
+
+a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#Search {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  padding: 0.4rem 0.5rem;
+  color: white;
+}
+
+#Search:hover {
+  border: 1px solid white;
+  transition: all linear 0.8s;
+}
+
+#Search:focus {
+  outline: 0;
+  background-color: #0000007c;
+}
+
+#Search::placeholder {
+  color: white;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -21,8 +161,9 @@ a {
 
 .header__wrapper header {
   width: 100%;
-  background: url("../img/bg.jpeg") no-repeat 50% 20% / cover;
+  background: url("https://wallpapers.com/images/hd/sleeping-zoro-fan-art-4tk9wkzb8gmkns13.jpg") no-repeat 50% 20% / cover;
   min-height: calc(100px + 15vw);
+  filter: brightness(50%);
 }
 
 .header__wrapper .cols__container .left__col {
@@ -39,6 +180,7 @@ a {
   left: 50%;
   transform: translatex(-50%);
 }
+
 .header__wrapper .cols__container .left__col .img__container img {
   width: 120px;
   height: 120px;
@@ -47,6 +189,7 @@ a {
   display: block;
   box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
 }
+
 .header__wrapper .cols__container .left__col h2 {
   margin-top: 60px;
   font-weight: 600;
@@ -59,18 +202,22 @@ a {
   color: #1d1d1d;
   line-height: 1.8em;
 }
+
 .header__wrapper .cols__container .content ul {
   gap: 30px;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
 }
+
 .header__wrapper .cols__container .content ul li {
   display: flex;
 }
+
 .header__wrapper .cols__container .content ul i {
   font-size: 1.3rem;
 }
+
 .header__wrapper .cols__container .right__col nav {
   display: flex;
   align-items: center;
@@ -78,19 +225,27 @@ a {
   justify-content: space-between;
   flex-direction: column;
 }
+.right__col{
+  border-left: 1px solid black;
+  margin: 5px 0px;
+  padding-left: 15px;
+}
 .header__wrapper .cols__container .right__col nav ul {
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
+
 .header__wrapper .cols__container .right__col nav ul li a {
   text-transform: uppercase;
   color: #818181;
 }
+
 .header__wrapper .cols__container .right__col nav ul li:nth-child(1) a {
   color: #1d1d1d;
   font-weight: 600;
 }
+
 .header__wrapper .cols__container .right__col nav button {
   background: #0091ff;
   color: #fff;
@@ -100,14 +255,17 @@ a {
   cursor: pointer;
   margin-top: 20px;
 }
+
 .header__wrapper .cols__container .right__col nav button:hover {
   opacity: 0.8;
 }
+
 .header__wrapper .cols__container .right__col .photos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 20px;
 }
+
 .header__wrapper .cols__container .right__col .photos img {
   max-width: 100%;
   display: block;
@@ -127,13 +285,16 @@ a {
     grid-template-columns: 1fr 2fr;
     gap: 50px;
   }
+
   .header__wrapper .cols__container .left__col {
     padding: 25px 0px;
   }
+
   .header__wrapper .cols__container .right__col nav ul {
     flex-direction: row;
     gap: 30px;
   }
+
   .header__wrapper .cols__container .right__col .photos {
     height: 365px;
     overflow: auto;
@@ -146,10 +307,41 @@ a {
     margin: 0;
     margin-right: auto;
   }
+
   .header__wrapper .cols__container .right__col nav {
     flex-direction: row;
   }
+
   .header__wrapper .cols__container .right__col nav button {
     margin-top: 0;
   }
 }
+#bio > input{
+  height: 3rem;
+  opacity: 0;
+  width: 20rem;
+  margin-top: 10px;
+}
+input::placeholder{
+  font-size: 1rem;
+}
+.bioT{
+  background-color: #fdfdfd; /* Green */
+  border: 1px solid black;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.bioT:hover{
+  border: 1 px solid white;
+  background: black;
+  color: white;
+  letter-spacing: 0.8rem;
+  transition: all linear 0.5s;
+
+}
+
