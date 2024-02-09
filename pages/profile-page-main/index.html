@@ -10,29 +10,45 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="start()">
+
+      <div id="nav">
+        <img src="/pics/Logo.png" alt="" />
+        <h4><a href="/index.html">Home</a></h4>
+        <h4><a href="/pages/Anime/index.html">Anime</a></h4>
+        <h4><a href="/pages/manga/index.html">Manga</a></h4>
+        <h4><a href="/pages/movies/index.html">Movies</a></h4>
+        <form id="form">
+          <input type="text" placeholder="Type to search" id="Search" />
+        </form>
+        <div id="nav2">
+          <a href="/pages/registration/register.html">
+            <button class="Nav_btn"><span>Register</span></button>
+            <!-- <i class="fa-solid fa-circle-user"></i> -->
+          </a>
+        </div>
+        
+      </div>
     <div class="header__wrapper">
       <header></header>
       <div class="cols__container">
         <div class="left__col">
           <div class="img__container">
-            <img src="img/user.jpeg" alt="Anna Smith" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0sRf1A9B4kVd1XEe35EqHozY9bTkLfXUhj4BMpTxsSMIFHQJQ9cmPdJthdA&s"  />
           </div>
-          <h2>Anna Smith</h2>
+          <h2>Roronoa Zoro</h2>
           <div class="content">
-            <p>
+            <p id="boigar">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam
               erat volutpat. Morbi imperdiet, mauris ac auctor dictum, nisl
               ligula egestas nulla.
             </p>
-
-            <ul>
-              <li><i class="fab fa-twitter"></i></li>
-              <i class="fab fa-pinterest"></i>
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-dribbble"></i>
-            </ul>
+            <button class="bioT" onclick="myFunction(event), edit()">Edit</button>
+<form id="bio">
+  <input id="boitext" type="text" placeholder="Click on edit to apply changes">
+</form>
           </div>
         </div>
         <div class="right__col">
@@ -44,14 +60,14 @@
             </ul>
           </nav>
 
-          <div class="photos">
+          <!-- <div class="photos">
             <img src="img/img_1.avif" alt="Photo" />
             <img src="img/img_2.avif" alt="Photo" />
             <img src="img/img_3.avif" alt="Photo" />
             <img src="img/img_4.avif" alt="Photo" />
             <img src="img/img_5.avif" alt="Photo" />
             <img src="img/img_6.avif" alt="Photo" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

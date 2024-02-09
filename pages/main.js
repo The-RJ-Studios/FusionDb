@@ -81,8 +81,8 @@ let sections = gsap.utils.toArray(".popu");
 
 gsap.to(sections,{
 
-    xPercent: -100 * (sections.length-6),
-    ease: "slow(0.7,0.7,false)",
+    xPercent: -100 * (sections.length-4.5),
+    ease: "none",
     scrollTrigger: {
         trigger: ".all-card-pop",
         pin: true,
@@ -102,7 +102,7 @@ let sectionsL = gsap.utils.toArray(".popi");
 
 gsap.to(sectionsL,{
 
-    xPercent: -100 * (sectionsL.length-6),
+    xPercent: -100 * (sectionsL.length-4.5),
     ease: "slow(0.7,0.7,false)",
     scrollTrigger: {
         trigger: ".all-card-lat",
@@ -121,7 +121,7 @@ let sectionsR = gsap.utils.toArray(".popo");
 
 gsap.to(sectionsR,{
 
-    xPercent: -100 * (sectionsR.length-6),
+    xPercent: -100 * (sectionsR.length-4.5),
     ease: "slow(0.7,0.7,false)",
     scrollTrigger: {
         trigger: ".all-card-ran",
