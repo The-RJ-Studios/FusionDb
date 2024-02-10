@@ -26,6 +26,49 @@ body {
   border-radius: 10px;
   background: #5338AC;
 }
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1001;
+  display: flex;
+}
+
+#mkc img {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  left: 35%;
+  top: 30%;
+  z-index: 10000;
+  color: #bcbbc4;
+  padding: 0.2em 0.4em;
+  font-size: 28vw;
+
+}
+
+.bar {
+  width: 10vw;
+  height: 105vh;
+  background: white;
+}
+
+#demo {
+  height: 100px;
+  position: absolute;
+  width: 250px;
+  top: 40%;
+  left: 40%;
+  border: none;
+  background: transparent;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* color: red; */
+  font-size: 7rem;
+  z-index: 10000;
+
+}
 
 #nav {
   height: 100px;

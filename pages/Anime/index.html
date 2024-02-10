@@ -29,20 +29,21 @@
   </head>
   <body onload="tope()">
     <h1 id="mkc" class="counter">
-      <img src="/pics/icons8-loading-circle.gif" alt="">
+      <!-- <img src="/pics/icons8-loading-circle.gif" alt=""> -->
+      <input id="demo" value="0" />
     </h1>
-<div id="mkc-2" class="overlay">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</div>
+    <div id="mkc-2" class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <!-- <navbar id="Navbar">
         <img src="/pics/Logo.png" alt="" id="logo" />
         <h4><a href="/index.html">HOME</a></h4>
@@ -73,7 +74,6 @@
       <div id="nav">
         <img src="/pics/Logo.png" alt="" />
         <h4><a href="/index.html">Home</a></h4>
-        <h4><a href="/pages/profile-page-main/index.html">Profile</a></h4>
         <h4><a href="/pages/manga/index.html">Manga</a></h4>
         <h4><a href="/pages/movies/index.html">Movies</a></h4>
         <form id="form">
@@ -324,7 +324,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/pages/main.js"></script>
-    <!-- <script src="/pages/Anime/Anime.js"></script> -->
+    <script src="/pages/Anime/Anime.js"></script>
     <script type="module">
       let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
       let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));

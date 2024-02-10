@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#demo-wrapper{
+    height: 100vh;
+    width: 100%;
+    background: gray;
+    position: relative;
+}
+#demo{
+    height: 100px;
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 25%;
+    border: none;
+    background: transparent;
+    /* color: red; */
+    font-size: 5rem;
+    z-index: 5;
+
+}

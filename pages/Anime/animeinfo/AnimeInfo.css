@@ -23,6 +23,49 @@ body {
       background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
     background: #0B0C2A;
 }
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 70%;
+    z-index: 1001;
+    display: flex;
+}
+
+#mkc img {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    left: 35%;
+    top: 30%;
+    z-index: 10000;
+    color: #bcbbc4;
+    padding: 0.2em 0.4em;
+    font-size: 28vw;
+
+}
+
+#demo {
+    height: 100px;
+    position: absolute;
+    width: 250px;
+    top: 40%;
+    left: 40%;
+    border: none;
+    background: transparent;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* color: red; */
+    font-size: 7rem;
+    z-index: 10000;
+
+}
+
+.bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+}
 
 /* ::-webkit-scrollbar{
     width: 0;
@@ -73,52 +116,8 @@ body {
 
 #nav img {
     height: 4.5vw;
-}
-
-.Nav_btn {
-    border: 1px solid white;
-    background: none;
-    padding: 10px 30px;
-    display: inline-flex;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: inherit;
-    cursor: pointer;
-    margin: 10px;
-    color: white;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.Nav_btn::before {
-    content: "";
-    position: absolute;
-    top: var(--y);
-    left: var(--x);
-    transform: translate(-50%, -50%);
-    width: 0px;
-    height: 0px;
-    background: white;
-    border-radius: 50%;
-    transition: width 0.5s, height 0.5s;
-}
-
-.Nav_btn:hover {
-    color: black;
-    transition: all linear 1s;
-}
-
-.Nav_btn span {
-    position: relative;
-    z-index: 98;
-}
-
-.Nav_btn:hover::before {
-    width: 300px;
-    height: 300px;
-
+    z-index: 1;
+    padding-right : 120px;
 }
 
 #nav h4 {
@@ -135,8 +134,11 @@ body {
 
 }
 
-a:link {
-    color: #D3D3ED;
+a:active {
+    color: white;
+}
+
+:link {
     text-decoration: none;
 }
 
@@ -199,14 +201,14 @@ a:active {
 
 #page1 img {
     position: absolute;
+    
     width: 100%;
     border-radius: 0px;
     transition: 0.8s;
-    z-index: -1;
-
+    z-index: 0;
+  
 }
-
-#part2 {
+#part2{
     height: 83vh;
     width: 100%;
     margin-top: 25%;

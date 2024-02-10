@@ -77,18 +77,26 @@ gsap.to("#nav", {
 
 gsap.to(".counter",{
   duration: 0.25,
-  delay: 1.5,
+  delay: 4,
   opacity: 0,
 });
 gsap.to(".bar",1.5,{
-  delay: 1.5,
+  delay: 3.5,
   height: 0,
   stagger: {
     amount: 0.5,
   },
   ease: "power4.inOut",
 
-});   
+});
+gsap.from("#vid",2.5,{
+  delay: 1.5, 
+  x: 700,
+  stagger: {
+    amount: 0.5,
+  },
+  ease : "power4.inOut",
+});
 // let lastKnownScrollPosition = 0;
 // function gand(){
 
@@ -130,8 +138,9 @@ setTimeout(() => {
   a.style.zIndex=-100;
   clearTimeout(setTimeout);
 }, 4000);
-function toTop(){
-  // window.scroll(0,0)
+
+function tope(){
+  window.scrollTo(0,0);
 }
 setTimeout(function () {
   window.scrollTo(0, 0);

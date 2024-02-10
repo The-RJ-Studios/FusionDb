@@ -1,115 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reglog.css">
-    <script src="./relog.js"></script>
-    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reglog.css" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body onload="tope()">
+    <h1 id="mkc" class="counter">
+      <!-- <img src="/pics/icons8-loading-circle.gif" alt=""> -->
+      <input id="demo" value="0" />
+    </h1>
+    <div id="mkc-2" class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <div id="nav">
-        <img src="/pics/Logo.png" alt="" />
-        <h4><a class="link" href="/index.html">Home</a></h4>
-        <h4><a class="link" href="/pages/Users/User.html">Profile</a></h4>
-        <h4><a class="link" href="/pages/Anime/index.html">Anime</a></h4>
-        <h4><a class="link" href="/pages/manga/index.html">Manga</a></h4>
-        <h4><a class="link" href="/pages/movies/index.html">Movies</a></h4>
-        <a href="/pages/registration/register.html">
-            <button class="Nav_btn"><span>Register</span></button>
-        </a>
-    </div> 
-<section>
-    <form id="sign-in">  
+      <img src="/pics/Logo.png" alt="" />
+      <h4><a class="link" href="/index.html">Home</a></h4>
+      <h4><a class="link" href="/pages/Anime/index.html">Anime</a></h4>
+      <h4><a class="link" href="/pages/manga/index.html">Manga</a></h4>
+      <h4><a class="link" href="/pages/movies/index.html">Movies</a></h4>
+      <a href="/pages/registration/register.html">
+        <button class="Nav_btn"><span>Register</span></button>
+      </a>
+    </div>
+    <section>
+      <form id="sign-in">
         <h1>Login</h1>
         <!-- <div class="social-icons">
             <a href="#" class="icon"><button><i class="fa-brands fa-google-plus-g"></i></button></a>
             <a href="#" class="icon"><button><i class="fa-brands fa-facebook-f"></i></button></a>
             <a href="#" class="icon"><button><i class="fa-brands fa-github"></i></button></a>
             <a href="#" class="icon"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
-        </div> -->    
+        </div> -->
         <!-- <span>or use your email password</span> -->
 
         <div class="inputbox">
-         <ion-icon name="mail-outline"></ion-icon>
-         <input type="email" required id="email" autocomplete="username">
-         <label for="">Email</label>
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" required id="email" autocomplete="username" />
+          <label for="">Email</label>
         </div>
 
         <div class="inputbox">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" required id="pass" autocomplete="current-password">
-            <label for="">Password</label>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            type="password"
+            required
+            id="pass"
+            autocomplete="current-password"
+          />
+          <label for="">Password</label>
         </div>
 
         <div class="forget">
           <!-- <a href="#">Forget Password</a>- -->
         </div>
         <button class="stylish-btn" type="submit" onclick="">Log In</button>
-    </form>
-</section>    
-   
-
+      </form>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./relog.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     
-    <script type="module" defer>
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getDatabase, get, ref, child} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-        import { getAuth, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyABQtlWaFpJhoOqPNRYUFS_tFRtQnPKMaQ",
-            authDomain: "m2adb2537.firebaseapp.com",
-            databaseURL: "https://m2adb2537-default-rtdb.firebaseio.com",
-            projectId: "m2adb2537",
-            storageBucket: "m2adb2537.appspot.com",
-            messagingSenderId: "89155231634",
-            appId: "1:89155231634:web:c826df5eb93b18cabb2b4b",
-            measurementId: "G-P0KGHPKMCK"
-        };
-        
-        const app = initializeApp(firebaseConfig);
-        const db =getDatabase();
-        const auth =getAuth(app);
-        const dbref = ref(db);
-        
-        let name = document.getElementById("name");
-        let EmailInp = document.getElementById("email");
-        let PassInp = document.getElementById("pass");
-        let signInForm = document.getElementById("sign-in");
-        function setCookie(name,value,exp_days) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exp_days*24*60*60*1000));
-            var expires = "expires=" + d.toGMTString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
-        
-        let SignUser = evt => {
-            evt.preventDefault();
-        // The below funtion checks if user's authenticated or not aand if yes it goes inside the then function
-            signInWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
-
-               get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
-                    if(snapshot.exist){
-                        sessionStorage.setItem("user-info", JSON.stringify({
-                            name: snapshot.val().Name
-                        })).
-                        sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
-                        window.location.href = './Users/User.html';
-
-                    }
-                })       
-                console.log(credentials)
-                console.log(credentials.user.uid);
-            }).catch((error)=>{
-                alert(error.code);
-                console.log(error.code);
-                console.log(error.message);
-            })
-        };
-        signInForm.addEventListener('submit',SignUser);
-        signInForm.addEventListener('submit',setCookie("user-info",name));
-
+    <script src="/pages/anime.min.js"></script>
+    <script>
+      anime({
+        targets: "#demo",
+        value: [0, 100],
+        duration: 3000,
+        round: 1,
+        easing: "linear",
+      });
     </script>
-</body>
+
+    <script type="module" defer>
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import {
+        getDatabase,
+        get,
+        ref,
+        child,
+      } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyABQtlWaFpJhoOqPNRYUFS_tFRtQnPKMaQ",
+        authDomain: "m2adb2537.firebaseapp.com",
+        databaseURL: "https://m2adb2537-default-rtdb.firebaseio.com",
+        projectId: "m2adb2537",
+        storageBucket: "m2adb2537.appspot.com",
+        messagingSenderId: "89155231634",
+        appId: "1:89155231634:web:c826df5eb93b18cabb2b4b",
+        measurementId: "G-P0KGHPKMCK",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase();
+      const auth = getAuth(app);
+      const dbref = ref(db);
+
+      let name = document.getElementById("name");
+      let EmailInp = document.getElementById("email");
+      let PassInp = document.getElementById("pass");
+      let signInForm = document.getElementById("sign-in");
+      function setCookie(name, value, exp_days) {
+        var d = new Date();
+        d.setTime(d.getTime() + exp_days * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      let SignUser = (evt) => {
+        evt.preventDefault();
+        // The below funtion checks if user's authenticated or not aand if yes it goes inside the then function
+        signInWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+          .then((credentials) => {
+            get(child(dbref, "UserAuthList/" + credentials.user.uid)).then(
+              (snapshot) => {
+                if (snapshot.exist) {
+                  sessionStorage
+                    .setItem(
+                      "user-info",
+                      JSON.stringify({
+                        name: snapshot.val().Name,
+                      })
+                    )
+                    .sessionStorage.setItem(
+                      "user-creds",
+                      JSON.stringify(credentials.user)
+                    );
+                  window.location.href = "./Users/User.html";
+                }
+              }
+            );
+            console.log(credentials);
+            console.log(credentials.user.uid);
+          })
+          .catch((error) => {
+            alert(error.code);
+            console.log(error.code);
+            console.log(error.message);
+          });
+      };
+      signInForm.addEventListener("submit", SignUser);
+      signInForm.addEventListener("submit", setCookie("user-info", name));
+    </script>
+  </body>
 </html>
