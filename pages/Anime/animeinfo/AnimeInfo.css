@@ -23,6 +23,49 @@ body {
       background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
     background: #0B0C2A;
 }
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 70%;
+    z-index: 1001;
+    display: flex;
+}
+
+#mkc img {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    left: 35%;
+    top: 30%;
+    z-index: 10000;
+    color: #bcbbc4;
+    padding: 0.2em 0.4em;
+    font-size: 28vw;
+
+}
+
+#demo {
+    height: 100px;
+    position: absolute;
+    width: 250px;
+    top: 40%;
+    left: 40%;
+    border: none;
+    background: transparent;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* color: red; */
+    font-size: 7rem;
+    z-index: 10000;
+
+}
+
+.bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+}
 
 /* ::-webkit-scrollbar{
     width: 0;
@@ -59,10 +102,11 @@ body {
     color: white;
     z-index: 1;
 }
+
 #nav img {
     height: 4.5vw;
     z-index: 1;
-    padding-right : 120px;
+    padding-right: 120px;
 }
 
 #nav h4 {
@@ -89,7 +133,7 @@ a:active {
     color: white;
 }
 
-:link {
+a:link {
     text-decoration: none;
 }
 
@@ -135,35 +179,40 @@ a:active {
     transition: all ease 0.5s;
     color: #1d1616;
 }
-#page1{
+
+#page1 {
     height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     /* background-color: red; */
-    
+
 }
+
 #page1 img {
     position: absolute;
-    
+
     width: 100%;
     margin-top: -381px;
     border-radius: 0px;
     transition: 0.8s;
     z-index: 0;
-  
+
 }
-#part2{
+
+
+#part2 {
     height: 83vh;
     width: 100%;
     margin-top: 430px;
     z-index: 1;
     background: #FAFAFA;
 }
-#part2 img{
+
+#part2 img {
     height: 322px;
     width: 215px;
     /* position: absolute; */
@@ -171,6 +220,7 @@ a:active {
     margin-left: 100px;
 
 }
+
 #part2 h2 {
     display: block;
     font-size: 2em;
@@ -179,6 +229,7 @@ a:active {
     margin-inline-start: 360px;
     margin-inline-end: 0px;
 }
+
 #part2 p {
     display: block;
     width: 820px;

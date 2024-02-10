@@ -23,11 +23,13 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="/pics/Tab.png" />
+ 
   </head>
 
   <body onload="tope()">
     <h1 id="mkc" class="counter">
-      <img src="/pics/icons8-loading-circle.gif" alt="">
+      <!-- <img src="/pics/icons8-loading-circle.gif" alt=""> -->
+      <input id="demo" value="0">
     </h1>
 <div id="mkc-2" class="overlay">
   <div class="bar"></div>
@@ -49,7 +51,6 @@
         <img src="/pics/Logo.png" alt="" />
         <h4><a href="#page1">Home</a></h4>
         <h4><a href="#page3">About</a></h4>
-        <h4><a href="/pages/profile-page-main/index.html">Profile</a></h4>
         <h4><a href="/pages/Anime/index.html">Anime</a></h4>
         <h4><a href="/pages/manga/index.html">Manga</a></h4>
         <h4><a href="/pages/movies/index.html">Movies</a></h4>
@@ -194,6 +195,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="/pages/anime.min.js"></script>
+    <script>
+        anime({
+          targets: '#demo',
+          value: [0,100],
+          duration: 3000,
+          round: 1,
+          easing: "linear"
+
+        });
+    </script>
     <script src="./HomePage.js"></script>
   </body>
 </html>

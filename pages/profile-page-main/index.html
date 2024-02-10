@@ -13,7 +13,22 @@
     <script src="script.js"></script>
   </head>
   <body onload="start()">
-
+    <h1 id="mkc" class="counter">
+      <!-- <img src="/pics/icons8-loading-circle.gif" alt=""> -->
+      <input id="demo" value="0" />
+    </h1>
+    <div id="mkc-2" class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
       <div id="nav">
         <img src="/pics/Logo.png" alt="" />
         <h4><a href="/index.html">Home</a></h4>
@@ -71,5 +86,29 @@
         </div>
       </div>
     </div>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/pages/anime.min.js"></script>
+    <script>
+        anime({
+          targets: '#demo',
+          value: [0,100],
+          duration: 3000,
+          round: 1,
+          easing: "linear"
+
+        });
+    </script>
   </body>
 </html>

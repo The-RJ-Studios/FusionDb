@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="demo-wrapper">
+        <input id="demo" value="0">
+    </div>
+    <script src="/pages/anime.min.js"></script>
+    <script>
+        anime({
+          targets: '#demo',
+          value: [0,100],
+          duration: 5000,
+          round: 1,
+          easing: "linear"
+
+        });
+    </script>
+</body>
+</html>

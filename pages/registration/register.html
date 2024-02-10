@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="
-https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
-"></script>
-<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <title>Register</title>
-    <link rel="stylesheet" href="./reglog.css">
-    <script src="./relog.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./reglog.css" />
+   
+  </head>
+  <body onload="tope()">
+    <h1 id="mkc" class="counter">
+      <!-- <img src="/pics/icons8-loading-circle.gif" alt=""> -->
+      <input id="demo" value="0" />
+    </h1>
+    <div id="mkc-2" class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <div id="nav">
-        <img src="/pics/Logo.png" alt="" />
-        <h4><a class="link" href="/index.html">Home</a></h4>
-        <h4><a class="link" href="/pages/Users/User.html">Profile</a></h4>
-        <h4><a class="link" href="/pages/Anime/index.html">Anime</a></h4>
-        <h4><a class="link" href="/pages/manga/index.html">Manga</a></h4>
-        <h4><a class="link" href="/pages/movies/index.html">Movies</a></h4>
-        <a href="/pages/registration/login.html">
-            <button class="Nav_btn"><span>Login</span></button>
-        </a>
-    </div>    
-<section>
-    <form id="sign-up">
+      <img src="/pics/Logo.png" alt="" />
+      <h4><a class="link" href="/index.html">Home</a></h4>
+      <h4><a class="link" href="/pages/Anime/index.html">Anime</a></h4>
+      <h4><a class="link" href="/pages/manga/index.html">Manga</a></h4>
+      <h4><a class="link" href="/pages/movies/index.html">Movies</a></h4>
+      <a href="/pages/registration/login.html">
+        <button class="Nav_btn"><span>Login</span></button>
+      </a>
+    </div>
+    <section>
+      <form id="sign-up">
         <h1>Sign up</h1>
         <!-- <div class="social-icons">
             <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -34,60 +47,82 @@ https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
         </div> -->
         <!-- <span>or use your email for registeration</span> -->
         <div class="inputbox">
-            <ion-icon name="mail-outline"></ion-icon>
-            <input type="email" required id="email" autocomplete="username">
-            <label for="">Email</label>
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" required id="email" autocomplete="username" />
+          <label for="">Email</label>
         </div>
         <div class="inputbox">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" required id="pass" autocomplete="current-password">
-            <label for="">Password</label>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            type="password"
+            required
+            id="pass"
+            autocomplete="current-password"
+          />
+          <label for="">Password</label>
         </div>
-            <div class="forget">
-
+        <div class="forget">
           <a href="#">Forget Password</a>
         </div>
         <button class="stylish-btn" type="submit">Sign Up</button>
-    </form>
-</section> 
+      </form>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./relog.js"></script>
     <!-- <button><a href="./login.html">Login form</a></button> -->
-
-
+    <script src="/pages/anime.min.js"></script>
+    <script>
+      anime({
+        targets: "#demo",
+        value: [0, 100],
+        duration: 3000,
+        round: 1,
+        easing: "linear",
+      });
+    </script>
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+      } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyABQtlWaFpJhoOqPNRYUFS_tFRtQnPKMaQ",
-            authDomain: "m2adb2537.firebaseapp.com",
-            databaseURL: "https://m2adb2537-default-rtdb.firebaseio.com",
-            projectId: "m2adb2537",
-            storageBucket: "m2adb2537.appspot.com",
-            messagingSenderId: "89155231634",
-            appId: "1:89155231634:web:c826df5eb93b18cabb2b4b",
-            measurementId: "G-P0KGHPKMCK"
-        };
-        
-        const app = initializeApp(firebaseConfig);
-        const db =getDatabase();
-        const auth =getAuth(app);
-        const dbref = ref(db);
-        
-        let name = document.getElementById("name");
-        let EmailInp = document.getElementById("email");
-        let PassInp = document.getElementById("pass");
-        let registerForm = document.getElementById("sign-up");
-        let RegisterUser = evt => {
-            evt.preventDefault();
-            //Creating user using this function
-            createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value).then((credentials)=>{
-                //Using set function to set data into database
-                set(ref(db, 'UserAuthList/' + credentials.user.uid),{//This Curly braces are objects
-                    Name: name.value
-                    
-                })
-                /*get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
+      const firebaseConfig = {
+        apiKey: "AIzaSyABQtlWaFpJhoOqPNRYUFS_tFRtQnPKMaQ",
+        authDomain: "m2adb2537.firebaseapp.com",
+        databaseURL: "https://m2adb2537-default-rtdb.firebaseio.com",
+        projectId: "m2adb2537",
+        storageBucket: "m2adb2537.appspot.com",
+        messagingSenderId: "89155231634",
+        appId: "1:89155231634:web:c826df5eb93b18cabb2b4b",
+        measurementId: "G-P0KGHPKMCK",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase();
+      const auth = getAuth(app);
+      const dbref = ref(db);
+
+      let name = document.getElementById("name");
+      let EmailInp = document.getElementById("email");
+      let PassInp = document.getElementById("pass");
+      let registerForm = document.getElementById("sign-up");
+      let RegisterUser = (evt) => {
+        evt.preventDefault();
+        //Creating user using this function
+        createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+          .then((credentials) => {
+            //Using set function to set data into database
+            set(ref(db, "UserAuthList/" + credentials.user.uid), {
+              //This Curly braces are objects
+              Name: name.value,
+            });
+            /*get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
                     if(snapshot.exist){
                         sessionStorage.setItem("user-info", JSON.stringify({
                             name: snapshot.val().Name
@@ -99,14 +134,15 @@ https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
                     }
                 }
                 )*/
-            }).catch((error)=>{
-                alert(error.code);
-                console.log(error.code);
-                console.log(error.message);
-            })
-        }
+          })
+          .catch((error) => {
+            alert(error.code);
+            console.log(error.code);
+            console.log(error.message);
+          });
+      };
 
-        registerForm.addEventListener('submit',RegisterUser);
+      registerForm.addEventListener("submit", RegisterUser);
     </script>
-</body>
+  </body>
 </html>
