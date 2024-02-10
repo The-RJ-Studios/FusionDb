@@ -25,7 +25,6 @@ body {
       background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
     background: #0E100F;
 }
-
 .overlay {
     position: fixed;
     width: 100vw;
@@ -236,7 +235,7 @@ video {
     height: 103vh;
     width: 100%;
     object-fit: cover;
-    filter: brightness(140%);
+    filter: brightness(90%);
 
     border-radius: 5px;
 }

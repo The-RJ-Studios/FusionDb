@@ -89,6 +89,14 @@ gsap.to(".bar",1.5,{
   ease: "power4.inOut",
 
 });
+gsap.from("#vid",2.5,{
+  delay: 1.5, 
+  x: 700,
+  stagger: {
+    amount: 0.5,
+  },
+  ease : "power4.inOut",
+});
 // let lastKnownScrollPosition = 0;
 // function gand(){
 
@@ -126,15 +134,17 @@ gsap.to(".bar",1.5,{
 setTimeout(() => {
   var a = document.getElementById("mkc");
   a.style.zIndex=-100; 
-  a.scrollTop = 0;
   var a = document.getElementById("mkc-2");
   a.style.zIndex=-100;
   clearTimeout(setTimeout);
-}, 5000);
+}, 4000);
 
 function tope(){
   window.scrollTo(0,0);
 }
+setTimeout(function () {
+  window.scrollTo(0, 0);
+},2);
 
 // document.getElementById("page1").style.zIndex = 100000;
 
