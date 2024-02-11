@@ -26,19 +26,35 @@ btn.onmousemove = function(e){
   btn.style.setProperty("--x",x + "px");
   btn.style.setProperty("--y",y + "px");
 }
+gsap.from(".container", {
+    x: "-100%",
+    duration: 2,
+    ease: "sine.out",
+    delay: 5,
+
+})
+gsap.from(".header", {
+    y: "-100%",
+    duration: 2,
+    delay: 6,
+    ease: "bounce",
+    scrub: 1
+
+})
+
 
 
 gsap.to("#nav", {
-    backgroundColor: "transparent",
-    duration: 0.5,
+    backgroundColor: "#0e100f",
+    duration: 1.5,
     height: "80px",
     scrollTrigger: {
       trigger: "#nav",
       scroller: "body",
       // markers:true,
-      start: "top -10%",
-      end: "top -11%",
-      scrub: 1,
+      start: "740px",
+      // end: "top -11%",
+      scrub: 1
     },
   });
 
@@ -77,7 +93,7 @@ gsap.to("#nav", {
 
 gsap.to(".counter",{
   duration: 0.25,
-  delay: 4,
+  delay: 3.5,
   opacity: 0,
 });
 gsap.to(".bar",1.5,{
@@ -88,14 +104,6 @@ gsap.to(".bar",1.5,{
   },
   ease: "power4.inOut",
 
-});
-gsap.from("#vid",2.5,{
-  delay: 1.5, 
-  x: 700,
-  stagger: {
-    amount: 0.5,
-  },
-  ease : "power4.inOut",
 });
 // let lastKnownScrollPosition = 0;
 // function gand(){
@@ -137,14 +145,14 @@ setTimeout(() => {
   var a = document.getElementById("mkc-2");
   a.style.zIndex=-100;
   clearTimeout(setTimeout);
-}, 4000);
+}, 5000);
 
 function tope(){
   window.scrollTo(0,0);
 }
-setTimeout(function () {
-  window.scrollTo(0, 0);
-},2);
+// setTimeout(function () {
+//   window.scrollTo(0, 0);
+// },2);
 
 // document.getElementById("page1").style.zIndex = 100000;
 
