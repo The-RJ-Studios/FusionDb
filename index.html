@@ -7,25 +7,29 @@
     <link href="HomePage.css" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/x-icon" href="/pics/Tab.png" />
- 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
-  <body onload="">
+  <body onload="tope()">
     <h1 id="mkc" class="counter">
-      <img src="/pics/icons8-loading-circle.gif" alt>
+      <!-- <img src="/pics/icons8-loading-circle.gif" alt=""> -->
+      <input id="demo" value="0" />
     </h1>
     <div id="mkc-2" class="overlay">
       <div class="bar"></div>
@@ -42,29 +46,29 @@
 
     <div id="page1">
       <!-- nav section -->
-      <div id="nav">
-        <img src="/pics/Logo.png" alt />
-        <h4><a href="#page1">Home</a></h4>
-        <h4><a href="#page3">About</a></h4>
-        <h4><a href="/pages/Anime/index.html">Anime</a></h4>
-        <h4><a href="/pages/manga/index.html">Manga</a></h4>
-        <h4><a href="/pages/movies/index.html">Movies</a></h4>
+      <div id="nav" class="header">
+
+        <a class="nav-elem" href="./index.html"><img src="/pics/Logo.png" alt /></a>
+        <h4><a class="nav-elem" href="#page1">Home</a></h4>
+        <h4><a class="nav-elem" href="#page3">About</a></h4>
+        <h4><a class="nav-elem" href="/pages/Anime/index.html">Anime</a></h4>
+        <h4><a class="nav-elem" href="/pages/manga/index.html">Manga</a></h4>
+        <h4><a class="nav-elem" href="/pages/movies/index.html">Movies</a></h4>
         <form id="form">
-          <input type="text" placeholder="Type to search" id="Search" />
+          <input type="text" class="nav-elem" placeholder="Type to search" id="Search" />
         </form>
-        <div id="nav2">
-          <a href="/pages/registration/register.html">
-            <button class="Nav_btn"><span>Register</span></button>
+        <div id="nav2" class="nav-elem">
+          <a class="nav-elem"href="/pages/registration/register.html">
+            <button class="Nav_btn" class="nav-elem"><span>Register</span></button>
             <!-- <i class="fa-solid fa-circle-user"></i> -->
           </a>
         </div>
-
       </div>
 
       <div class="container">
         <video loop autoplay muted>
-          <source id="vid" src="/videos/gate-torii-sunset-moewalls-com.mp4">
-          <source src="/videos/18.mp4">
+          <source id="vid" src="/videos/gate-torii-sunset-moewalls-com.mp4" />
+          <source src="/videos/18.mp4" />
         </video>
         <!-- <img
           src="/pics/lone.png"
@@ -87,7 +91,59 @@
       </div>
       <br /><br /><br /><br /><br /><br />
       <div id="page2">
-        <div class="elem elem-1">
+        <div class="firstsec">
+          <a href="/pages/Anime/index.html">
+            <img data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" clas="rightImg" src="/pics/Anime1.jpg" alt="" />
+            <div class="scroll" >
+              <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
+              <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">ANIME</h2>
+          </a>
+              <br><br>
+            <div class="words">
+              <span class="rote-span fail-span" data-aos-easing="linear" data-aos="fade-up-right" data-aos-duration="500">.</span>
+              <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">LATEST</span>
+              <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">TRENDING</span>
+              <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">UPCOMING</span>
+              <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">POPULAR</span>
+            </div>
+          </div>
+        </div>
+            <br /><br /><br /><br /><br /><br />
+            <div class="secondsec">
+              <a href="/pages/manga/index.html">
+              <img data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" class="leftImg" src="/pics/manga1.3.jpg" alt="" />
+              <div class="scroll-2" >
+                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
+                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">Manga</h2>
+              </a>
+              <br><br>
+                <div class="words">
+                  <span class="rote-span fail-span" data-aos-easing="linear" data-aos="fade-up-right" data-aos-duration="500">.</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">LATEST</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">TRENDING</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">UPCOMING</span>
+                  <span class="rote-span"  data-aos="fade-up-right" data-aos-duration="500">POPULAR</span>
+                </div>
+            </div>
+            <br /><br /><br /><br /><br /><br />
+            <div class="thirdsec">
+              <a href="/pages/movies/index.html">
+              <img data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" class="leftImg" src="/pics/movie2.1.jpg" alt="" />
+              <div class="scroll-3" >
+                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
+                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">MOVIES</h2>
+              </a><br><br>
+                <div class="words">
+                  <span class="rote-span fail-span" data-aos="fade-up-right" data-aos-duration="1000">.</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">LATEST</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">TRENDING</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">UPCOMING</span>
+                  <span class="rote-span" data-aos="fade-up-right" data-aos-duration="500">POPULAR</span>
+                </div>
+            </div>
+
+        
+        <!-- <div class="elem elem-1">
           <a href="/pages/Anime/index.html">
             <h2>Anime</h2>
             <img
@@ -108,27 +164,29 @@
           <img
             src="https://static.vecteezy.com/system/resources/previews/011/598/289/original/blank-smartphone-with-popcorn-film-strip-clapperboard-on-blue-background-online-streaming-movie-concept-iluustration-free-vector.jpg"
             alt />
-        </div>
+        </div> -->
       </div>
       <div id="page3">
         <br /><br /><br /><br /><br /><br />
         <div class="aboutus">
-          <h2 id="mkc-3">LATEST & POPULAR</h2>
+          <h2 id="mkc-3" data-aos="zoom-in-up" data-aos-duration="1000" class="timepass">LATEST & POPULAR</h2>
+          <br />
+          <br />
           <br />
           <br />
 
           <p>
-            M2ADB is a webite made in a way that <br />
-            people can discover Popular, Upcoming & Latest <br /><b><i>Anime,
-                Manga and Movies</i></b>
-            all three in <br />one single place, and does not have the need to
-            visit another <br />
-            website for each.
+           <span data-aos="fade-up" data-aos-duration="100000"> M2ADB is a webite made in a way that</span> <br />
+           <span data-aos="fade-up" data-aos-duration="120000">people can discover Popular, Upcoming & Latest</span> <br /><b
+              ><i><span data-aos="fade-up" data-aos-duration="130000">Anime, Manga and Movies</i></b></span>
+          <span data-aos="fade-up" data-aos-duration="140000">all three in </span><br /><span data-aos="fade-up" data-aos-duration="150000">one single place, and does not have the need to
+            visit another </span><br />
+            <span data-aos="fade-up" data-aos-duration="160000">website for each.</span>
           </p>
-          <img src="/pics/About2.png" alt />
+          <img data-aos="flip-left" data-aos-duration="3000" src="/pics/About2.png" alt />
         </div>
         <br /><br /><br /><br /><br />
-        <footer class="footer">
+        <footer class="footer" data-aos="fade-up"  data-aos-duration="2000">
           <div class="container2">
             <div class="row">
               <div class="footer-col">
@@ -173,20 +231,45 @@
           </div>
         </footer>
       </div>
-      </div>
+    </div>
 
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-      <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-      <script src="./HomePage.js"></script>
-    </body>
-  </html>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./HomePage.js"></script>
+    <script src="/pages/anime.min.js"></script>
+    <script>
+      anime({
+        targets: "#demo",
+        value: [0, 100],
+        duration: 3000,
+        round: 1,
+        easing: "linear"
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+  offset: 120,
+  delay: 1, 
+  duration: 1000, 
+  easing: 'ease', 
+  once: false, 
+  mirror: false, 
+  anchorPlacement: 'top-bottom', 
+
+});
+    </script>
+  </body>
+</html>
