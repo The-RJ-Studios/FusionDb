@@ -1,222 +1,258 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Sixtyfour&display=swap');
 
-
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 
 html,
 body {
 
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 
+
+
+}
+html{
+  scrollbar-color: blue;
+  scroll-behavior: smooth;
 }
 
 body {
-    overflow-x: hidden;
-    /* overflow-y: hidden; */
-    /* background-color: #c9d6ff;
-      background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
-    background: #0E100F;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply; */
+
+  background: #0e100f;
 }
+
 .overlay {
-    position: fixed;
-    width: 100vw;
-    height: 70%;
-    z-index: 1001;
-    display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 70%;
+  z-index: 1001;
+  display: flex;
 }
 
 #mkc img {
-    position: absolute;
-    height: 5rem;
-    width: 5rem;
-    left: 35%;
-    top: 30%;
-    z-index: 10000;
-    color: #bcbbc4;
-    padding: 0.2em 0.4em;
-    font-size: 28vw;
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  left: 35%;
+  top: 30%;
+  z-index: 10000;
+  color: #bcbbc4;
+  padding: 0.2em 0.4em;
+  font-size: 28vw;
+
+}
+
+#demo {
+  height: 100px;
+  position: absolute;
+  width: 250px;
+  top: 40%;
+  left: 40%;
+  border: none;
+  background: transparent;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* color: red; */
+  font-size: 7rem;
+  z-index: 10000;
 
 }
 
 .bar {
-    width: 10vw;
-    height: 105vh;
-    background: white;
-}
-
-#demo {
-    height: 100px;
-    position: absolute;
-    width: 250px;
-    top: 40%;
-    left: 40%;
-    border: none;
-    background: transparent;
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    /* color: red; */
-    font-size: 7rem;
-    z-index: 10000;
-
+  width: 10vw;
+  height: 105vh;
+  background: white;
 }
 
 
 /* ::-webkit-scrollbar{
-    width: 0;
-  } */
+  width: 0;
+} */
 ::selection {
-    background: rgb(255, 188, 188);
-    color: black;
+  background: rgb(255, 188, 188);
+  color: rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
+  background: #5338AC;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #5338AC;
+  border-radius: 10px;
+  background: #5338AC;
 }
 
 #page1 {
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.678);
-    margin: 0;
-    padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e100f;
+  margin: 0;
+  padding: 0;
 
 }
 
 #nav {
-    height: 100px;
-    width: 95%;
-    margin: 0 1em 0 2em;
-    /* background-color: #4343ea; */
-    display: flex;
-    align-items: center;
-    /* padding: 0 120px; */
-    gap: 80px;
-    font-weight: 400;
-    position: fixed;
-    justify-content: flex-start;
-    color: #ffffff;
-    z-index: 99;
-    border-bottom: .0625rem solid #42433d;
+  height: 100px;
+  width: 100%;
+  /* background-color: #4343ea; */
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  /* padding: 0 120px; */
+  gap: 100px;
+  font-weight: 900;
+  position: fixed;
+  justify-content: flex-start;
+  color: #292b23;
+  z-index: 99;
+  border-bottom: .0625rem solid #42433d;
 }
 
 #nav img {
-    height: 4.5vw;
+  height: 4.5vw;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#nav img:hover{
+  height: 5.5vw;
+  transform: translateY(-5px);
 }
 
 .Nav_btn {
-    border: 1px solid white;
-    background: none;
-    padding: 10px 30px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: inherit;
-    cursor: pointer;
-    margin: 10px;
-    color: white;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
+  border: 1px solid white;
+  background: none;
+  padding: 10px 30px;
+  display: inline-flex;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 10px;
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
 .Nav_btn::before {
-    content: "";
-    position: absolute;
-    left: var(--x);
-    top: var(--y);
-    transform: translate(-50%, -50%);
-    width: 0px;
-    height: 0px;
-    background: white;
-    border-radius: 50%;
-    transition: width 0.5s, height 0.5s;
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  background: white;
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
 }
 
 .Nav_btn:hover {
-    color: black;
-    transition: all linear 0.8s;
+  color: cyan;
+  letter-spacing: 0.3rem;
+  /* transition: all linear 1s; */
+  transform: translateY(-5px);
 }
 
 .Nav_btn span {
-    position: relative;
-    z-index: 100;
+  position: relative;
+  z-index: 98;
 }
 
 .Nav_btn:hover::before {
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
 
 }
 
 #nav h4 {
-    text-transform: uppercase;
-    /* font-weight: 400; */
-    cursor: pointer;
-    font-size: 1.35vw;
+  text-transform: uppercase;
+  /* font-weight: 400; */
+  cursor: pointer;
+  font-size: 1.35vw;
+  transition: all 0.3s;
 }
 
-#nav h4 :hover {
-    color: white;
-    transition: all linear 0.5s;
-    letter-spacing: 0.1rem;
+#nav h4:hover {
+  color: white;
+  transform: translateY(-5px);
+  letter-spacing: 0.1rem;
 
+}
+
+#nav a:hover {
+  color: white;
 }
 
 a:link {
-    color: #ffffff;
-    text-decoration: none;
+  color: #292b23;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+  text-decoration: none;
 }
 
 a:visited {
-    color: #ffffff;
-    text-decoration: none;
+  color: #292b23;
+  text-decoration: none;
 }
 
-a:active {
-    color: white;
-    text-decoration: none;
-}
 
 #Search {
-    background-color: transparent;
-    border: 1px solid white;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: 0.5rem 1rem;
-    color: white;
+  background-color: transparent;
+  border: 1px solid #292b23;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  color: white;
 }
 
 #Search:hover {
-    border: 1px solid white;
-    transition: all linear 0.8s;
+  border: 1px solid white;
+  transition: all linear 0.8s;
 }
 
 #Search:focus {
-    outline: 0;
-    background-color: #0000007c;
+  outline: 0;
+  background-color: #0000007c;
 }
 
 #Search::placeholder {
-    color: white;
+  color: white;
+}
+
+#nav i {
+  font-size: 3vw;
+  color: #292b23;
+}
+
+#nav i:hover {
+  font-size: 3.5vw;
+  transition: all ease 0.5s;
+  color: white;
 }
 
 .container {
@@ -235,9 +271,10 @@ video {
     height: 103vh;
     width: 100%;
     object-fit: cover;
-    filter: brightness(90%);
-
     border-radius: 5px;
+}
+.page1-img{
+    filter: brightness(50%);
 }
 
 .card-layout {
@@ -277,6 +314,10 @@ video {
 
 .Viewall {
     font-size: 1rem;
+    color: #fff;
+}
+.ri-arrow-right-line{
+    color: #fff;
 }
 
 .card {
@@ -284,7 +325,7 @@ video {
     padding: 5rem 0 0;
     margin-top: 30px;
     width: 15rem;
-    height: 15rem;
+    height: 20rem;
     border-radius: 1rem;
     color: black;
     overflow: hidden;
