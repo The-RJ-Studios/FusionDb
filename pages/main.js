@@ -115,7 +115,7 @@ gsap.to(sectionsL,{
     scrollTrigger: {
         trigger: ".all-card-lat",
         pin: true,
-        start: "-70px",
+        start: "50px",
         // end:"100px",
         markers: true,
         scrub: 1,
@@ -134,7 +134,8 @@ gsap.to(sectionsR,{
     scrollTrigger: {
         trigger: ".all-card-ran",
         pin: true,
-        start: "-70px",
+
+        start: "50px",
         // end:"100px",
         // markers: true,
         scrub: 1,
@@ -143,5 +144,37 @@ gsap.to(sectionsR,{
         document.querySelector(".all-card-ran").offsetWidth
 
     }
+});
+gsap.from(".container video", {
+  height: 0,
+  width: 0,
+  duration: 2,
+  ease: "sine.out",
+  delay: 5,
+
+})
+gsap.from(".header", {
+  y: "-100%",
+  duration: 2,
+  delay: 6.5,
+  ease: "bounce",
+  scrub: 1
+
+})
+
+
+
+gsap.to("#nav", {
+  backgroundColor: "#0e100f",
+  duration: 1.5,
+  height: "80px",
+  scrollTrigger: {
+    trigger: "#nav",
+    scroller: "body",
+    // markers:true,
+    start: "740px",
+    // end: "top -11%",
+    scrub: 1
+  },
 });
 

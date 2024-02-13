@@ -26,6 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body onload="tope()">
     <h1 id="mkc" class="counter">
@@ -71,7 +72,7 @@
     </navbar> -->
     <div id="page1">
       <!-- nav section -->
-      <div id="nav">
+      <div id="nav" class="header">
         <img src="/pics/Logo.png" alt="" />
         <h4><a href="/index.html">Home</a></h4>
         <h4><a href="/pages/manga/index.html">Manga</a></h4>
@@ -88,8 +89,9 @@
         
       </div>
       <div class="container">
-       <video loop autoplay muted>
-        <source src="/videos/18.mp4">
+       <video class="page1-img" loop autoplay muted>
+        <source src="/videos/itachi.mp4">
+        <source class="page1-img" src="/videos/18.mp4">
         <source src="/videos/gate-torii-sunset-moewalls-com.mp4">
         <!-- <source src="/videos/18.mp4"> -->
        </video>
@@ -309,7 +311,7 @@
 <div id="page3">
 
 </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -332,6 +334,14 @@
         value: [0,100],
         easing:  'linear',
         round: 1,
+        duration: 3000
+      })
+      anime({
+        targets: ".Viewall",
+        rotate: [90,0],
+        autoplay: true,
+        easing: 'easeInOutSine',
+        loop: true,
         duration: 3000
       })
     </script>
