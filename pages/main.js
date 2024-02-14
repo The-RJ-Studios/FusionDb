@@ -86,7 +86,46 @@ setTimeout(() => {
 }, 5000);
 
 let sections = gsap.utils.toArray(".popu");
+gsap.set(".card",{
+  opacity: 0,
+  
+})
+gsap.set(".Type",{
+  opacity: 0,
+  
+})
+gsap.to(".Type",{
+  opacity:1,
+  ease: "linear",
+  stagger: {
+    amount: 8,
+    each: 4,
+  },
+  scrollTrigger: {
+    trigger: ".all-card-pop",
+    start: "-100px",
+    end: "-20px",
+    scrub: 1,
+    markers: true,
+  }
+})
 
+
+gsap.to(".card",{
+  opacity:1,
+  ease: "linear",
+  stagger: {
+    amount: 8,
+    each: 4,
+  },
+  scrollTrigger: {
+    trigger: ".all-card-pop",
+    start: "-50px",
+    end: "100px",
+    scrub: 1,
+    markers: true,
+  }
+})
 gsap.to(sections,{
 
     xPercent: -100 * (sections.length-6),
