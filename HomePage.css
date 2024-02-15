@@ -111,8 +111,8 @@ body {
 
 #nav {
   height: 100px;
-  width: 95%;
-  margin: 0 1em 0 2em;
+  width: 100%;
+  /* margin: 0 1em 0 2em; */
   /* background-color: #4343ea; */
   display: flex;
   align-items: center;
