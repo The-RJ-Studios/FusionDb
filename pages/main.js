@@ -15,17 +15,17 @@
 
 // },3000);
 
-function tope(){
-  window.scrollTo(0,0);
+function tope() {
+  window.scrollTo(0, 0);
 }
 
 const btn = document.querySelector(".Nav_btn");
-btn.onmousemove = function(e){
+btn.onmousemove = function (e) {
   const x = e.pageX - btn.offsetLeft;
   const y = e.pageY - btn.offsetTop;
 
-  btn.style.setProperty("--x",x + "px");
-  btn.style.setProperty("--y",y + "px");
+  btn.style.setProperty("--x", x + "px");
+  btn.style.setProperty("--y", y + "px");
 }
 
 
@@ -39,7 +39,7 @@ btn.onmousemove = function(e){
 //     }
 
 //     currentValue += Math.floor(Math.random() * 10) + 1;
-    
+
 //     if (currentValue > 100){
 //       currentValue = 100;
 //     }
@@ -63,12 +63,12 @@ btn.onmousemove = function(e){
 // startLoader();
 // let text = document.querySelector(".text");
 
-gsap.to(".counter",0.25,{
+gsap.to(".counter", 0.25, {
   delay: 3.5,
   opacity: 0,
   ease: "power4.inOut"
 });
-gsap.to(".bar",1.5,{
+gsap.to(".bar", 1.5, {
   delay: 3.5,
   height: 0,
   stagger: {
@@ -79,124 +79,214 @@ gsap.to(".bar",1.5,{
 });
 setTimeout(() => {
   var a = document.getElementById("mkc");
-  a.style.zIndex=-100; 
+  a.style.zIndex = -100;
   var a = document.getElementById("mkc-2");
-  a.style.zIndex=-100;
+  a.style.zIndex = -100;
   clearTimeout(setTimeout);
 }, 5000);
 
+let tl = gsap.timeline({
+  defaults: {
+    opacity: 0,
+    ease: "slow(0.7,0.7,false)",
+  }
+})
+
 let sections = gsap.utils.toArray(".popu");
-gsap.set(".card",{
-  opacity: 0,
-  
+// tl.set(".card",{
+//   opacity: 0,
+
+// })
+// tl.set(".Type",{
+//   opacity: 0,
+
+// })
+// tl.to(".Type",{
+//   opacity:1,
+//   ease: "linear",
+//   stagger: {
+//     amount: 8,
+//     each: 4,
+//   },
+//   scrollTrigger: {
+//     trigger: ".all-card-pop",
+//     start: "-100px",
+//     end: "-20px",
+//     scrub: 1,
+//     markers: true,
+//   }
+// })
+// for popular section
+tl.fromTo(".type-1", { opacity: 0 }, {
+  opacity: 1,
+  ease: "slow(0.7,0.7,false)",
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".all-card",
+    start: "-295px",
+    // end: "-20px",
+    scrub: 1,
+    // markers: true,
+  }
 })
-gsap.set(".Type",{
-  opacity: 0,
-  
-})
-gsap.to(".Type",{
-  opacity:1,
-  ease: "linear",
-  stagger: {
-    amount: 8,
-    each: 4,
-  },
+tl.fromTo(".popu", { opacity: 0 }, {
+  opacity: 1,
+  duration: 3,
+  delay: 1,
+  ease: "slow(0.7,0.7,false)",
+  paused: true,
+  stagger: 1,
   scrollTrigger: {
     trigger: ".all-card-pop",
-    start: "-100px",
-    end: "-20px",
+    start: "-280px",
+    end: "70px",
+    scrub: 1,
+    // markers: true,
+  }
+})
+// for latest section
+tl.fromTo(".type-2", { opacity: 0 }, {
+  opacity: 1,
+  ease: "slow(0.7,0.7,false)",
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".all-card-lat",
+    start: "1000px",
+    // end: "-20px",
+    scrub: 1,
+    // markers: true,
+  }
+})
+tl.fromTo(".popi", { opacity: 0 }, {
+  opacity: 1,
+  duration: 3,
+  delay: 1,
+  ease: "slow(0.7,0.7,false)",
+  paused: true,
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".all-card-lat",
+    start: "1010px",
+    end: "1300px",
+    scrub: 1,
+    // markers: true,
+  }
+})
+// for ran section
+tl.fromTo(".type-3", { opacity: 0 }, {
+  opacity: 1,
+  ease: "slow(0.7,0.7,false)",
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".all-card-ran",
+    start: "2400px",
+    // end: "2450px",
     scrub: 1,
     markers: true,
   }
 })
-
-
-gsap.to(".card",{
-  opacity:1,
-  ease: "linear",
-  stagger: {
-    amount: 8,
-    each: 4,
-  },
+tl.fromTo(".popo", { opacity: 0 }, {
+  opacity: 1,
+  duration: 3,
+  delay: 1,
+  ease: "slow(0.7,0.7,false)",
+  paused: true,
+  stagger: 1,
   scrollTrigger: {
-    trigger: ".all-card-pop",
-    start: "-50px",
-    end: "100px",
+    trigger: ".all-card-ran",
+    start: "2410px",
+    end: "2600px",
     scrub: 1,
-    markers: true,
+    // markers: true,
   }
 })
-gsap.to(sections,{
+//horizontal scrolling
+gsap.to(sections, {
 
-    xPercent: -100 * (sections.length-6),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".all-card-pop",
-        pin: true,
-        start: "50px",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sections.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-pop").offsetWidth
+  xPercent: -100 * (sections.length - 6),
+  ease: "linear",
+  scrollTrigger: {
+    trigger: ".all-card-pop",
+    pin: true,
+    start: "50px",
+    // end:"100px",
+    // markers: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => "+=" +
+      document.querySelector(".all-card-pop").offsetWidth
 
-    }
+  }
 });
 
 
 let sectionsL = gsap.utils.toArray(".popi");
 
-gsap.to(sectionsL,{
+gsap.to(sectionsL, {
 
-    xPercent: -100 * (sectionsL.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-lat",
-        pin: true,
-        start: "50px",
-        // end:"100px",
-        markers: true,
-        scrub: 1,
-        snap: 1 / (sectionsL.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-lat").offsetWidth
+  xPercent: -100 * (sectionsL.length - 6),
+  ease: "slow(0.7,0.7,false)",
+  scrollTrigger: {
+    trigger: ".all-card-lat",
+    pin: true,
+    start: "50px",
+    // end:"100px",
+    // markers: true,
+    scrub: 1,
+    snap: 1 / (sectionsL.length - 1),
+    end: () => "+=" +
+      document.querySelector(".all-card-lat").offsetWidth
 
-    }
+  }
 });
 let sectionsR = gsap.utils.toArray(".popo");
 
-gsap.to(sectionsR,{
+gsap.to(sectionsR, {
 
-    xPercent: -100 * (sectionsR.length-6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-        trigger: ".all-card-ran",
-        pin: true,
+  xPercent: -100 * (sectionsR.length - 6),
+  ease: "slow(0.7,0.7,false)",
+  scrollTrigger: {
+    trigger: ".all-card-ran",
+    pin: true,
 
-        start: "50px",
-        // end:"100px",
-        // markers: true,
-        scrub: 1,
-        snap: 1 / (sectionsR.length-1),
-        end: () => "+=" + 
-        document.querySelector(".all-card-ran").offsetWidth
+    start: "50px",
+    // end:"100px",
+    // markers: true,
+    scrub: 1,
+    snap: 1 / (sectionsR.length - 1),
+    end: () => "+=" +
+      document.querySelector(".all-card-ran").offsetWidth
 
-    }
+  }
 });
-gsap.from(".container video", {
-  height: 0,
-  width: 0,
+gsap.fromTo(".ani-vid",{scale: 0}, {
+scale: 1,
+  duration: 2,
+  // ease: "sine.out",
+  delay: 5,
+
+})
+gsap.fromTo(".man-vid", { opacity: 0 }, {
   duration: 2,
   ease: "sine.out",
+  opacity: 1,
+  rotation: 360,
   delay: 5,
 
 })
 gsap.from(".header", {
   y: "-100%",
   duration: 2,
-  delay: 6.5,
+  delay: 5.5,
   ease: "bounce",
+  scrub: 1
+
+})
+gsap.fromTo(".nav-elem", { opacity: 0 }, {
+  opacity: 1,
+  duration: 2,
+  delay: 5.5,
+  stagger: 0.3,
   scrub: 1
 
 })
