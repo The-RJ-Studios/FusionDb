@@ -201,7 +201,7 @@ a:active {
 
 #page1 img {
     position: absolute;
-    margin-top: 12.8rem;
+    /* margin-top: 12.8rem; */
     width: 100%;
     border-radius: 0px;
     transition: 0.8s;

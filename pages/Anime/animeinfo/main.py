@@ -6,7 +6,7 @@ import requests
 from js import document, console
 
 # Generating Request Headers
-url ='https://imdb-api.uzairshaikhking777.workers.dev/title/tt0388629'
+url ='https://imdb-api.uzairshaikhking777.workers.dev/title/tt12343534'
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
 req_header= {
     'User-Agent' : userAgent,
