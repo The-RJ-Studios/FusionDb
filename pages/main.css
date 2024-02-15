@@ -21,7 +21,6 @@ body {
 
 }
 html{
-  scrollbar-color: blue;
   scroll-behavior: smooth;
 }
 
@@ -275,6 +274,12 @@ video {
 }
 .mov-vid{
   filter: brightness(80%);
+}
+.ani-vid{
+  filter: brightness(70%);
+}
+.man-vid{
+  filter: brightness(50%);
 }
 /* .page1-img{
     filter: brightness(120%);
