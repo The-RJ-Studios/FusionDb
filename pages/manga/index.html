@@ -72,32 +72,32 @@
     <div id="page1">
       <!-- nav section -->
       <div id="nav" class="header">
-        <img src="/pics/Logo.png" alt="" />
-        <h4><a href="/index.html">Home</a></h4>
-        <h4><a href="/pages/Anime/index.html">Anime</a></h4>
-        <h4><a href="/pages/movies/index.html">Movies</a></h4>
+        <img class="nav-elem" src="/pics/Logo.png" alt="" />
+        <h4 class="nav-elem"><a href="/index.html">Home</a></h4>
+        <h4 class="nav-elem"><a href="/pages/Anime/index.html">Anime</a></h4>
+        <h4 class="nav-elem"><a href="/pages/movies/index.html">Movies</a></h4>
         <form id="form">
-          <input type="text" placeholder="Type to search" id="Search" />
+          <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
         </form>
         <div id="nav2">
           <a href="/pages/registration/register.html">
-            <button class="Nav_btn"><span>Register</span></button>
+            <button class="Nav_btn nav-elem"><span>Register</span></button>
             <!-- <i class="fa-solid fa-circle-user"></i> -->
           </a>
         </div>
         
       </div>
-      <div class="container">
+      <div class="container man-vid">
        <video loop autoplay muted>
         <source  src="/videos/8.mp4">
         <source src="/videos/gate-torii-sunset-moewalls-com.mp4">
         <!-- <source src="/videos/18.mp4"> -->
        </video>
     </div>
-
-    <div id="all-card-layout" class="all-card-pop"  >
+    <br><br><br>
+    <div id="all-card-layout" class="all-card-pop all-card"  >
       <br><br><br><br><br>
-      <h2 class="Type">Popular Manga<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+      <h2 class="Type type-1">Popular Manga<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
       <div class="card-layout card-layout-pop slider-wrapper"> 
         <!-- element -->
@@ -165,9 +165,9 @@
    </div>    
 
   <div id="page2">
-    <div id="all-card-layout-Latest" class="all-card-lat"  >
+    <div id="all-card-layout-Latest" class="all-card-lat all-card"  >
       <br><br><br><br><br>
-      <h2 class="Type">Latest Manga<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+      <h2 class="Type type-2">Latest Manga<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
       <div class="card-layout slider-wrapper card-layout-latest"> 
         <!-- element -->
@@ -235,9 +235,9 @@
           </div>
   </div>
 
-  <div id="all-card-layout-Random"class="all-card-ran"  >
+  <div id="all-card-layout-Random"class="all-card-ran all-card"  >
     <br><br><br><br><br>
-    <h2 class="Type">Random Manga<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
+    <h2 class="Type type-3">Random Manga<a  href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
     <!-- media scroller -->
     <div class="card-layout slider-wrapper card-layout-Random"> 
       <!-- element -->
@@ -306,8 +306,51 @@
 </div>
 </div>
 <br><br><br><br><br>
-<div id="page3">
-</div>
+<footer class="footer" > 
+  <!-- data-aos="fade-up"  data-aos-duration="2000" -->
+  <div class="container2">
+    <div class="row">
+      <div class="footer-col">
+        <div class="h44">
+          <h4>Contact</h4>
+        </div>
+        <ul>
+          <li>
+            <h4>Email : - hajimenagumo421@gmail.com</h4>
+          </li>
+          <li>
+            <h4>Phone no : - 9702529149</h4>
+          </li>
+          <li>
+            <h4>
+              Address : - Nilgiris CHS, Godrej Hills, Khadakpada, Kalyan
+            </h4>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="h44">
+          <h4>follow us</h4>
+        </div>
+        <div class="social-links">
+          <h4>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </h4>
+          <h4>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </h4>
+          <h4>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </h4>
+          <h4>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
