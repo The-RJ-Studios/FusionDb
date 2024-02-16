@@ -16,6 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,9 +46,6 @@
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
-<div id="smooth-wrapper">
-<div id="smooth-content">
-
 
     <div id="page1">
       <!-- nav section -->
@@ -75,6 +73,15 @@
           <source id="vid" src="/videos/gate-torii-sunset-moewalls-com.mp4" />
           <source src="/videos/18.mp4" />
         </video>
+        <div class="scroll-down">
+          <h1 id="myText">TO DISCOVER</h1>
+          <h3 class="scrolling-down">scroll down</h3>
+          <span class="material-symbols-outlined scrolling-down-symbol">
+            expand_more
+            </span>
+
+        </div>
+
         <!-- <img
           src="/pics/lone.png"
           alt="anime image"
@@ -101,7 +108,7 @@
             <img data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" class="pop-img" src="/pics/Anime1.jpg" alt="" />
             <div class="scroll" >
               <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
-              <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">ANIME</h2>
+              <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">ANIME</h2>
           </a>
               <br><br>
             <div class="words">
@@ -116,10 +123,10 @@
             <br /><br /><br /><br /><br /><br />
             <div class="secondsec">
               <a href="/pages/manga/index.html">
-              <img data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" class="pop-img" src="/pics/manga1.3.jpg" alt="" />
+              <img data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000" class="pop-img" src="/pics/manga1.3.jpg" alt="" />
               <div class="scroll-2" >
-                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
-                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">Manga</h2>
+                <h2 data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
+                <h2 data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000">Manga</h2>
               </a>
               <br><br>
                 <div class="words">
@@ -136,7 +143,7 @@
               <img data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" class="pop-img" src="/pics/movie2.1.jpg" alt="" />
               <div class="scroll-3" >
                 <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">DISCOVER</h2>
-                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1500">MOVIES</h2>
+                <h2 data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000">MOVIES</h2>
               </a><br><br>
                 <div class="words">
                   <span class="rote-span fail-span" data-aos="fade-up-right" data-aos-duration="1000">.</span>
@@ -174,21 +181,21 @@
       <div id="page3">
         <br /><br /><br /><br /><br /><br />
         <div class="aboutus">
-          <h2 id="mkc-3" data-aos="zoom-in-up" data-aos-duration="1000" class="timepass">LATEST & POPULAR</h2>
+          <h2 id="mkc-3"></h2>
           <br />
           <br />
           <br />
           <br />
 
-          <p>
-           <span data-aos="fade-up" data-aos-duration="100000"> M2ADB is a webite made in a way that</span> <br />
-           <span data-aos="fade-up" data-aos-duration="120000">people can discover Popular, Upcoming & Latest</span> <br /><b
-              ><i><span data-aos="fade-up" data-aos-duration="130000">Anime, Manga and Movies</i></b></span>
-          <span data-aos="fade-up" data-aos-duration="140000">all three in </span><br /><span data-aos="fade-up" data-aos-duration="150000">one single place, and does not have the need to
-            visit another </span><br />
-            <span data-aos="fade-up" data-aos-duration="160000">website for each.</span>
+  <p class="ani-words">
+    <span class="p1"></span> <br />
+    <span class="p2"></span> <br /><b
+              ><i><span class="p3"></i></b></span>
+              <span class="p4"></span><br /><span class="p5"></span><br />
+            <span class="p6"></span>
           </p>
-          <img data-aos="flip-left" data-aos-duration="3000" src="/pics/About2.png" alt />
+        </div>
+          <img class="ab-img" src="/pics/About2.png" alt />
         </div>
         <br /><br /><br /><br /><br />
         <footer class="footer" data-aos="fade-up"  data-aos-duration="2000">
@@ -237,23 +244,50 @@
         </footer>
       </div>
     </div>
-   </div>
-  </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://unpkg.com/split-type"></script>
     <script src="./HomePage.js"></script>
     <script src="/pages/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/TextPlugin.min.js"></script>
+    <script>
+      const split = new SplitType('#myText')
+      const split2 = new SplitType('.scrolling-down')
+
+      gsap.to(".char", 
+      {
+        y:0,
+        stagger: 0.05,
+        delay: 7,
+        ease: "linear",
+        duration: .1,
+      })
+      // gsap.set(".char",{ y:0 })
+      // gsap.fromTo(".char",{ y:0 },{
+      //   y: 155,
+      //   stagger: 0.05,
+      //   delay: 7,
+      //   ease: "linear",
+      //   duration: .1,
+        
+      // })
+    </script>
     <script>
       anime({
         targets: "#demo",

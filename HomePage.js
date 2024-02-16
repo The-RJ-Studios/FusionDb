@@ -16,7 +16,7 @@
 //     }
 
 // },3000);
-
+// gsap.to("#myText", {duration: 2, text: "thank you for waiting",preserveSpaces: true, delay: 7.5});
 
 const btn = document.querySelector(".Nav_btn");
 btn.onmousemove = function(e){
@@ -40,6 +40,21 @@ gsap.from(".header", {
     ease: "bounce",
     scrub: 1
 
+})
+gsap.fromTo(".scrolling-down",{opacity:0,y: 120},{
+  opacity:1,
+  y: 0,
+  duration: 1,
+  ease: "linear",
+  delay: 6.5,
+  
+})
+gsap.fromTo(".scrolling-down-symbol",{opacity:0,y: 100},{
+  opacity:1,
+  y: 0,
+  duration: 2,
+  ease: "linear",
+  delay: 7,
 })
 
 
@@ -150,6 +165,28 @@ setTimeout(() => {
 function tope(){
   window.scrollTo(0,0);
 }
+
+
+// TweenLite.defaultEase = Linear.easeNone;
+let tl= gsap.timeline({scrollTrigger: {
+  trigger: ".ani-words",
+  start: "-600px",
+  end: "-270px",
+  scrub: 1,
+  delay: 4,
+  stagger: 0.01,
+  // markers: true,
+  ease: "slow(0.7,0.7,false)",
+},});
+
+tl.to("#mkc-3",4, {text:"LATEST & POPULAR"})
+tl.to(".p1",4, {text:" M2ADB is a webite made in a way that"})
+tl.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
+tl.to(".p2", 4, {text:"people can discover Popular, Upcoming & Latest"})
+tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
+tl.to(".p4", 4, {text:"all three in"})
+tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
+tl.to(".p6", 4, {text:"website for each."})
 // setTimeout(function () {
 //   window.scrollTo(0, 0);
 // },2);
