@@ -75,6 +75,10 @@ body {
   height: 105vh;
   background: white;
 }
+.char{
+  transform: translateY(155px);
+  transition: transform .5s;
+}
 
 
 /* ::-webkit-scrollbar{
@@ -272,6 +276,24 @@ video {
   filter: brightness(140%);
 
   border-radius: 5px;
+}
+.container h1{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.scroll-down{
+  margin-top: 450px;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+.scroll-down h3{
+  padding-top: 10%;
+  padding-left: 30%;
+}
+.scroll-down span{
+  padding-left: 45%;
+  padding-top: 10%;
+  font-size: 3rem;
+  height: 1rem;
 }
 
 /* .sliderimg {
