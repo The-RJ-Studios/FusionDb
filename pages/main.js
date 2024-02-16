@@ -18,6 +18,19 @@
 function tope() {
   window.scrollTo(0, 0);
 }
+gsap.to("#nav", {
+  backgroundColor: "#0e100f",
+  duration: 1.5,
+  height: "80px",
+  scrollTrigger: {
+    trigger: "#nav",
+    scroller: "body",
+    // markers:true,
+    start: "740px",
+    // end: "top -11%",
+    scrub: 1
+  },
+});
 
 const btn = document.querySelector(".Nav_btn");
 btn.onmousemove = function (e) {
@@ -293,17 +306,4 @@ gsap.fromTo(".nav-elem", { opacity: 0 }, {
 
 
 
-gsap.to("#nav", {
-  backgroundColor: "#0e100f",
-  duration: 1.5,
-  height: "80px",
-  scrollTrigger: {
-    trigger: "#nav",
-    scroller: "body",
-    // markers:true,
-    start: "740px",
-    // end: "top -11%",
-    scrub: 1
-  },
-});
 
