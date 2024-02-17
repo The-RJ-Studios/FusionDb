@@ -49,13 +49,13 @@ gsap.fromTo(".scrolling-down",{opacity:0,y: 120},{
   delay: 6.5,
   
 })
-gsap.fromTo(".scrolling-down-symbol",{opacity:0,y: 100},{
-  opacity:1,
-  y: 0,
-  duration: 2,
-  ease: "linear",
-  delay: 7,
-})
+// gsap.fromTo(".scrolling-down-symbol",{opacity:0,y: 100},{
+//   opacity:1,
+//   y: 0,
+//   duration: 2,
+//   ease: "linear",
+//   delay: 7,
+// })
 
 
 
@@ -63,6 +63,9 @@ gsap.to("#nav", {
     backgroundColor: "#0e100f",
     duration: 1.5,
     height: "80px",
+    marginTop: 0,
+    // boxShadow: "0px 4px 0px 0px blue",
+    borderBottom: "10px solid #42433d",
     scrollTrigger: {
       trigger: "#nav",
       scroller: "body",
@@ -165,8 +168,37 @@ setTimeout(() => {
 function tope(){
   window.scrollTo(0,0);
 }
+// start page timeline
+// let tl2 = gsap.timeline({
+//   // ease: "slow(0.7,0.7,false)",
+//   stagger: 0.01,
+//   duration: 6,
+//   repeat: 2,
+
+// });
+// tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place", delay: 7,ease: "slow(0.5, 0.8)",})
+// tl2.to("#myText-2",{text:"Trending, Popular, New releases and upcoming", delay: 7,ease: "slow(0.5, 0.8)",})
+// tl2.to("#myText-2",{text:"No need to vist three websites for all three", delay: 7,ease: "slow(0.5, 0.8)",})
+// tl2.to("#myText-2",{text:"Enjoy your visit", delay: 7,ease: "slow(0.5, 0.8)",})
+
+let tl2 = gsap.timeline({
+  // ease: "slow(0.7,0.7,false)",
+  stagger: 0.5,
+  opacity:0,
+  repeat: -1,
+
+});
+tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place",opacity:1, delay: 7,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"Trending, Popular, New releases and upcoming", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"No need to vist three websites for all three", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"Enjoy your visit", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 3,})
+tl2.to("#myText-2",{opacity:0, delay: 4, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
 
 
+// about us timeline
 // TweenLite.defaultEase = Linear.easeNone;
 let tl= gsap.timeline({scrollTrigger: {
   trigger: ".ani-words",

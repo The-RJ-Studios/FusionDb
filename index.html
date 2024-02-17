@@ -50,16 +50,17 @@
     <div id="page1">
       <!-- nav section -->
       <div id="nav" class="header">
-
         <a class="nav-elem" href="./index.html"><img src="/pics/Logo.png" alt /></a>
+<div class="nav1">
         <h4><a class="nav-elem" href="#page1">Home</a></h4>
         <h4><a class="nav-elem" href="#page3">About</a></h4>
         <h4><a class="nav-elem" href="/pages/Anime/index.html">Anime</a></h4>
         <h4><a class="nav-elem" href="/pages/manga/index.html">Manga</a></h4>
         <h4><a class="nav-elem" href="/pages/movies/index.html">Movies</a></h4>
-        <form id="form">
+</div>
+        <!-- <form id="form">
           <input type="text" class="nav-elem" placeholder="Type to search" id="Search" />
-        </form>
+        </form> -->
         <div id="nav2" class="nav-elem">
           <a class="nav-elem"href="/pages/registration/register.html">
             <button class="Nav_btn" class="nav-elem"><span>Register</span></button>
@@ -67,14 +68,20 @@
           </a>
         </div>
       </div>
-
+      
       <div class="container">
+        <div class="scroll-down-2">
+          <h1 id="myText-2"></h1>
+  
+        </div>
         <video loop autoplay muted>
-          <source id="vid" src="/videos/gate-torii-sunset-moewalls-com.mp4" />
+          <source id="vid" src="/videos/Anime.mp4" />
+          <!-- <source id="vid" src="/videos/gate-torii-sunset-moewalls-com.mp4" /> -->
           <source src="/videos/18.mp4" />
         </video>
+       
         <div class="scroll-down">
-          <h1 id="myText">TO DISCOVER</h1>
+          <h2 id="myText">TO DISCOVER</h2>
           <h3 class="scrolling-down">scroll down</h3>
           <span class="material-symbols-outlined scrolling-down-symbol">
             expand_more
@@ -268,15 +275,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/TextPlugin.min.js"></script>
     <script>
       const split = new SplitType('#myText')
+      const split3 = new SplitType('#myText-2')
       const split2 = new SplitType('.scrolling-down')
 
-      gsap.to(".char", 
+      gsap.fromTo(".char",{opacity:0} ,
       {
         y:0,
         stagger: 0.05,
-        delay: 7,
+        delay: 30,
         ease: "linear",
         duration: .1,
+        opacity:1,
+        repeat: 2,
+        yoyo: true,
+      })
+      gsap.fromTo(".scrolling-down-symbol", {opacity:0} ,
+      {
+        y:0,
+        stagger: 0.05,
+        delay: 30,
+        ease: "linear",
+        duration: .1,
+        opacity:1,
+        repeat: 2,
+        yoyo: true,
       })
       // gsap.set(".char",{ y:0 })
       // gsap.fromTo(".char",{ y:0 },{
