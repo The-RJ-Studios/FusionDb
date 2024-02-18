@@ -72,13 +72,15 @@
     <div id="page1">
       <!-- nav section -->
       <div id="nav" class="header">
-        <img class="nav-elem" src="/pics/Logo.png" alt="" />
-        <h4 class="nav-elem"><a href="/index.html">Home</a></h4>
-        <h4 class="nav-elem"><a href="/pages/Anime/index.html">Anime</a></h4>
-        <h4 class="nav-elem"><a href="/pages/manga/index.html">Manga</a></h4>
-        <form id="form">
+        <a class="nav-elem" href="./index.html"><img src="/pics/new-logo-2.1png" alt /></a>
+        <div class="nav1">
+          <h4><a class="nav-elem" href="./index.html">Home</a></h4>
+          <h4><a class="nav-elem" href="/pages/Anime/index.html">Anime</a></h4>
+          <h4><a class="nav-elem" href="/pages/manga/index.html">Manga</a></h4>
+  </div>
+        <!-- <form id="form">
           <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
-        </form>
+        </form> -->
         <div id="nav2">
           <a href="/pages/registration/register.html">
             <button class="Nav_btn nav-elem"><span>Register</span></button>
@@ -88,11 +90,23 @@
         
       </div>
       <div class="container mov-vid">
+        <div class="scroll-down-2">
+          <h1 id="myText-2"></h1>
+  
+        </div>
        <video loop autoplay muted>
+        <source src="/videos/movie-video - 2.mp4">
         <source src="/videos/spiderman.mp4">
         <source src="/videos/gate-torii-sunset-moewalls-com.mp4">
         <!-- <source src="/videos/18.mp4"> -->
        </video>
+       <div class="scroll-down">
+        <h2 id="myText">TO DISCOVER</h2>
+        <h3 class="scrolling-down">scroll down</h3>
+        <span class="material-symbols-outlined scrolling-down-symbol">
+          expand_more
+          </span>
+       </div>
     </div>
     <br><br><br>
     <div id="all-card-layout" class="all-card-pop all-card"  >
@@ -358,21 +372,51 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/pages/main.js"></script>
     <script src="/pages/Anime/Anime.js"></script>
     <script src="/pages/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/TextPlugin.min.js"></script>
+    <script>
+      const split = new SplitType('#myText')
+      const split3 = new SplitType('#myText-2')
+      const split2 = new SplitType('.scrolling-down')
+
+      gsap.fromTo(".char",{opacity:0} ,
+      {
+        y:0,
+        stagger: 0.05,
+        delay: 30,
+        ease: "linear",
+        duration: .1,
+        opacity:1,
+      })
+      gsap.fromTo(".scrolling-down-symbol", {opacity:0} ,
+      {
+        y:0,
+        stagger: 0.05,
+        delay: 30,
+        ease: "linear",
+        duration: .1,
+        opacity:1,
+      })
+      // gsap.set(".char",{ y:0 })
+      // gsap.fromTo(".char",{ y:0 },{
+      //   y: 155,
+      //   stagger: 0.05,
+      //   delay: 7,
+      //   ease: "linear",
+      //   duration: .1,
+        
+      // })
+    </script>
     <script>
         anime({
           targets: '#demo',
           value: [0,100],
-          duration: 3000,
+          duration: 1000,
           round: 1,
           easing: "linear"
 
