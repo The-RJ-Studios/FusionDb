@@ -50,7 +50,7 @@ let tl2 = gsap.timeline({
   repeat: -1,
 
 });
-tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place",opacity:1, delay: 7,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place",opacity:1, delay: 5,ease: "slow(0.5, 0.8)",  duration: 6,})
 tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
 tl2.to("#myText-2",{text:"Trending, Popular, New releases and upcoming", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
 tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})

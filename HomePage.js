@@ -188,7 +188,9 @@ let tl2 = gsap.timeline({
   repeat: -1,
 
 });
-tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place",opacity:1, delay: 7,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies",opacity:1, delay: 7,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"All in one Single place", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
 tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
 tl2.to("#myText-2",{text:"Trending, Popular, New releases and upcoming", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
 tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
@@ -219,6 +221,32 @@ tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
 tl.to(".p4", 4, {text:"all three in"})
 tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
 tl.to(".p6", 4, {text:"website for each."})
+
+//for mobile
+let mm = gsap.matchMedia();
+mm.add("(max-width: 600px)",()=>{
+  let tlm= gsap.timeline({scrollTrigger: {
+    trigger: ".ani-words",
+    start: "top center",
+    end: "bottom center",
+    scrub: true,
+    duration: 6,
+    delay: 4,
+    stagger: 0.01,
+    markers: true,
+    ease: "slow(0.7,0.7,false)",
+  },});
+  
+  tlm.to("#mkc-3", {text:"LATEST & POPULAR"})
+  tlm.to(".p1", {text:" M2ADB is a webite made in a way that"})
+  // tlm.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
+  tlm.to(".p2",  {text:"people can discover Popular, Upcoming & Latest"})
+  tlm.to(".p3",  {text:"Anime, Manga and Movies"})
+  tlm.to(".p4",  {text:"all three in"})
+  tlm.to(".p5",  {text:"one single place, and does not have the need to visit another "})
+  tlm.to(".p6",  {text:"website for each."})
+})
+
 // setTimeout(function () {
 //   window.scrollTo(0, 0);
 // },2);

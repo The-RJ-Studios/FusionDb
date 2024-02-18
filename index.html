@@ -51,23 +51,36 @@
       <!-- nav section -->
       <div id="nav" class="header">
         <a class="nav-elem" href="./index.html"><img src="/pics/new-logo-2.1png" alt /></a>
-<div class="nav1">
-        <h4><a class="nav-elem" href="#page1">Home</a></h4>
-        <h4><a class="nav-elem" href="#page3">About</a></h4>
-        <h4><a class="nav-elem" href="/pages/Anime/index.html">Anime</a></h4>
-        <h4><a class="nav-elem" href="/pages/manga/index.html">Manga</a></h4>
-        <h4><a class="nav-elem" href="/pages/movies/index.html">Movies</a></h4>
-</div>
+        <div class="nav1">
+        <h4><a class="nav-elem hideOnMobile" href="#page1">Home</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="#page3">About</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="/pages/Anime/index.html">Anime</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="/pages/manga/index.html">Manga</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="/pages/movies/index.html">Movies</a></h4>
+        </div>
         <!-- <form id="form">
           <input type="text" class="nav-elem" placeholder="Type to search" id="Search" />
         </form> -->
-        <div id="nav2" class="nav-elem">
-          <a class="nav-elem"href="/pages/registration/register.html">
+        <div id="nav2" class="nav-elem hideOnMobile">
+          <a class="nav-elem" href="/pages/registration/register.html">
             <button class="Nav_btn" class="nav-elem"><span>Register</span></button>
             <!-- <i class="fa-solid fa-circle-user"></i> -->
           </a>
         </div>
+        <h4 onclick= showSidebar()><svg  class="svg-clr" xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </h4>
       </div>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a><svg class="svg-clr" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#page1"> Home</li></a>
+        <li><a href="#page3"> About</li></a>
+        <li><a href="/pages/Anime/index.html"> Anime</li></a>
+        <li><a href="/pages/movies/index.html"> Movies</li></a>
+        <li><a href="/pages/manga/index.html"> Manga</li></a>
+      </ul>
+    </nav>
+      
       
       <div class="container">
         <div class="scroll-down-2">
@@ -195,17 +208,17 @@
           <br />
 
   <p class="ani-words">
-    <span class="p1"></span> <br />
+    <i><span class="p1"></span> <br />
     <span class="p2"></span> <br /><b
-              ><i><span class="p3"></i></b></span>
+              ><span class="p3"></b></span>
               <span class="p4"></span><br /><span class="p5"></span><br />
-            <span class="p6"></span>
+            <span class="p6"></span></i>
           </p>
         </div>
           <img class="ab-img" src="/pics/About2.png" alt />
         </div>
-        <br /><br /><br /><br /><br />
-        <footer class="footer" data-aos="fade-up"  data-aos-duration="2000">
+        <!-- <br /><br /><br /><br /><br /> -->
+        <footer class="footer">
           <div class="container2">
             <div class="row">
               <div class="footer-col">
@@ -305,6 +318,16 @@
       //   duration: .1,
         
       // })
+    </script>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none'
+      }
     </script>
     <script>
       anime({

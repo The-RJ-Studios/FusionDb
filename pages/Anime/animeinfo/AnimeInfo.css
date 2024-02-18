@@ -98,26 +98,32 @@ body {
 }
 
 #nav {
-    height: 80px;
+    height: 70px;
     width: 100%;
-    /* margin: 0 1em 0 2em; */
-    background-color: #6c6cf5;
+    margin-top: .5rem;
+    background-color: transparent;
     display: flex;
     align-items: center;
     /* padding: 0 120px; */
-    font-weight: 900;
-    position: fixed;
-    justify-content: space-evenly;
-    
+    font-weight: 400;
+    position: absolute;
+    justify-content: flex-start;
+    top: 0;
+    gap: 30vw;
     color: #292b23;
-    z-index: 99;
+    z-index: 5;
     border-bottom: .0625rem solid #42433d;
 }
-
+.nav-2-1{
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ gap: 150px;
+}
 #nav img {
-    height: 4.5vw;
+    height: 7vw;
     z-index: 1;
-    padding-right : 120px;
+    padding-left: 5vw;
 }
 
 #nav h4 {
@@ -199,48 +205,54 @@ a:active {
 
 }
 
-#page1 img {
-    position: absolute;
-    /* margin-top: 12.8rem; */
+#back-cover{
+    position: absolute; 
+     /* margin-top: 12.8rem;  */
     width: 100%;
+    top:-10vw;
     border-radius: 0px;
     transition: 0.8s;
     z-index: 0;
   
 }
 #part2{
-    height: 83vh;
+    height: 85vh;
     width: 100%;
     margin-top: 45%;
     z-index: 1;
+    position: relative;
     background: #FAFAFA;
 }
 
 #part2 img {
-    height: 322px;
-    width: 215px;
+    height: 25vw;
+    width: 16vw;
     /* position: absolute; */
-    margin-top: -85px;
-    margin-left: 100px;
+    margin-top: -9vw;
+    margin-left: 5vw;
 
+}
+#Anime-info{
+    position: relative;
 }
 
 #part2 h2 {
     display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 360px;
+    position: relative;
+    font-size: 2.4vw;
+    margin-block-start: -14.67vw;
+    margin-block-end: 1.67em;
+    margin-inline-start: 25vw;
     margin-inline-end: 0px;
 }
 
 #part2 p {
     display: block;
-    width: 820px;
-    font-size: 14px;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 360px;
+    width: 64vw;
+    font-size: 1.5vw;
+    margin-block-start: 3.33vw;
+    margin-block-end: -0.33vw;
+    margin-inline-start: 25vw;
     margin-inline-end: 0px;
-    line-height: 25px;
+    line-height: 2vw;
 }
