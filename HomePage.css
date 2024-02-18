@@ -142,22 +142,23 @@ body {
 }
 
 #nav img {
-  height: 4.5vw;
+  height: 8vw;
   cursor: pointer;
   transition: all 0.3s;
-  margin-left: 35px;
+  margin-left: 3vw;
 }
 #nav img:hover{
-  height: 5vw;
+  height: 9vw;
   /* transform: translateY(-5px); */
 }
 
 .Nav_btn {
   border: 1px solid white;
   background: transparent;
-  padding: 10px 25px;
+  /* padding: 10px 25px; */
+  padding: 0.8vw 1.5vw;
   display: inline-flex;
-  font-size: 15px;
+  font-size: 1.5vw;
   text-transform: uppercase;
   font-family: inherit;
   cursor: pointer;
@@ -294,11 +295,11 @@ a:visited {
 video {
   position: absolute;
   height: 103vh;
-  width: 100%;
+  width: 100vw;
   object-fit: cover;
   /* filter: brightness(140%); */
 
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 .container h1 h2 span{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -307,23 +308,27 @@ video {
   /* margin-top: 450px; */
   /* margin-left: 150px; */
   z-index: 1;
-  font-size: 1.5rem;
+  color: #ffffff;
+  font-size: 1.2rem;
   position: absolute;
 }
 .scroll-down{
   margin-top: 450px;
   /* margin-left: -300px; */
   z-index: 1;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 .scroll-down h3{
   padding-top: 5%;
   padding-left: 20%;
+  color: #ffffff;
 }
 .scroll-down span{
   padding-left: 35%;
   /* padding-top: 5%; */
   font-size: 3rem;
+  color: #ffffff;
   height: 1rem;
 }
 

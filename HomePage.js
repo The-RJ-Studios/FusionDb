@@ -65,7 +65,7 @@ gsap.to("#nav", {
     height: "80px",
     marginTop: 0,
     // boxShadow: "0px 4px 0px 0px blue",
-    borderBottom: "10px solid #42433d",
+    borderBottom: "1.5px solid #42433d",
     scrollTrigger: {
       trigger: "#nav",
       scroller: "body",

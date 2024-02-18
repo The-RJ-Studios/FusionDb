@@ -22,6 +22,9 @@ gsap.to("#nav", {
   backgroundColor: "#0e100f",
   duration: 1.5,
   height: "80px",
+  marginTop: 0,
+  // boxShadow: "0px 4px 0px 0px blue",
+  borderBottom: "1.5px solid #42433d",
   scrollTrigger: {
     trigger: "#nav",
     scroller: "body",
@@ -40,8 +43,29 @@ btn.onmousemove = function (e) {
   btn.style.setProperty("--x", x + "px");
   btn.style.setProperty("--y", y + "px");
 }
+let tl2 = gsap.timeline({
+  // ease: "slow(0.7,0.7,false)",
+  stagger: 0.5,
+  opacity:0,
+  repeat: -1,
 
+});
+tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place",opacity:1, delay: 7,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"Trending, Popular, New releases and upcoming", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"No need to vist three websites for all three", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"Enjoy your visit", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 3,})
+tl2.to("#myText-2",{opacity:0, delay: 4, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
 
+gsap.fromTo(".container",{opacity:0}, {
+  opacity: 1,
+  duration: 2,
+  ease: "linear",
+  delay: 4,
+
+})
 // function startLoader() {
 //    let counterElement = document.querySelector(".counter");
 //    let currentValue = 0;
@@ -77,35 +101,42 @@ btn.onmousemove = function (e) {
 // let text = document.querySelector(".text");
 
 gsap.to(".counter", 0.25, {
-  delay: 3.5,
+  delay: 3.4,
   opacity: 0,
   ease: "power4.inOut"
 });
-gsap.to(".bar", 1.5, {
-  delay: 3.5,
-  height: 0,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut"
+
+gsap.fromTo(".bar",{opacity:1},  {
+  delay: 3.7,
+  opacity: 0 ,
+  duration: 4,
+  ease: "power1.out",
 
 });
+// gsap.to(".bar", 1.5, {
+//   delay: 3.5,
+//   height: 0,
+//   stagger: {
+//     amount: 0.5,
+//   },
+//   ease: "power4.inOut"
+
+// });
 setTimeout(() => {
   var a = document.getElementById("mkc");
   a.style.zIndex = -100;
   var a = document.getElementById("mkc-2");
   a.style.zIndex = -100;
   clearTimeout(setTimeout);
-}, 5000);
+}, 4000);
 
-let tl = gsap.timeline({
-  defaults: {
-    opacity: 0,
-    ease: "slow(0.7,0.7,false)",
-  }
-})
+// let tl = gsap.timeline({
+//   defaults: {
+//     opacity: 0,
+//     ease: "slow(0.7,0.7,false)",
+//   }
+// })
 
-let sections = gsap.utils.toArray(".popu");
 // tl.set(".card",{
 //   opacity: 0,
 
@@ -130,90 +161,92 @@ let sections = gsap.utils.toArray(".popu");
 //   }
 // })
 // for popular section
-tl.fromTo(".type-1", { opacity: 0 }, {
-  opacity: 1,
-  ease: "slow(0.7,0.7,false)",
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".all-card",
-    start: "-295px",
-    // end: "-20px",
-    scrub: 1,
-    // markers: true,
-  }
-})
-tl.fromTo(".popu", { opacity: 0 }, {
-  opacity: 1,
-  duration: 3,
-  delay: 1,
-  ease: "slow(0.7,0.7,false)",
-  paused: true,
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".all-card-pop",
-    start: "-280px",
-    end: "70px",
-    scrub: 1,
-    // markers: true,
-  }
-})
-// for latest section
-tl.fromTo(".type-2", { opacity: 0 }, {
-  opacity: 1,
-  ease: "slow(0.7,0.7,false)",
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".all-card-lat",
-    start: "1000px",
-    // end: "-20px",
-    scrub: 1,
-    // markers: true,
-  }
-})
-tl.fromTo(".popi", { opacity: 0 }, {
-  opacity: 1,
-  duration: 3,
-  delay: 1,
-  ease: "slow(0.7,0.7,false)",
-  paused: true,
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".all-card-lat",
-    start: "1010px",
-    end: "1300px",
-    scrub: 1,
-    // markers: true,
-  }
-})
-// for ran section
-tl.fromTo(".type-3", { opacity: 0 }, {
-  opacity: 1,
-  ease: "slow(0.7,0.7,false)",
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".all-card-ran",
-    start: "2400px",
-    // end: "2450px",
-    scrub: 1,
-    markers: true,
-  }
-})
-tl.fromTo(".popo", { opacity: 0 }, {
-  opacity: 1,
-  duration: 3,
-  delay: 1,
-  ease: "slow(0.7,0.7,false)",
-  paused: true,
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".all-card-ran",
-    start: "2410px",
-    end: "2600px",
-    scrub: 1,
-    // markers: true,
-  }
-})
+// tl.fromTo(".type-1", { opacity: 0 }, {
+//   opacity: 1,
+//   ease: "slow(0.7,0.7,false)",
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".all-card",
+//     start: "-295px",
+//     // end: "-20px",
+//     scrub: 1,
+//     // markers: true,
+//   }
+// })
+// tl.fromTo(".popu", { opacity: 0 }, {
+//   opacity: 1,
+//   duration: 3,
+//   delay: 1,
+//   ease: "slow(0.7,0.7,false)",
+//   paused: true,
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".all-card-pop",
+//     start: "-280px",
+//     end: "70px",
+//     scrub: 1,
+//     // markers: true,
+//   }
+// })
+// // for latest section
+// tl.fromTo(".type-2", { opacity: 0 }, {
+//   opacity: 1,
+//   ease: "slow(0.7,0.7,false)",
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".all-card-lat",
+//     start: "1000px",
+//     // end: "-20px",
+//     scrub: 1,
+//     // markers: true,
+//   }
+// })
+// tl.fromTo(".popi", { opacity: 0 }, {
+//   opacity: 1,
+//   duration: 3,
+//   delay: 1,
+//   ease: "slow(0.7,0.7,false)",
+//   paused: true,
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".all-card-lat",
+//     start: "1010px",
+//     end: "1300px",
+//     scrub: 1,
+//     // markers: true,
+//   }
+// })
+// // for ran section
+// tl.fromTo(".type-3", { opacity: 0 }, {
+//   opacity: 1,
+//   ease: "slow(0.7,0.7,false)",
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".all-card-ran",
+//     start: "2400px",
+//     // end: "2450px",
+//     scrub: 1,
+//     markers: true,
+//   }
+// })
+// tl.fromTo(".popo", { opacity: 0 }, {
+//   opacity: 1,
+//   duration: 3,
+//   delay: 1,
+//   ease: "slow(0.7,0.7,false)",
+//   paused: true,
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".all-card-ran",
+//     start: "2410px",
+//     end: "2600px",
+//     scrub: 1,
+//     // markers: true,
+//   }
+// })
 //horizontal scrolling
+let sections = gsap.utils.toArray(".popu");
+
 gsap.to(sections, {
 
   xPercent: -100 * (sections.length - 6),
@@ -272,13 +305,13 @@ gsap.to(sectionsR, {
 
   }
 });
-gsap.fromTo(".ani-vid",{scale: 0}, {
-scale: 1,
-  duration: 2,
-  // ease: "sine.out",
-  delay: 5,
+// gsap.fromTo(".ani-vid",{scale: 0}, {
+// scale: 1,
+//   duration: 2,
+//   // ease: "sine.out",
+//   delay: 5,
 
-})
+// })
 gsap.fromTo(".man-vid", { opacity: 0 }, {
   duration: 2,
   ease: "sine.out",
@@ -287,19 +320,19 @@ gsap.fromTo(".man-vid", { opacity: 0 }, {
   delay: 5,
 
 })
-gsap.from(".header", {
-  y: "-100%",
-  duration: 2,
-  delay: 5.5,
-  ease: "bounce",
-  scrub: 1
+// gsap.from(".header", {
+//   y: "-100%",
+//   duration: 2,
+//   delay: 4,
+//   ease: "linear",
+//   scrub: 1
 
-})
+// })
 gsap.fromTo(".nav-elem", { opacity: 0 }, {
   opacity: 1,
-  duration: 2,
-  delay: 5.5,
-  stagger: 0.3,
+  duration: 4,
+  delay: 4.5,
+  stagger: 0.1,
   scrub: 1
 
 })
