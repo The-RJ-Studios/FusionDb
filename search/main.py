@@ -25,7 +25,7 @@ try:
     urllib3.disable_warnings()
     data= getData()
     print("\n")
-    # """<div class="media-card">
+    # """<div class="media-card"> #cardDiv
     #        <a href="" class="cover">
 
     #       <img src=\"""", 1,  """\" alt="" class="image loaded">
@@ -39,9 +39,10 @@ try:
     #       </div>"""
     results= data["results"]
     for item in results:
-        # document.getElementById("results").innerHTML = a
+        # Experimenting with cresting a card div
+        outerDiv= document.getElementById('result')
+        cardDiv=document.createElement("div")
         
-        console.log(item["title"])
         
         # print(item["title"])
     print(data['title'])
