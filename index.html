@@ -201,6 +201,7 @@
         </div> -->
       </div>
       <div id="page3">
+
         <br /><br /><br /><br /><br /><br />
         <div class="aboutus">
           <h2 id="mkc-3"></h2>
@@ -264,7 +265,6 @@
             </div>
           </div>
         </footer>
-      </div>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -297,7 +297,7 @@
       {
         y:0,
         stagger: 0.05,
-        delay: 30,
+        delay: 10,
         ease: "linear",
         duration: .1,
         opacity:1,
@@ -306,7 +306,7 @@
       {
         y:0,
         stagger: 0.05,
-        delay: 30,
+        delay: 10,
         ease: "linear",
         duration: .1,
         opacity:1,
@@ -342,6 +342,7 @@
     </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
     <script>
       AOS.init({
   offset: 120,
@@ -351,7 +352,10 @@
   once: false, 
   mirror: false, 
   anchorPlacement: 'top-bottom', 
-
+  disable: function() {
+    var maxWidth = 801;
+    return window.innerWidth < maxWidth;
+  }
 });
     </script>
   </body>
