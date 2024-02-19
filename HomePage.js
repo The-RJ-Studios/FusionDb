@@ -1,5 +1,7 @@
 // let counter = 1
 
+
+
 // const { default: gsap } = require("gsap");
 
 
@@ -26,7 +28,62 @@ btn.onmousemove = function(e){
   btn.style.setProperty("--x",x + "px");
   btn.style.setProperty("--y",y + "px");
 }
-gsap.from(".container", {
+ScrollTrigger.matchMedia({
+  "(max-width: 800px)": function(){
+    let tl= gsap.timeline({scrollTrigger: {
+  trigger: ".ani-words",
+  start: "-600px",
+  end: "-270px",
+  scrub: 1,
+  delay: 4,
+  stagger: 0.01,
+  markers: true,
+  ease: "slow(0.7,0.7,false)",
+},});
+
+tl.to("#mkc-3",4, {text:"LATEST & POPULAR"})
+tl.to(".p1",4, {text:" M2ADB is a webite made in a way that"})
+tl.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
+tl.to(".p2", 4, {text:"people can discover Popular, Upcoming & Latest"})
+tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
+tl.to(".p4", 4, {text:"all three in"})
+tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
+tl.to(".p6", 4, {text:"website for each."})
+  }
+})
+let mm = gsap.matchMedia();
+mm.add("(max-width: 800px)",()=>{
+  gsap.fromTo(".container",{opacity:0}, {
+    opacity:1,
+    duration: 5,
+    ease: "linear",
+    delay: 2,
+
+})
+gsap.fromTo(".header",{opacity:0}, {
+  opacity:1,
+    duration: 4,
+    delay: 1,
+    ease: "linear",
+    scrub: 1
+
+})
+gsap.fromTo(".scrolling-down",{opacity:0,y: 120},{
+  opacity:1,
+  y: 0,
+  duration: 1,
+  ease: "linear",
+  delay: 5,
+  
+  
+})
+
+})
+
+//for lap
+let mkc5 = gsap.matchMedia();
+mkc5.add("(min-width: 801px",()=>{
+  gsap.from(".container", {
     x: "-100%",
     duration: 2,
     ease: "sine.out",
@@ -49,6 +106,30 @@ gsap.fromTo(".scrolling-down",{opacity:0,y: 120},{
   delay: 6.5,
   
 })
+let tl= gsap.timeline({scrollTrigger: {
+  trigger: ".ani-words",
+  start: "-600px",
+  end: "-270px",
+  scrub: 1,
+  delay: 4,
+  stagger: 0.01,
+  // markers: true,
+  ease: "slow(0.7,0.7,false)",
+},});
+
+tl.to("#mkc-3",4, {text:"LATEST & POPULAR"})
+tl.to(".p1",4, {text:" M2ADB is a webite made in a way that"})
+tl.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
+tl.to(".p2", 4, {text:"people can discover Popular, Upcoming & Latest"})
+tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
+tl.to(".p4", 4, {text:"all three in"})
+tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
+tl.to(".p6", 4, {text:"website for each."})
+})
+
+  
+
+
 // gsap.fromTo(".scrolling-down-symbol",{opacity:0,y: 100},{
 //   opacity:1,
 //   y: 0,
@@ -123,6 +204,16 @@ gsap.to(".bar",1.5,{
   ease: "power4.inOut",
 
 });
+setTimeout(() => {
+  var a = document.getElementById("mkc");
+  a.style.zIndex=-100; 
+  var a = document.getElementById("mkc-2");
+  a.style.zIndex=-100;
+}, 5000);
+
+function tope(){
+  window.scrollTo(0,0);
+}
 // let lastKnownScrollPosition = 0;
 // function gand(){
 
@@ -157,17 +248,7 @@ gsap.to(".bar",1.5,{
   
 // },0)
 
-setTimeout(() => {
-  var a = document.getElementById("mkc");
-  a.style.zIndex=-100; 
-  var a = document.getElementById("mkc-2");
-  a.style.zIndex=-100;
-  clearTimeout(setTimeout);
-}, 5000);
 
-function tope(){
-  window.scrollTo(0,0);
-}
 // start page timeline
 // let tl2 = gsap.timeline({
 //   // ease: "slow(0.7,0.7,false)",
@@ -202,50 +283,32 @@ tl2.to("#myText-2",{opacity:0, delay: 4, text:"",ease: "slow(0.5, 0.8)",  durati
 
 // about us timeline
 // TweenLite.defaultEase = Linear.easeNone;
-let tl= gsap.timeline({scrollTrigger: {
-  trigger: ".ani-words",
-  start: "-600px",
-  end: "-270px",
-  scrub: 1,
-  delay: 4,
-  stagger: 0.01,
-  // markers: true,
-  ease: "slow(0.7,0.7,false)",
-},});
 
-tl.to("#mkc-3",4, {text:"LATEST & POPULAR"})
-tl.to(".p1",4, {text:" M2ADB is a webite made in a way that"})
-tl.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
-tl.to(".p2", 4, {text:"people can discover Popular, Upcoming & Latest"})
-tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
-tl.to(".p4", 4, {text:"all three in"})
-tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
-tl.to(".p6", 4, {text:"website for each."})
 
 //for mobile
-let mm = gsap.matchMedia();
-mm.add("(max-width: 600px)",()=>{
-  let tlm= gsap.timeline({scrollTrigger: {
-    trigger: ".ani-words",
-    start: "top center",
-    end: "bottom center",
-    scrub: true,
-    duration: 6,
-    delay: 4,
-    stagger: 0.01,
-    markers: true,
-    ease: "slow(0.7,0.7,false)",
-  },});
+// let mm = gsap.matchMedia();
+// mm.add("(max-width: 600px)",()=>{
+//   let tlm= gsap.timeline({scrollTrigger: {
+//     trigger: ".ani-words",
+//     start: "-600px",
+//     end: "-250px",
+//     scrub: true,
+//     duration: 6,
+//     delay: 4,
+//     stagger: 0.01,
+//     markers: true,
+//     ease: "slow(0.7,0.7,false)",
+//   },});
   
-  tlm.to("#mkc-3", {text:"LATEST & POPULAR"})
-  tlm.to(".p1", {text:" M2ADB is a webite made in a way that"})
-  // tlm.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
-  tlm.to(".p2",  {text:"people can discover Popular, Upcoming & Latest"})
-  tlm.to(".p3",  {text:"Anime, Manga and Movies"})
-  tlm.to(".p4",  {text:"all three in"})
-  tlm.to(".p5",  {text:"one single place, and does not have the need to visit another "})
-  tlm.to(".p6",  {text:"website for each."})
-})
+//   tlm.to("#mkc-3", {text:"LATEST & POPULAR"})
+//   tlm.to(".p1", {text:" M2ADB is a webite made in a way that"})
+//   // tlm.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
+//   tlm.to(".p2",  {text:"people can discover Popular, Upcoming & Latest"})
+//   tlm.to(".p3",  {text:"Anime, Manga and Movies"})
+//   tlm.to(".p4",  {text:"all three in"})
+//   tlm.to(".p5",  {text:"one single place, and does not have the need to visit another "})
+//   tlm.to(".p6",  {text:"website for each."})
+// })
 
 // setTimeout(function () {
 //   window.scrollTo(0, 0);
