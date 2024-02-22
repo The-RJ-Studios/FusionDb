@@ -104,7 +104,7 @@ ScrollTrigger.matchMedia({
   scrub: 1,
   delay: 4,
   stagger: 0.01,
-  // markers: true,
+  markers: true,
   ease: "slow(0.7,0.7,false)",
 },});
 

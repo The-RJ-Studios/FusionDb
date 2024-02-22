@@ -307,9 +307,6 @@ mm.add("(min-width: 1000px)",()=>{
   
     }
   });
-
-})
-
 // gsap.fromTo(".ani-vid",{scale: 0}, {
 // scale: 1,
 //   duration: 2,

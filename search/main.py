@@ -6,7 +6,7 @@ import requests
 from js import document, console
 
 # Generating Request Headers
-query = "John Wick" #Query string
+query = "john wick" #Query string
 url ='https://imdb-api.uzairshaikhking777.workers.dev/search?query='+ query
 print(url)
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
@@ -25,10 +25,10 @@ try:
     urllib3.disable_warnings()
     data= getData()
     print("\n")
-    # """<div class="media-card">
+    # """<div class="media-card"> #cardDiv
     #        <a href="" class="cover">
 
-    #       <img src=\"""", 1,  """\" alt="" class="image loaded">
+    #       <img src="" alt="" class="image loaded">
 
     #        </a> 
     #        <a href="" class="title">
@@ -39,12 +39,17 @@ try:
     #       </div>"""
     results= data["results"]
     for item in results:
-        # document.getElementById("results").innerHTML = a
-        
+        # Experimenting with cresting a card div
         console.log(item["title"])
+        cardDiv=document.createElement("div")
+        # cardDiv.className="media-card"
+        imageATag=document.createElement("a")
+        # imageATag.className="cover"
+        imageTag=document.createElement("img")
+        cardDiv.appendChild(imageATag)
+        document.getElementById('result').appendChild(cardDiv)
         
         # print(item["title"])
-    print(data['title'])
     # console.log("Request sent")
     # document.getElementById('cover').src=data['image']
     # document.getElementById('title').innerHTML=data['title']
