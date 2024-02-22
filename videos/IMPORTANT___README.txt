@@ -1,0 +1,1 @@
+The FIles should be 26 mb or less due to streaming issues. So upload media of maximum 25 mb(1mb deploayment overhead)
