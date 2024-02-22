@@ -716,3 +716,47 @@ ul {
     width: 100%;
   }
 }
+@media (max-width: 800px) {
+
+  .Menu-Btn{
+    display: block;
+   position: absolute;
+   top: 1rem;
+   right: 3vw;
+  }
+  .logo{
+    margin-top: 1rem;
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .counter{
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  } 
+  video {
+  width: 100vw;
+
+  }
+  .bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+  }
+  html{ 
+    scrollbar-width: none;  
+  }
+ html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+}
