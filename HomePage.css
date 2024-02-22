@@ -685,7 +685,7 @@ video {
 }
 
 #page3 h2 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -704,15 +704,15 @@ video {
 
 #page3 p {
   margin-left: 69px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
   line-height: 40px;
   font-weight: 100;
 }
 
 .p3 {
-  font-size: 1rem;
-  color: green;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
 }
 
 #page3 img {
@@ -754,7 +754,7 @@ video {
    left: 20rem;
   }
 } */
-
+@media (max-width: 1200px) {
   .ab-img {
     display: none;
   }
