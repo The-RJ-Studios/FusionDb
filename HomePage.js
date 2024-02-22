@@ -29,11 +29,11 @@ btn.onmousemove = function(e){
   btn.style.setProperty("--y",y + "px");
 }
 ScrollTrigger.matchMedia({
-  "(max-width: 800px)": function(){
+  "(max-width: 1200px)": function(){
     let tl= gsap.timeline({scrollTrigger: {
   trigger: ".ani-words",
-  start: "-600px",
-  end: "-270px",
+  start: "50px",
+  end: "70px",
   scrub: 1,
   delay: 4,
   stagger: 0.01,
@@ -42,17 +42,16 @@ ScrollTrigger.matchMedia({
 },});
 
 tl.to("#mkc-3",4, {text:"LATEST & POPULAR"})
-tl.to(".p1",4, {text:" M2ADB is a webite made in a way that"})
+tl.to(".p1",4, {text:" M2ADB is a webite made in a way that,"})
 tl.fromTo(".ab-img", {opacity:0,scale:0},{ opacity: 1 , scale: 1 , duration: 5 , })
 tl.to(".p2", 4, {text:"people can discover Popular, Upcoming & Latest"})
 tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
-tl.to(".p4", 4, {text:"all three in"})
-tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
-tl.to(".p6", 4, {text:"website for each."})
+tl.to(".p4", 4, {text:"all three in one single place, and does not"})
+tl.to(".p5", 4, {text:"have the need to visit another website for each."})
   }
 })
 let mm = gsap.matchMedia();
-mm.add("(max-width: 800px)",()=>{
+mm.add("(max-width: 1200px)",()=>{
   gsap.fromTo(".container",{opacity:0}, {
     opacity:1,
     duration: 5,
@@ -78,35 +77,27 @@ gsap.fromTo(".scrolling-down",{opacity:0,y: 120},{
   
 })
 
-})
-
-//for lap
-let mkc5 = gsap.matchMedia();
-mkc5.add("(min-width: 801px",()=>{
-  gsap.from(".container", {
-    x: "-100%",
-    duration: 2,
-    ease: "sine.out",
-    delay: 5,
-
-})
-gsap.from(".header", {
-    y: "-100%",
-    duration: 2,
-    delay: 6,
-    ease: "bounce",
+gsap.to("#nav", {
+  backgroundColor: "#0e100f",
+  duration: 1.5,
+  height: "80px",
+  marginTop: 0,
+  // boxShadow: "0px 4px 0px 0px blue",
+  borderBottom: "1.5px solid #42433d",
+  scrollTrigger: {
+    trigger: "#nav",
+    scroller: "body",
+    // markers:true,
+    start: "500px",
+    end: "550px",
     scrub: 1
+  },
+});
+})
 
-})
-gsap.fromTo(".scrolling-down",{opacity:0,y: 120},{
-  opacity:1,
-  y: 0,
-  duration: 1,
-  ease: "linear",
-  delay: 6.5,
-  
-})
-let tl= gsap.timeline({scrollTrigger: {
+ScrollTrigger.matchMedia({
+  "(min-width: 1201px)": function(){
+    let tl= gsap.timeline({scrollTrigger: {
   trigger: ".ani-words",
   start: "-600px",
   end: "-270px",
@@ -125,10 +116,8 @@ tl.to(".p3", 4, {text:"Anime, Manga and Movies"})
 tl.to(".p4", 4, {text:"all three in"})
 tl.to(".p5", 4, {text:"one single place, and does not have the need to visit another "})
 tl.to(".p6", 4, {text:"website for each."})
+  }
 })
-
-  
-
 
 // gsap.fromTo(".scrolling-down-symbol",{opacity:0,y: 100},{
 //   opacity:1,
