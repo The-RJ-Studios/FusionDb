@@ -1,4 +1,3 @@
-
 response.addHeader("Access-Control-Allow-Origin", "*");
 languagePluginUrl = 'https://cdn.jsdelivr.net/pyodide/dev/full/';
 pyodide = await loadPyodide({ indexURL : languagePluginUrl });
