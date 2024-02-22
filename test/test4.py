@@ -53,6 +53,8 @@ try:
         titleATag.innerHTML=item['title']
         # imageATag.className="cover"
         imageTag = document.createElement('img')
+        imageATag.appendChild(imageTag)
+        imageTag.src = item['image']
         
         # print(item["title"])
     # console.log("Request sent")
