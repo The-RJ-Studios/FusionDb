@@ -754,13 +754,24 @@ video {
    left: 20rem;
   }
 } */
-@media (max-width: 1400px){
+@media (max-width: 3000px){
   .ab-img {
     display: block;
   }
   #page3 p {
     margin-left: 6vw;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: white;
+    line-height: 3.5rem;
+    font-weight: 600;
+  }
+  .p3 {
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+  }
+  #page3 p {
+    margin-left: 2rem;
+    font-size: 1.5rem;
     color: white;
     line-height: 3.5rem;
     font-weight: 400;
