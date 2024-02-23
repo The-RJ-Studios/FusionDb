@@ -765,12 +765,336 @@ video {
    left: 20rem;
   }
 } */
-@media (max-width: 800) {
-  .ab-img {
+@media(min-width: 100px) and (max-width: 408px) {
+  .ab-img{
+    display: none;
+  }
+
+  .Menu-Btn{
+    display: block;
+   position: absolute;
+   top: 1rem;
+   right: 0rem;
+  }
+  .logo{
+    margin-top: 1rem;
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .counter{
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+  } 
+  video {
+  width: 100vw;
+  height: 70vh;
+  }
+  .bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+  }
+  #page3 p {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    width: 20rem;
+    color: white;
+    line-height: 2.5rem;
+    font-weight: 400;
+  }
+  
+  #page3 h2 {
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: brown;
+    margin-left: 3vw;
+    font-weight: 500;
+  }
+  #myText-2{
+    font-size: 5vw;
+    margin: 5vw 5vw;
+  }
+  
+  .scroll-down-2{
+    top: 70vw;
+  }
+  .scroll-down{
+    margin-top: 95vw;
+    font-size: .5rem;
+  }
+  .scroll-down span{
+    font-size: 2.5rem;
+  }
+  .scroll-down span{
+    font-size: 2rem;
+    padding-left: 33%;
+  }
+  #nav img{
+    height: 6rem;
+  }
+  #nav img:hover{
+    height: 6.5rem;
+  }
+  #nav svg{
+    margin-right: 2.5rem;
+    cursor: pointer;
+  }
+  #nav {
+    padding-left: 2rem;
+  }
+  #page1 svg{
+    cursor: pointer;
+    color: white;
+  }
+  .svg-clr{
+    fill: rgb(4, 0, 250);
+  }
+  html{ 
+    scrollbar-width: none;  
+  }
+ html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+}
+@media(min-width: 100px) and (max-width: 499px) {
+  .ab-img{
+    display: none;
+  }
+
+  .Menu-Btn{
+    display: block;
+   position: absolute;
+   top: 1rem;
+   right: 0rem;
+  }
+  .logo{
+    margin-top: 1rem;
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .counter{
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+  } 
+  video {
+  width: 100vw;
+  height: 70vh;
+  }
+  .bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+  }
+  #page3 p {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    width: 24rem;
+    color: white;
+    line-height: 2.5rem;
+    font-weight: 400;
+  }
+  #page3 {
+
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    padding: 0;
+  }
+  
+  #page3 h2 {
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: brown;
+    margin-left: 3vw;
+    font-weight: 500;
+  }
+  #myText-2{
+    font-size: 5vw;
+    margin: 5vw 5vw;
+  }
+  .scroll-down-2{
+    top: 70vw;
+  }
+  .scroll-down{
+    margin-top: 95vw;
+    font-size: .5rem;
+  }
+  .scroll-down span{
+    font-size: 2.5rem;
+  }
+  .scroll-down span{
+    font-size: 2rem;
+    padding-left: 33%;
+  }
+  #nav img{
+    height: 6rem;
+  }
+  #nav img:hover{
+    height: 6.5rem;
+  }
+  #nav svg{
+    margin-right: 2.5rem;
+    cursor: pointer;
+  }
+  #nav {
+    padding-left: 2rem;
+  }
+  #page1 svg{
+    cursor: pointer;
+    color: white;
+  }
+  .svg-clr{
+    fill: rgb(4, 0, 250);
+  }
+  html{ 
+    scrollbar-width: none;  
+  }
+ html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+}
+@media(min-width: 500px) and (max-width: 750px) {
+  .ab-img{
+    display: none;
+  }
+
+  .Menu-Btn{
+    display: block;
+   position: absolute;
+   top: 1rem;
+   right: 0rem;
+  }
+  .logo{
+    margin-top: 1rem;
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .counter{
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+  } 
+  video {
+  width: 100vw;
+  height: 70vh;
+  }
+  .bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+  }
+  #page3 p {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    width: 24rem;
+    color: white;
+    line-height: 2.5rem;
+    font-weight: 400;
+  }
+  
+  #page3 h2 {
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: brown;
+    margin-left: 3vw;
+    font-weight: 500;
+  }
+  #myText-2{
+    font-size: 3.5vw;
+    margin: 5vw 5vw;
+    line-height: 3rem;
+  }
+  .scroll-down-2{
+    top: 40vw;
+  }
+  .scroll-down{
+    margin-top: 65vw;
+    font-size: .5rem;
+  }
+  .scroll-down span{
+    font-size: 2.5rem;
+  }
+  .scroll-down span{
+    font-size: 2rem;
+    padding-left: 33%;
+  }
+  #nav img{
+    height: 6rem;
+  }
+  #nav img:hover{
+    height: 6.5rem;
+  }
+  #nav svg{
+    margin-right: 2.5rem;
+    cursor: pointer;
+  }
+  #nav {
+    padding-left: 2rem;
+  }
+  #page1 svg{
+    cursor: pointer;
+    color: white;
+  }
+  .svg-clr{
+    fill: rgb(4, 0, 250);
+  }
+  html{ 
+    scrollbar-width: none;  
+  }
+ html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+}
+@media (min-width: 100px)and (max-width: 790px) {
+  .ab-img{
     display: none;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 751px) and (max-width: 1000px) {
   #page3 img {
     height: 400px;
     width: 450px;
@@ -850,10 +1174,10 @@ video {
     line-height: 3rem;
   }
   .scroll-down-2{
-    top: 50vw;
+    top: 25vw;
   }
   .scroll-down{
-    margin-top: 70vw;
+    margin-top: 40vw;
     font-size: .5rem;
   }
   .scroll-down span{
@@ -893,27 +1217,113 @@ body {
   position: relative
 }
 }
-/* @media  (max-width: 800px){
-  .p1{
-    padding: 0rem 10rem;
+
+/* */
+@media (min-width: 1001px) and (max-width: 1200px) {
+  #page3 img {
+    height: 450px;
+    width: 550px;
+    position: absolute;
+    top: 114px;
+    right: -51px;
+  } 
+  .container {
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+  } 
+  video {
+  width: 100vw;
+  height: 70vh;
   }
-  .p2{
-    padding: 0rem 7rem;
+  .bar {
+    width: 10vw;
+    height: 105vh;
+    background: white;
+  }
+  #page3 p {
+    margin-left: 2.5rem;
+    font-size: 1.5rem;
+    width: 35rem;
+    color: white;
+    line-height: 3rem;
+    font-weight: 400;
+  }
+  
+  #page3 h2 {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: brown;
+    margin-left: 3vw;
+    font-weight: 700;
+  }
+  #page3 {
+
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    padding: 0;
   }
   .p3 {
     font-size: 2rem;
     color: white;
-    padding: 0rem 11rem;
   }
-  .p4{
-    padding: 0rem 8rem;
+  #myText-2{
+    font-size: 4vw;
+    margin: 5vw 5vw;
+    line-height: 3rem;
   }
-  .p5{
-    padding: 0rem 6rem;
+  .scroll-down-2{
+    top: 25vw;
   }
-} */
-  
-
+  .scroll-down{
+    margin-top: 40vw;
+    font-size: .5rem;
+  }
+  .scroll-down span{
+    font-size: 2.5rem;
+  }
+  .scroll-down span{
+    font-size: 2rem;
+    padding-left: 33%;
+  }
+  #nav img{
+    height: 6rem;
+  }
+  #nav img:hover{
+    height: 6.5rem;
+  }
+  #nav svg{
+    margin-right: 2.5rem;
+    cursor: pointer;
+  }
+  #nav {
+    padding-left: 2rem;
+  }
+  #page1 svg{
+    cursor: pointer;
+    color: white;
+  }
+  .svg-clr{
+    fill: rgb(4, 0, 250);
+  }
+  html{ 
+    scrollbar-width: none;  
+  }
+ html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+}
+/* */
 .container2 {
   max-width: 1170px;
   margin: auto;
