@@ -7,9 +7,7 @@ import requests
 from js import document, console
 
 # Generating Request Headers
-console.clear()
-console.log("enter prompt")
-query = "avengers" #Query string
+query = "john wick" #Query string
 url ='https://imdb-api.uzairshaikhking777.workers.dev/search?query='+ query
 print(url)
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
@@ -40,27 +38,24 @@ try:
 
     #        </a>
     #       </div>"""
-    i=1
     results= data["results"]
     for item in results:
         # Experimenting with cresting a card div
-        console.log('Creating item', i)
-        outerDiv = document.getElementById('result')
+        console.log(item["title"])
+        outerDiv = document.getElementById('heading')
         cardDiv = document.createElement('div')
         outerDiv.appendChild(cardDiv)
         cardDiv.className="media-card"
         imageATag = document.createElement('a')
         cardDiv.appendChild(imageATag)
-        imageATag.className='cover'
         titleATag=document.createElement('a')
         cardDiv.appendChild(titleATag)
-        titleATag.className = 'title'
         titleATag.innerHTML=item['title']
-        imageATag.className="cover"
+        # imageATag.className="cover"
         imageTag = document.createElement('img')
         imageATag.appendChild(imageTag)
         imageTag.src = item['image']
-        i=i+1
+        
         # print(item["title"])
     # console.log("Request sent")
     # document.getElementById('cover').src=data['image']
