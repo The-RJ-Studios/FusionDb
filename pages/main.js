@@ -14,26 +14,19 @@
 //     }
 
 // },3000);
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none'
+}
 
 function tope() {
   window.scrollTo(0, 0);
 }
-gsap.to("#nav", {
-  backgroundColor: "#0e100f",
-  duration: 1.5,
-  height: "80px",
-  marginTop: 0,
-  // boxShadow: "0px 4px 0px 0px blue",
-  borderBottom: "1.5px solid #42433d",
-  scrollTrigger: {
-    trigger: "#nav",
-    scroller: "body",
-    // markers:true,
-    start: "740px",
-    // end: "top -11%",
-    scrub: 1
-  },
-});
+
 
 const btn = document.querySelector(".Nav_btn");
 btn.onmousemove = function (e) {
@@ -50,7 +43,9 @@ let tl2 = gsap.timeline({
   repeat: -1,
 
 });
-tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies all in one place",opacity:1, delay: 5,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{text:"Discover Anime, Manga and Movies",opacity:1, delay: 7,ease: "slow(0.5, 0.8)",  duration: 6,})
+tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
+tl2.to("#myText-2",{text:"All in one Single place", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
 tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
 tl2.to("#myText-2",{text:"Trending, Popular, New releases and upcoming", delay: 0,ease: "slow(0.5, 0.8)",opacity:1,  duration: 6,})
 tl2.to("#myText-2",{opacity:0, delay: 10, text:"",ease: "slow(0.5, 0.8)",  duration: 2,})
@@ -63,7 +58,7 @@ gsap.fromTo(".container",{opacity:0}, {
   opacity: 1,
   duration: 2,
   ease: "linear",
-  delay: 4,
+  delay: 1,
 
 })
 // function startLoader() {
@@ -100,19 +95,7 @@ gsap.fromTo(".container",{opacity:0}, {
 // startLoader();
 // let text = document.querySelector(".text");
 
-gsap.to(".counter", 0.25, {
-  delay: 3.4,
-  opacity: 0,
-  ease: "power4.inOut"
-});
 
-gsap.fromTo(".bar",{opacity:1},  {
-  delay: 3.7,
-  opacity: 0 ,
-  duration: 4,
-  ease: "power1.out",
-
-});
 // gsap.to(".bar", 1.5, {
 //   delay: 3.5,
 //   height: 0,
@@ -246,7 +229,38 @@ setTimeout(() => {
 // })
 //horizontal scrolling
 let mm = gsap.matchMedia();
-mm.add("(min-width: 1000px)",()=>{
+mm.add("(min-width: 801px)",()=>{
+  
+  gsap.to(".counter", 0.25, {
+    delay: 1.5,
+    duration: 2,
+    opacity: 0,
+    ease: "power4.inOut"
+  });
+  
+  gsap.fromTo(".bar",{opacity:1},  {
+    delay: 2,
+    opacity: 0 ,
+    duration: 2,
+    ease: "power1.out",
+  
+  });
+  gsap.to("#nav", {
+    backgroundColor: "#0e100f",
+    duration: 1.5,
+    height: "80px",
+    marginTop: 0,
+    // boxShadow: "0px 4px 0px 0px blue",
+    borderBottom: "1.5px solid #42433d",
+    scrollTrigger: {
+      trigger: "#nav",
+      scroller: "body",
+      // markers:true,
+      start: "740px",
+      // end: "top -11%",
+      scrub: 1
+    },
+  });
   let sections = gsap.utils.toArray(".popu");
 
   gsap.to(sections, {
@@ -307,6 +321,30 @@ mm.add("(min-width: 1000px)",()=>{
   
     }
   });
+  gsap.fromTo(".man-vid", { opacity: 0 }, {
+    duration: 2,
+    ease: "sine.out",
+    opacity: 1,
+    rotation: 360,
+    delay: 5,
+  
+  })
+  // gsap.from(".header", {
+  //   y: "-100%",
+  //   duration: 2,
+  //   delay: 4,
+  //   ease: "linear",
+  //   scrub: 1
+  
+  // })
+  gsap.fromTo(".nav-elem", { opacity: 0 }, {
+    opacity: 1,
+    duration: 4,
+    delay: 4.5,
+    stagger: 0.1,
+    scrub: 1
+  
+  })
 });
 // gsap.fromTo(".ani-vid",{scale: 0}, {
 // scale: 1,
@@ -315,14 +353,33 @@ mm.add("(min-width: 1000px)",()=>{
 //   delay: 5,
 
 // })
+let mobile = gsap.matchMedia();
+mobile.add("(max-width: 800px)",()=>{
+
 gsap.fromTo(".man-vid", { opacity: 0 }, {
   duration: 2,
-  ease: "sine.out",
+  ease: "linear",
   opacity: 1,
-  rotation: 360,
-  delay: 5,
+
+  delay: 1,
 
 })
+gsap.to("#nav", {
+  backgroundColor: "#0e100f",
+  duration: 1.5,
+  height: "80px",
+  marginTop: 0,
+  // boxShadow: "0px 4px 0px 0px blue",
+  borderBottom: "1.5px solid #42433d",
+  scrollTrigger: {
+    trigger: "#nav",
+    scroller: "body",
+    // markers:true,
+    start: "300px",
+    // end: "top -11%",
+    scrub: 1
+  },
+});
 // gsap.from(".header", {
 //   y: "-100%",
 //   duration: 2,
@@ -334,12 +391,12 @@ gsap.fromTo(".man-vid", { opacity: 0 }, {
 gsap.fromTo(".nav-elem", { opacity: 0 }, {
   opacity: 1,
   duration: 4,
-  delay: 4.5,
+  delay: 2,
   stagger: 0.1,
   scrub: 1
 
 })
 
-
+});
 
 

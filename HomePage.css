@@ -41,6 +41,15 @@ body {
   z-index: 1001;
   display: flex;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*Edge and Firefox */
+body,html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 #mkc img {
   position: absolute;
@@ -182,6 +191,7 @@ nav li:first-child{
   height: 70px;
   width: 100%;
   margin-top: .5rem;
+  padding-left: 5rem;
   /* margin: 0 1em 0 2em; */
   /* background-color: #4343ea; */
   display: flex;
@@ -703,11 +713,12 @@ video {
 }
 
 #page3 p {
-  margin-left: 69px;
+  margin-left: 4.5rem;
   font-size: 1.5rem;
+  width: 35rem;
   color: white;
-  line-height: 40px;
-  font-weight: 100;
+  line-height: 4rem;
+  font-weight: 400;
 }
 
 .p3 {
@@ -754,10 +765,19 @@ video {
    left: 20rem;
   }
 } */
-@media (max-width: 1200px) {
+@media (max-width: 800) {
   .ab-img {
     display: none;
   }
+}
+@media (max-width: 1200px) {
+  #page3 img {
+    height: 400px;
+    width: 450px;
+    position: absolute;
+    top: 114px;
+    right: 31px;
+  } 
 
   .Menu-Btn{
     display: block;
@@ -779,12 +799,13 @@ video {
   }
   .container {
     width: 100vw;
+    height: 70vh;
     margin: 0;
     padding: 0;
   } 
   video {
   width: 100vw;
-
+  height: 70vh;
   }
   .bar {
     width: 10vw;
@@ -792,21 +813,22 @@ video {
     background: white;
   }
   #page3 p {
-    margin: 0vw 2vw;
-    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    width: 24rem;
     color: white;
-    line-height: 3.5rem;
-    font-weight: 100;
+    line-height: 2.5rem;
+    font-weight: 400;
   }
   
   #page3 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: brown;
     margin-left: 3vw;
-    font-weight: 900;
+    font-weight: 500;
   }
   #page3 {
 
@@ -823,19 +845,23 @@ video {
     color: white;
   }
   #myText-2{
-    font-size: 5.4vw;
-    margin: 5rem 5vw;
+    font-size: 4vw;
+    margin: 5vw 5vw;
     line-height: 3rem;
   }
   .scroll-down-2{
-    top: 15rem;
+    top: 50vw;
   }
   .scroll-down{
-    margin-top: 150px;
-    font-size: 1rem;
+    margin-top: 70vw;
+    font-size: .5rem;
   }
   .scroll-down span{
     font-size: 2.5rem;
+  }
+  .scroll-down span{
+    font-size: 2rem;
+    padding-left: 33%;
   }
   #nav img{
     height: 6rem;
@@ -846,6 +872,9 @@ video {
   #nav svg{
     margin-right: 2.5rem;
     cursor: pointer;
+  }
+  #nav {
+    padding-left: 2rem;
   }
   #page1 svg{
     cursor: pointer;
