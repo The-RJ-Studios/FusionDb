@@ -366,7 +366,7 @@ video {
 
 .card {
     color: var(--clr-neutral-100);
-    padding: 5rem 0 0;
+    /* padding: 5rem 0 0; */
     margin-top: 30px;
     width: 15rem;
     height: 20rem;
@@ -375,13 +375,19 @@ video {
     overflow: hidden;
     transition: transform 500ms ease;
 }
-
-.card-1 {
+.card-img{
+  z-index: -5;
+  object-fit: cover;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 1rem;
+}
+/* .card-1 {
     background-image: url(https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D);
     background-size: cover;
-}
+} */
 
-.card-2 {
+/* .card-2 {
     background-image: url(https://plus.unsplash.com/premium_photo-1682001801592-7be1661d6ef7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D);
     background-size: cover;
 }
@@ -424,28 +430,32 @@ video {
 .card-10 {
     background-image: url(https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D);
     background-size: cover;
-}
+} */
 
 .card:hover,
+.card-img,
 .card:focus-within {
     transform: scale(1.07);
+    
 }
 
 .card-content {
     --padding: 30%;
     padding: var(--padding);
+    padding-top: 60%;
     padding-left: 15px;
-    background: linear-gradient(hsl(0, 0%, 0% / 0),
+    background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 100%);
+    /* background: linear-gradient(hsl(0, 0%, 0% / 0),
             hsl(20, 0%, 0% /0.3) 20%,
-            hsl(0, 0%, 0% / 0));
+            hsl(0, 0%, 0% / 0)); */
     transform: translateY(70%);
     transition: transform 500ms ease;
-    z-index: -1;
+    z-index: 1;
     transition-delay: 500ms;
 }
 
 .card:hover .card-content {
-    transform: translateY(0);
+    transform: translateY(-21rem);
     transition-delay: 500ms;
 }
 
@@ -516,7 +526,7 @@ video {
     content: '';
     position: absolute;
     inset: 2px;
-    background: transparent;
+    background: transparent;  
 }
 
 .slider-wrapper {
