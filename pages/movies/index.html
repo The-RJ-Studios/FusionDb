@@ -74,21 +74,34 @@
       <div id="nav" class="header">
         <a class="nav-elem" href="/index.html"><img src="/pics/new-logo-2.1png" alt /></a>
         <div class="nav1">
-          <h4><a class="nav-elem" href="/index.html">Home</a></h4>
-          <h4><a class="nav-elem" href="/pages/Anime/index.html">Anime</a></h4>
-          <h4><a class="nav-elem" href="/pages/manga/index.html">Manga</a></h4>
+          <h4><a class="nav-elem hideOnMobile" href="/index.html">Home</a></h4>
+          <h4><a class="nav-elem hideOnMobile" href="/pages/Anime/index.html">Anime</a></h4>
+          <h4><a class="nav-elem hideOnMobile" href="/pages/manga/index.html">Manga</a></h4>
   </div>
         <!-- <form id="form">
           <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
         </form> -->
-        <div id="nav2">
+
           <a href="/pages/registration/register.html">
-            <button class="Nav_btn nav-elem"><span>Register</span></button>
+            <button class="Nav_btn nav-elem hideOnMobile"><span>Register</span></button>
             <!-- <i class="fa-solid fa-circle-user"></i> -->
           </a>
-        </div>
+
+        <h4  onclick= showSidebar()><svg  class="svg-clr Menu-Btn nav-elem" xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         
       </div>
+      <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a><svg class="svg-clr" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+          <li><a href="/index.html"> Home</li></a>
+          <li><a href="/pages/Anime/index.html"> Anime</li></a>
+          <li><a href="/pages/movies/index.html"> Movies</li></a>
+          <li><a href="/pages/manga/index.html"> Manga</li></a>
+          <li><a href="/pages/registration/register.html"> Register</li></a>
+          <li><a href="/pages/registration/login.html"> Login</li></a>
+
+        </ul>
+      </nav>
       <div class="container mov-vid">
         <div class="scroll-down-2">
           <h1 id="myText-2"></h1>
@@ -348,7 +361,7 @@
 </div>
 </div>
 <br><br><br><br><br>
-<!-- <footer class="footer" > 
+<footer class="footer" > 
 
   <div class="container2">
     <div class="row">
@@ -392,7 +405,7 @@
       </div>
     </div>
   </div>
-</footer> -->
+</footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -402,7 +415,6 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/pages/main.js"></script>
-    <script src="/pages/Anime/Anime.js"></script>
     <script src="/pages/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
