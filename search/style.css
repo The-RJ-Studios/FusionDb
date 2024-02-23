@@ -23,6 +23,15 @@ body {
 html{
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*Edge and Firefox */
+body,html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 body {
   overflow-x: hidden;

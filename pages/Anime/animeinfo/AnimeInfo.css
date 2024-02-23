@@ -23,6 +23,15 @@ body {
       background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
     background: #0B0C2A;
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /*Edge and Firefox */
+  body,html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 .overlay {
     position: fixed;
     width: 100vw;

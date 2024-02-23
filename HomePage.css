@@ -41,6 +41,15 @@ body {
   z-index: 1001;
   display: flex;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*Edge and Firefox */
+body,html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 #mkc img {
   position: absolute;
@@ -756,10 +765,19 @@ video {
    left: 20rem;
   }
 } */
-@media (max-width: 1200px) {
+@media (max-width: 800) {
   .ab-img {
     display: none;
   }
+}
+@media (max-width: 1200px) {
+  #page3 img {
+    height: 400px;
+    width: 450px;
+    position: absolute;
+    top: 114px;
+    right: 31px;
+  } 
 
   .Menu-Btn{
     display: block;
@@ -795,9 +813,9 @@ video {
     background: white;
   }
   #page3 p {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     font-size: 1.2rem;
-    width: 30rem;
+    width: 24rem;
     color: white;
     line-height: 2.5rem;
     font-weight: 400;
@@ -854,6 +872,9 @@ video {
   #nav svg{
     margin-right: 2.5rem;
     cursor: pointer;
+  }
+  #nav {
+    padding-left: 2rem;
   }
   #page1 svg{
     cursor: pointer;

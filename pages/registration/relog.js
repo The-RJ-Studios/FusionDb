@@ -1,3 +1,12 @@
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none'
+}
+
 gsap.to(".counter", 0.25, {
   delay: 3.5,
   opacity: 0,
