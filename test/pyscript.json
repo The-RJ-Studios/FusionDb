@@ -1,5 +1,5 @@
 {
-    "packages": ["beautifulsoup4", "requests","ssl","urllib3", "certifi"]
+    "packages": [ "requests","ssl","urllib3", "certifi"]
 
 }
 
