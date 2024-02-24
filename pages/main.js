@@ -14,6 +14,66 @@
 //     }
 
 // },3000);
+// let sections = gsap.utils.toArray(".popu");
+
+// gsap.to(sections, {
+
+//   xPercent: 100 * (sections.length - 1),
+//   ease: "linear",
+//   scrollTrigger: {
+//     trigger: ".all-card-pop",
+//     pin: true,
+//     start: "50px",
+//     // end:"100px",
+//     markers: true,
+//     scrub: 1,
+//     snap: 1 / (sections.length - 1),
+//     end: () => "+=" +
+//       document.querySelector(".all-card-pop").offsetWidth
+
+//   }
+// });
+
+
+// let sectionsL = gsap.utils.toArray(".popi");
+
+// gsap.to(sectionsL, {
+
+//   xPercent: -100 * (sectionsL.length - 6),
+//   ease: "slow(0.7,0.7,false)",
+//   scrollTrigger: {
+//     trigger: ".all-card-lat",
+//     pin: true,
+//     start: "50px",
+//     // end:"100px",
+//     // markers: true,
+//     scrub: 1,
+//     snap: 1 / (sectionsL.length - 1),
+//     end: () => "+=" +
+//       document.querySelector(".all-card-lat").offsetWidth
+
+//   }
+// });
+// let sectionsR = gsap.utils.toArray(".popo");
+
+// gsap.to(sectionsR, {
+
+//   xPercent: -100 * (sectionsR.length - 6),
+//   ease: "slow(0.7,0.7,false)",
+//   scrollTrigger: {
+//     trigger: ".all-card-ran",
+//     pin: true,
+
+//     start: "50px",
+//     // end:"100px",
+//     // markers: true,
+//     scrub: 1,
+//     snap: 1 / (sectionsR.length - 1),
+//     end: () => "+=" +
+//       document.querySelector(".all-card-ran").offsetWidth
+
+//   }
+// });
 function showSidebar(){
   const sidebar = document.querySelector('.sidebar');
   sidebar.style.display = 'flex'
@@ -261,66 +321,7 @@ mm.add("(min-width: 801px)",()=>{
       scrub: 1
     },
   });
-  let sections = gsap.utils.toArray(".popu");
-
-  gsap.to(sections, {
-  
-    xPercent: -100 * (sections.length - 1),
-    ease: "linear",
-    scrollTrigger: {
-      trigger: ".all-card-pop",
-      pin: true,
-      start: "50px",
-      // end:"100px",
-      markers: true,
-      scrub: 1,
-      snap: 1 / (sections.length - 1),
-      end: () => "+=" +
-        document.querySelector(".all-card-pop").offsetWidth
-  
-    }
-  });
-  
-  
-  let sectionsL = gsap.utils.toArray(".popi");
-  
-  gsap.to(sectionsL, {
-  
-    xPercent: -100 * (sectionsL.length - 6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-      trigger: ".all-card-lat",
-      pin: true,
-      start: "50px",
-      // end:"100px",
-      // markers: true,
-      scrub: 1,
-      snap: 1 / (sectionsL.length - 1),
-      end: () => "+=" +
-        document.querySelector(".all-card-lat").offsetWidth
-  
-    }
-  });
-  let sectionsR = gsap.utils.toArray(".popo");
-  
-  gsap.to(sectionsR, {
-  
-    xPercent: -100 * (sectionsR.length - 6),
-    ease: "slow(0.7,0.7,false)",
-    scrollTrigger: {
-      trigger: ".all-card-ran",
-      pin: true,
-  
-      start: "50px",
-      // end:"100px",
-      // markers: true,
-      scrub: 1,
-      snap: 1 / (sectionsR.length - 1),
-      end: () => "+=" +
-        document.querySelector(".all-card-ran").offsetWidth
-  
-    }
-  });
+ 
   // gsap.from(".header", {
   //   y: "-100%",
   //   duration: 2,

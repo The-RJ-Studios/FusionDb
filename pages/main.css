@@ -435,6 +435,7 @@ video {
   margin: 0 20px;
   padding-left: 10px;
   gap: 20px;
+  position: relative;
 }
 
 .card-layout a {
@@ -657,7 +658,8 @@ video {
 
 .slide-button {
   position: absolute;
-  top: 133%;
+  top: 165%;
+  z-index: 9;
   height: 50px;
   width: 50px;
   color: #fff;
@@ -687,7 +689,7 @@ video {
 
 .slide-button-2 {
   position: absolute;
-  top: 200%;
+  top: 245%;
   height: 50px;
   width: 50px;
   color: #fff;
