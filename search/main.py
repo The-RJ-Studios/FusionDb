@@ -9,7 +9,7 @@ from js import document, console
 # Generating Request Headers
 console.clear()
 console.log("enter prompt")
-query = "avengers" #Query string
+query = "barbie" #Query string
 url ='https://imdb-api.uzairshaikhking777.workers.dev/search?query='+ query
 print(url)
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
