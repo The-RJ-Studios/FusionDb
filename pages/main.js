@@ -265,14 +265,14 @@ mm.add("(min-width: 801px)",()=>{
 
   gsap.to(sections, {
   
-    xPercent: -100 * (sections.length - 6),
+    xPercent: -100 * (sections.length - 1),
     ease: "linear",
     scrollTrigger: {
       trigger: ".all-card-pop",
       pin: true,
       start: "50px",
       // end:"100px",
-      // markers: true,
+      markers: true,
       scrub: 1,
       snap: 1 / (sections.length - 1),
       end: () => "+=" +
@@ -321,14 +321,6 @@ mm.add("(min-width: 801px)",()=>{
   
     }
   });
-  gsap.fromTo(".man-vid", { opacity: 0 }, {
-    duration: 2,
-    ease: "sine.out",
-    opacity: 1,
-    rotation: 360,
-    delay: 5,
-  
-  })
   // gsap.from(".header", {
   //   y: "-100%",
   //   duration: 2,
@@ -340,7 +332,7 @@ mm.add("(min-width: 801px)",()=>{
   gsap.fromTo(".nav-elem", { opacity: 0 }, {
     opacity: 1,
     duration: 4,
-    delay: 4.5,
+    delay: 2,
     stagger: 0.1,
     scrub: 1
   

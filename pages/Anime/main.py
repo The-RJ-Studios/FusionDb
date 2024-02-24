@@ -27,7 +27,7 @@ def getData(inurl):
 try:   
     urllib3.disable_warnings()
     
-    # <div class="card card-1 popu" id="0"> 
+    # <div class="card popu" id="0"> 
     #            <img class="card-img" src="" alt="">
     #           <div class="card-content">
     #             <h2 class="card-title">Something awesome</h2>
@@ -47,12 +47,28 @@ try:
         
         outerDiv = document.createElement('div')
         outerOuterDiv.appendChild(outerDiv)
-        outerDiv.className = "card card-1 popu"
+        outerDiv.className = "card popu"
         
         imageTag = document.createElement('img')
         outerDiv.appendChild(imageTag)
         imageTag.className="card-img"
         imageTag.src= data['image']
+        
+        contentCard = document.createElement('div')
+        outerDiv.appendChild(contentCard)
+        contentCard.className = "card-content"
+        
+        h2tag = document.createElement('h2')
+        contentCard.appendChild(h2tag)
+        h2tag.className ="card-title"
+        h2tag.innerHTML = data['title']
+        
+        linknATag = document.createElement('a')
+        contentCard.appendChild(linknATag)
+        linknATag.className = 'button'
+        linknATag.href ="/pages/Anime/animeinfo/index.html"
+        linknATag.innerHTML ="Read More"
+        
         # cardDiv = document.createElement('div')
         # outerDiv.appendChild(cardDiv)
         
