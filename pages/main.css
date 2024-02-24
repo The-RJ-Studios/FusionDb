@@ -657,7 +657,7 @@ video {
 
 .slide-button {
   position: absolute;
-  top: 133%;
+  top: 170%;
   height: 50px;
   width: 50px;
   color: #fff;
@@ -747,7 +747,7 @@ video {
 }
 
 #page2 {
-  height: 580vh;
+  height: 180vh;
   width: 100%;
   margin: 0;
   padding: 0;
