@@ -1,0 +1,40 @@
+{
+popular:{
+
+Attack on Titan,
+One punch man,
+Dragon ball,
+Naruto,
+Bleach,
+One piece,
+My hero academia,
+Fairy tail,
+Death note,
+Demon slayer
+}
+
+latest:{
+Kyuujitsu no Warumono-san
+Mato Seihei no Slave
+Jaku-Chara Tomozaki-kun 2nd Stage
+Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita,
+Dungeon Meshi
+Kekkon Yubiwa Monogatari
+Sasaki to Pii-chan
+Oroka na Tenshi wa Akuma to Odoru
+Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni Shimashita 2nd
+Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga
+}
+ random:{
+The Tunnel to Summer, the Exit of Goodbyes
+Date a Live
+Black Lagoon
+Akagami no Shirayukihime
+Mahoutsukai no Yome
+Idoly Pride
+Isekai wa Smartphone to Tomo ni.
+Clannad
+Ao no Exorcist
+Kyoukai no Kanata
+}
+}
