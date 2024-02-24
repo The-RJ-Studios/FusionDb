@@ -1,40 +1,40 @@
 {
 popular:{
 
-Attack on Titan,
-One punch man,
-Dragon ball,
-Naruto,
-Bleach,
-One piece,
-My hero academia,
-Fairy tail,
-Death note,
-Demon slayer
+Attack on Titan[tt2560140],
+One punch man[tt4508902],
+Dragon ball Z [tt0214341],
+Naruto[tt0409591],
+Bleach[tt0434665],
+One piece[tt0388629],
+My hero academia[tt5626028],
+Fairy tail[tt1528406],
+Death note[tt0877057],
+Demon slayer[tt9335498]
 }
 
 latest:{
-Kyuujitsu no Warumono-san
-Mato Seihei no Slave
-Jaku-Chara Tomozaki-kun 2nd Stage
-Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita,
-Dungeon Meshi
-Kekkon Yubiwa Monogatari
-Sasaki to Pii-chan
-Oroka na Tenshi wa Akuma to Odoru
-Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni Shimashita 2nd
-Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga
+Kyuujitsu no Warumono-san[tt29467317]
+Mato Seihei no Slave[tt16156736]
+Jaku-Chara Tomozaki-kun 2nd Stage[tt13103028]
+Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita[tt30644010],
+Dungeon Meshi[tt21621494]
+Kekkon Yubiwa Monogatari[tt30488398]
+Sasaki to Pii-chan[tt27524116]
+Oroka na Tenshi wa Akuma to Odoru[tt30495098]
+Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node[tt13483212], 
+Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga[tt30146725]
 }
  random:{
-The Tunnel to Summer, the Exit of Goodbyes
-Date a Live
-Black Lagoon
-Akagami no Shirayukihime
-Mahoutsukai no Yome
-Idoly Pride
-Isekai wa Smartphone to Tomo ni.
-Clannad
-Ao no Exorcist
-Kyoukai no Kanata
+The Tunnel to Summer, the Exit of Goodbyes[tt17382524]
+Date a Live[tt2575684]
+Black Lagoon[tt0962826]
+Akagami no Shirayukihime[tt4542568]
+Mahoutsukai no Yome[tt7326322]
+Idoly Pride[tt13009190]
+Isekai wa Smartphone to Tomo ni[tt7088332]
+Clannad[tt1118804]
+Ao no Exorcist[tt5987956]
+Kyoukai no Kanata[tt3114376]
 }
 }
