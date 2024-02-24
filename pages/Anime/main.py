@@ -74,6 +74,83 @@ try:
         
         i=i+1
         # print(item["title"])
+    # Loop for getting and displaying data inside the latest section    
+    for item in latest:
+        # Fetching data
+        url=baseUrl+item
+        data = getData(url)
+        # Experimenting with creating a card div
+        console.log('Creating item', i)
+        outerOuterDiv = document.getElementById('latest')
+        
+        outerDiv = document.createElement('div')
+        outerOuterDiv.appendChild(outerDiv)
+        outerDiv.className = "card popi"
+        
+        imageTag = document.createElement('img')
+        outerDiv.appendChild(imageTag)
+        imageTag.className="card-img"
+        imageTag.src= data['image']
+        
+        contentCard = document.createElement('div')
+        outerDiv.appendChild(contentCard)
+        contentCard.className = "card-content"
+        
+        h2tag = document.createElement('h2')
+        contentCard.appendChild(h2tag)
+        h2tag.className ="card-title"
+        h2tag.innerHTML = data['title']
+        
+        linknATag = document.createElement('a')
+        contentCard.appendChild(linknATag)
+        linknATag.className = 'button'
+        linknATag.href ="/pages/Anime/animeinfo/index.html"
+        linknATag.innerHTML ="Read More"
+        
+        # cardDiv = document.createElement('div')
+        # outerDiv.appendChild(cardDiv)
+        
+        i=i+1
+        # print(item["title"])
+    
+    # Loop for getting and displaying data inside the random section
+    for item in random:
+        # Fetching data
+        url=baseUrl+item
+        data = getData(url)
+        # Experimenting with creating a card div
+        console.log('Creating item', i)
+        outerOuterDiv = document.getElementById('random')
+        
+        outerDiv = document.createElement('div')
+        outerOuterDiv.appendChild(outerDiv)
+        outerDiv.className = "card popo"
+        
+        imageTag = document.createElement('img')
+        outerDiv.appendChild(imageTag)
+        imageTag.className="card-img"
+        imageTag.src= data['image']
+        
+        contentCard = document.createElement('div')
+        outerDiv.appendChild(contentCard)
+        contentCard.className = "card-content"
+        
+        h2tag = document.createElement('h2')
+        contentCard.appendChild(h2tag)
+        h2tag.className ="card-title"
+        h2tag.innerHTML = data['title']
+        
+        linknATag = document.createElement('a')
+        contentCard.appendChild(linknATag)
+        linknATag.className = 'button'
+        linknATag.href ="/pages/Anime/animeinfo/index.html"
+        linknATag.innerHTML ="Read More"
+        
+        # cardDiv = document.createElement('div')
+        # outerDiv.appendChild(cardDiv)
+        
+        i=i+1
+        # print(item["title"])
     # console.log("Request sent")
     # document.getElementById('cover').src=data['image']
     # document.getElementById('title').innerHTML=data['title']
