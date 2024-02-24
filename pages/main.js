@@ -349,14 +349,6 @@ mm.add("(min-width: 801px)",()=>{
 let mobile = gsap.matchMedia();
 mobile.add("(max-width: 800px)",()=>{
 
-gsap.fromTo(".man-vid", { opacity: 0 }, {
-  duration: 2,
-  ease: "linear",
-  opacity: 1,
-
-  delay: 1,
-
-})
 gsap.to("#nav", {
   backgroundColor: "#0e100f",
   duration: 1.5,
