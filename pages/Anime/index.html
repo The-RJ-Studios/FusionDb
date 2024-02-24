@@ -27,6 +27,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2024.1.1/core.css"
+    />
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.1.1/core.js"
+    ></script>
+    <script
+      type="py"
+      src="./main.py"
+      config="./pyscript.json"
+    ></script>
   </head>
   <body onload="tope()">
     <h1 id="mkc" class="counter">
@@ -128,78 +141,9 @@
       <br><br><br><br><br>
       <h2 class="Type type-1">Popular Anime<a href="/pages/view/index.html"><span class="Viewall">View all</span><i class="ri-arrow-right-line"></i></a></h2> 
       <!-- media scroller -->
-      <div class="card-layout card-layout-pop slider-wrapper"> 
+      <div class="card-layout card-layout-pop slider-wrapper" id="popular"> 
         <!-- element -->
-            <div class="card card-1 popu"> 
-              <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-2 popu">
-              <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-3 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-4 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-5 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-6 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-7 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-8 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-9 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
-              </div>
-            </div>
-            <div class="card card-10 popu">
-               <img class="card-img" src="https://images.unsplash.com/photo-1505217492286-46d8e25ff757?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHVsbHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-              <div class="card-content">
-                <h2 class="card-title">Something awesome</h2>
-                <a href="/pages/Anime/animeinfo/" class="button">Read More</a>
-              </div>
-            </div>        
+              <!-- popular -->
           </div>
    </div>
  

@@ -1,0 +1,32 @@
+{
+popular:
+{
+Berserk,
+Vagabond,
+JoJo no Kimyou na Bouken Part 7: Steel Ball Run,
+One piece,
+Monster,
+Slam dunk,
+Slam dunk,
+Vinland saga,
+Fullmetal alchemist,
+Grand blue,
+Oyasumi punpun
+}
+latest:
+{
+
+}
+random:
+{
+Chainsaw Man,
+My Hero Academia,
+A Couple of Cuckoos,
+Jujutsu Kaisen,
+One Piece,
+Blue Lock,
+Hajime no Ippo,
+Kaoru Hana wa Rin to Saku,
+Spy x Family,
+Dragon Ball Super
+}

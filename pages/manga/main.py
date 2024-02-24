@@ -9,7 +9,7 @@ from js import document, console
 # Generating Request Headers
 console.clear()
 console.log("enter prompt")
-query = "barbie" #Query string
+query = "avengers" #Query string
 url ='https://imdb-api.uzairshaikhking777.workers.dev/search?query='+ query
 print(url)
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
@@ -28,30 +28,33 @@ try:
     urllib3.disable_warnings()
     data= getData()
     print("\n")
+    # <div class="card card-1 popu" id="0"> 
+    #            <img class="card-img" src="" alt="">
+    #           <div class="card-content">
+    #             <h2 class="card-title">Something awesome</h2>
+    #             <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+    #           </div>
+    #         </div>
     i=1
     results= data["results"]
-    
     for item in results:
-        # Experimenting with creating a card div
+        # Experimenting with cresting a card div
         console.log('Creating item', i)
         outerDiv = document.getElementById('result')
-        cardDiv = document.createElement('div') #creating div element
-        outerDiv.appendChild(cardDiv)#Important: append the elemt to the consecutive element before doing any changes to it!
-        cardDiv.className="media-card" # adding class to it so style can be added 
-        imageATag = document.createElement('a')# Importatnt the tag name should be in single quotes
+        cardDiv = document.createElement('div')
+        outerDiv.appendChild(cardDiv)
+        cardDiv.className="media-card"
+        imageATag = document.createElement('a')
         cardDiv.appendChild(imageATag)
         imageATag.className='cover'
-        #----------------Same for this element----------------
         titleATag=document.createElement('a')
         cardDiv.appendChild(titleATag)
         titleATag.className = 'title'
         titleATag.innerHTML=item['title']
         imageATag.className="cover"
-        #------------------------------------------------------
         imageTag = document.createElement('img')
         imageATag.appendChild(imageTag)
         imageTag.src = item['image']
-        #-------------------------------------------------------
         i=i+1
         # print(item["title"])
     # console.log("Request sent")
