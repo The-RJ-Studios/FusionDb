@@ -1,6 +1,10 @@
+
+
+
 // for popular 
 
 const initSlider = () => {
+  window.scrollTo(0, 0);
   const cardlayout = document.querySelector(".card-layout");
   const slideButtons = document.querySelectorAll(".slide-button");
   const maxScrollLeft = cardlayout.scrollWidth - cardlayout.clientWidth;
@@ -13,9 +17,11 @@ const initSlider = () => {
     });
   });
   const handleSideButtons = () => {
-    slideButtons[0].style.display = cardlayout.scrollLeft <= 0 ? "block" : "block";
-    slideButtons[1].style.display = cardlayout.scrollLeft >= maxScrollLeft ? "block" : "block";
+    
+    slideButtons[0].style.display = cardlayout.scrollLeft <= 0 ? "none" : "block";
+    slideButtons[1].style.display = cardlayout.scrollLeft >= 100 ? "none" : "block";
   }
+  
 
   cardlayout.addEventListener("scroll",()=>{
     handleSideButtons();
@@ -41,8 +47,8 @@ const initSliderLat = () => {
     });
   });
   const handleSideButtons = () => {
-    slideButtonsL[0].style.display = cardlayoutL.scrollLeft <= 0 ? "none" : "block";
-    slideButtonsL[1].style.display = cardlayoutL.scrollLeft >= maxScrollLeftL ? "none" : "block";
+    slideButtons[0].style.display = cardlayout.scrollLeft <= 0 ? "none" : "block";
+    slideButtons[1].style.display = cardlayout.scrollLeft >= 100 ? "none" : "block";
   }
 
   cardlayoutL.addEventListener("scroll",()=>{
@@ -70,8 +76,8 @@ const initSliderRan = () => {
     });
   });
   const handleSideButtons = () => {
-    slideButtonsR[0].style.display = cardlayoutR.scrollLeft <= 0 ? "none" : "block";
-    slideButtonsR[1].style.display = cardlayoutR.scrollLeft >= maxScrollLeftR ? "none" : "block";
+    slideButtonsR[0].style.display = cardlayout.scrollLeft <= 0 ? "none" : "block";
+    slideButtonsR[1].style.display = cardlayout.scrollLeft >= 100 ? "none" : "block";
   }
 
   cardlayoutR.addEventListener("scroll",()=>{
