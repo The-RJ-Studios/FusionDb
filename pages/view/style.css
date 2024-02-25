@@ -38,7 +38,7 @@ body {
 .overlay {
     position: fixed;
     width: 100vw;
-    height: 70%;
+    height: 100%;
     z-index: 1001;
     display: flex;
 }
