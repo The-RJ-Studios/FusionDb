@@ -3,6 +3,7 @@ languagePluginUrl = 'https://cdn.jsdelivr.net/pyodide/dev/full/';
 pyodide = await loadPyodide({ indexURL : languagePluginUrl });
 let python_code = `
 import js
+import threading
 `
 (async () => { // enable await
   await pyodide.loadPackagesFromImports(python_code)
@@ -24,6 +25,11 @@ function loader(){
     return response.json();
 }).then(console.log("Header sent"));
 }
+
+
+
+
+////////Not My Code
 function myFunction() 
 {
     var dots = document.getElementById("dots");
