@@ -42,8 +42,8 @@ const initSlider = () => {
       });
     });
     const handleSideButtons = () => {
-      slideButtons[0].style.display = cardlayout.scrollLeft <= 0 ? "none" : "block";
-      slideButtons[1].style.display = cardlayout.scrollLeft >= 100 ? "none" : "block";
+      slideButtonsL[0].style.display = cardlayoutL.scrollLeft <= 0 ? "none" : "block";
+      slideButtonsL[1].style.display = cardlayoutL.scrollLeft >= 100 ? "none" : "block";
     }
   
     cardlayoutL.addEventListener("scroll",()=>{
