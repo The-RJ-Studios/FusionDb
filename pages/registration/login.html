@@ -29,7 +29,8 @@
         <h4><a class="nav-elem hideOnMobile" href="/index.html">Home</a></h4>
         <h4><a class="nav-elem hideOnMobile" href="/pages/Anime/index.html">Anime</a></h4>
         <h4><a class="nav-elem hideOnMobile" href="/pages/manga/index.html">Manga</a></h4>
-</div>
+      </div>
+    </div>
       <!-- <form id="form">
         <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
       </form> -->
@@ -176,7 +177,7 @@
           });
       };
       signInForm.addEventListener("submit", SignUser);
-      signInForm.addEventListener("submit", setCookie("user-info", name));
+      signInForm.addEventListener("submit", (evt) => setCookie("user-info", name.value, 1));
     </script>
   </body>
 </html>
