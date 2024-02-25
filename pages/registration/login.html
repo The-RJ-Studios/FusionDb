@@ -29,7 +29,8 @@
         <h4><a class="nav-elem hideOnMobile" href="/index.html">Home</a></h4>
         <h4><a class="nav-elem hideOnMobile" href="/pages/Anime/index.html">Anime</a></h4>
         <h4><a class="nav-elem hideOnMobile" href="/pages/manga/index.html">Manga</a></h4>
-</div>
+      </div>
+    </div>
       <!-- <form id="form">
         <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
       </form> -->
@@ -45,12 +46,12 @@
     <nav>
       <ul class="sidebar">
         <li onclick=hideSidebar()><a><svg class="svg-clr" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <li><a href="/index.html"> Home</li></a>
-        <li><a href="/pages/Anime/index.html"> Anime</li></a>
-        <li><a href="/pages/movies/index.html"> Movies</li></a>
-        <li><a href="/pages/manga/index.html"> Manga</li></a>
-        <li><a href="/pages/registration/register.html"> Register</li></a>
-        <li><a href="/pages/registration/login.html"> Login</li></a>
+        <li><a href="/index.html"> Home</a></li>
+        <li><a href="/pages/Anime/index.html"> Anime</a></li>
+        <li><a href="/pages/movies/index.html"> Movies</a></li>
+        <li><a href="/pages/manga/index.html"> Manga</a></li>
+        <li><a href="/pages/registration/register.html"> Register</a></li>
+        <li><a href="/pages/registration/login.html"> Login</a></li>
 
       </ul>
     </nav>
@@ -176,7 +177,7 @@
           });
       };
       signInForm.addEventListener("submit", SignUser);
-      signInForm.addEventListener("submit", setCookie("user-info", name));
+      signInForm.addEventListener("submit", (evt) => setCookie("user-info", name.value, 1));
     </script>
   </body>
 </html>
