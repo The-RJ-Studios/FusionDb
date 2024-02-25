@@ -42,8 +42,8 @@ const initSlider = () => {
       });
     });
     const handleSideButtons = () => {
-      slideButtons[0].style.display = cardlayout.scrollLeft <= 0 ? "none" : "block";
-      slideButtons[1].style.display = cardlayout.scrollLeft >= 100 ? "none" : "block";
+      slideButtonsL[0].style.display = cardlayoutL.scrollLeft <= 0 ? "none" : "block";
+      slideButtonsL[1].style.display = cardlayoutL.scrollLeft >= 100 ? "none" : "block";
     }
   
     cardlayoutL.addEventListener("scroll",()=>{
@@ -71,8 +71,8 @@ const initSlider = () => {
       });
     });
     const handleSideButtons = () => {
-      slideButtonsR[0].style.display = cardlayout.scrollLeft <= 0 ? "none" : "block";
-      slideButtonsR[1].style.display = cardlayout.scrollLeft >= 100 ? "none" : "block";
+      slideButtonsR[0].style.display = cardlayoutR.scrollLeft <= 0 ? "none" : "block";
+      slideButtonsR[1].style.display = cardlayoutR.scrollLeft >= 100 ? "none" : "block";
     }
   
     cardlayoutR.addEventListener("scroll",()=>{

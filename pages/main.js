@@ -290,6 +290,28 @@ setTimeout(() => {
 //horizontal scrolling
 let mm = gsap.matchMedia();
 mm.add("(min-width: 801px)",()=>{
+  const split = new SplitType('#myText')
+      const split3 = new SplitType('#myText-2')
+      const split2 = new SplitType('.scrolling-down')
+
+      gsap.fromTo(".char",{opacity:0} ,
+      {
+        y:0,
+        stagger: 0.05,
+        delay: 10,
+        ease: "linear",
+        duration: .1,
+        opacity:1,
+      })
+      gsap.fromTo(".scrolling-down-symbol", {opacity:0} ,
+      {
+        y:0,
+        stagger: 0.05,
+        delay: 10,
+        ease: "linear",
+        duration: .1,
+        opacity:1,
+      })
   
   gsap.to(".counter", 0.25, {
     delay: 1.5,
