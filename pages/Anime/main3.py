@@ -14,7 +14,7 @@ req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
-popular=['tt2560140','tt4508902','tt0214341','tt0409591','tt0434665','tt0388629','tt5626028','tt1528406','tt0877057','tt9335498']
+random=['tt17382524','tt2575684','tt0962826','tt4542568','tt7326322','tt13009190','tt7088332','tt1118804','tt5987956','tt3114376']
 # The above lines should be as it is No changes should be made
 # def parser(data):
 #     aData= list(data[0].key())
@@ -34,18 +34,18 @@ try:
     #         </div>
     
     i=1
-    # Loop for getting and displaying data inside the popular section
-    for item in popular:
+    # Loop for getting and displaying data inside the random section
+    for item in random:
         # Fetching data
         url=baseUrl+item
         data = getData(url)
         # Experimenting with creating a card div
         console.log('Creating item', i)
-        outerOuterDiv = document.getElementById('popular')
+        outerOuterDiv = document.getElementById('random')
         
         outerDiv = document.createElement('div')
         outerOuterDiv.appendChild(outerDiv)
-        outerDiv.className = "card popu"
+        outerDiv.className = "card popo"
         
         imageTag = document.createElement('img')
         outerDiv.appendChild(imageTag)
@@ -72,13 +72,6 @@ try:
         
         i=i+1
         # print(item["title"])
-    # Loop for getting and displaying data inside the latest section    
-    
-    # document.getElementById('cover').src=data['image']
-    # document.getElementById('title').innerHTML=data['title']
-    # document.getElementById('info').innerHTML = data['plot']
-    # document.getElementById('back-cover').src= data['images'][0]
-    
+    # console.log("Request sent")
 except():
     print("Error encountered")
-# Printing head, body,coverImg, banner
