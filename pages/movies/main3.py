@@ -14,7 +14,7 @@ req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
-random=['tt17382524','tt2575684','tt0962826','tt4542568','tt7326322','tt13009190','tt7088332','tt1118804','tt5987956','tt3114376']
+random=['tt0468569','tt0068646','tt0109830','tt0137523','tt0816692','tt23849204','tt15654328','tt0103064','tt0172495','tt0482571']
 # The above lines should be as it is No changes should be made
 # def parser(data):
 #     aData= list(data[0].key())

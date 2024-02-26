@@ -14,7 +14,7 @@ req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
-latest=['tt29467317','tt16156736','tt13103028','tt30644010','tt21621494','tt30488398','tt27524116','tt30495098','tt13483212','tt30146725']
+latest=['tt14230458','tt12747748','tt5198890','tt8337264','tt5535276','tt9362722','tt26315142','tt13592970','tt11304740','tt23289160']
 # The above lines should be as it is No changes should be made
 # def parser(data):
 #     aData= list(data[0].key())

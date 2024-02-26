@@ -14,7 +14,7 @@ req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
-popular=['tt2560140','tt4508902','tt0214341','tt0409591','tt0434665','tt0388629','tt5626028','tt1528406','tt0877057','tt9335498']
+popular=['tt4978420','tt15398776','tt15239678','tt8521778','tt19864802','tt6263850','tt17351924','tt21064584','tt15009428']
 # The above lines should be as it is No changes should be made
 # def parser(data):
 #     aData= list(data[0].key())
