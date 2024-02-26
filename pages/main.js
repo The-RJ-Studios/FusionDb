@@ -116,11 +116,35 @@ tl2.to("#myText-2",{opacity:0, delay: 4, text:"",ease: "slow(0.5, 0.8)",  durati
 
 gsap.fromTo(".container",{opacity:0}, {
   opacity: 1,
-  duration: 2,
-  ease: "linear",
-  delay: 1,
+  duration: 3,
+  ease: "slow(0.7,0.7,false)",
+  delay: 2,
 
 })
+gsap.fromTo(".nav-elem", { opacity: 0 }, {
+  opacity: 1,
+  duration: 4,
+  delay: 3,
+  stagger: 0.1,
+  scrub: 1
+
+})
+gsap.to("#nav", {
+  backgroundColor: "#0e100f",
+  duration: 1.5,
+  height: "80px",
+  marginTop: 0,
+  // boxShadow: "0px 4px 0px 0px blue",
+  borderBottom: "1.5px solid #42433d",
+  scrollTrigger: {
+    trigger: "#nav",
+    scroller: "body",
+    // markers:true,
+    start: "740px",
+    // end: "top -11%",
+    scrub: 1
+  },
+});
 // function startLoader() {
 //    let counterElement = document.querySelector(".counter");
 //    let currentValue = 0;
@@ -167,9 +191,9 @@ gsap.fromTo(".container",{opacity:0}, {
 // });
 setTimeout(() => {
   var a = document.getElementById("mkc");
-  a.style.zIndex = -100;
+  a.style.display = "none";
   var a = document.getElementById("mkc-2");
-  a.style.zIndex = -100;
+  a.style.display = "none";
   clearTimeout(setTimeout);
 }, 4000);
 
@@ -289,7 +313,7 @@ setTimeout(() => {
 // })
 //horizontal scrolling
 let mm = gsap.matchMedia();
-mm.add("(min-width: 801px)",()=>{
+mm.add("(min-width: 801)",()=>{
   const split = new SplitType('#myText')
       const split3 = new SplitType('#myText-2')
       const split2 = new SplitType('.scrolling-down')
@@ -300,6 +324,7 @@ mm.add("(min-width: 801px)",()=>{
         stagger: 0.05,
         delay: 10,
         ease: "linear",
+        markers: true,
         duration: .1,
         opacity:1,
       })
@@ -327,22 +352,7 @@ mm.add("(min-width: 801px)",()=>{
     ease: "power1.out",
   
   });
-  gsap.to("#nav", {
-    backgroundColor: "#0e100f",
-    duration: 1.5,
-    height: "80px",
-    marginTop: 0,
-    // boxShadow: "0px 4px 0px 0px blue",
-    borderBottom: "1.5px solid #42433d",
-    scrollTrigger: {
-      trigger: "#nav",
-      scroller: "body",
-      // markers:true,
-      start: "740px",
-      // end: "top -11%",
-      scrub: 1
-    },
-  });
+
  
   // gsap.from(".header", {
   //   y: "-100%",
@@ -352,14 +362,7 @@ mm.add("(min-width: 801px)",()=>{
   //   scrub: 1
   
   // })
-  gsap.fromTo(".nav-elem", { opacity: 0 }, {
-    opacity: 1,
-    duration: 4,
-    delay: 2,
-    stagger: 0.1,
-    scrub: 1
-  
-  })
+
 });
 // gsap.fromTo(".ani-vid",{scale: 0}, {
 // scale: 1,

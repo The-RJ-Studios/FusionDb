@@ -31,7 +31,7 @@ try:
     #            <img class="card-img" src="" alt="">
     #           <div class="card-content">
     #             <h2 class="card-title">Something awesome</h2>
-    #             <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
+    #             <a href="/info/index.html" class="button">Read More</a>
     #           </div>
     #         </div>
     
@@ -66,7 +66,7 @@ try:
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
-        linknATag.href ="/pages/Anime/animeinfo/index.html"
+        linknATag.href ="/info/index.html"
         linknATag.innerHTML ="Read More"
         
         # cardDiv = document.createElement('div')
@@ -104,7 +104,7 @@ try:
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
-        linknATag.href ="/pages/Anime/animeinfo/index.html"
+        linknATag.href ="/info/index.html"
         linknATag.innerHTML ="Read More"
         
         # cardDiv = document.createElement('div')
@@ -143,7 +143,7 @@ try:
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
-        linknATag.href ="/pages/Anime/animeinfo/index.html"
+        linknATag.href ="/info/index.html"
         linknATag.innerHTML ="Read More"
         
         # cardDiv = document.createElement('div')
