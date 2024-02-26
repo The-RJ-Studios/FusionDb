@@ -1,6 +1,3 @@
-
-
-
 // for popular 
 
 const initSlider = () => {
