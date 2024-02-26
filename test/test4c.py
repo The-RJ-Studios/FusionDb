@@ -23,7 +23,7 @@ console.log("Why the hell am i doing this?")
 def getData():
      res = requests.get(url, headers=req_header ,verify= False)
      return res.json()
-def getDiv1Data():
+def getDiv3Data():
     try:
         urllib3.disable_warnings()
         data= getData()
@@ -44,7 +44,7 @@ def getDiv1Data():
         for item in results:
             # Experimenting with cresting a card div
             console.log(item["title"])
-            outerDiv = document.getElementById('div1')
+            outerDiv = document.getElementById('div3')
             cardDiv = document.createElement('div')
             outerDiv.appendChild(cardDiv)
             cardDiv.className="media-card"
@@ -57,6 +57,7 @@ def getDiv1Data():
             imageTag = document.createElement('img')
             imageATag.appendChild(imageTag)
             imageTag.src = item['image']
+            console.log("Created Element")
         
         # print(item["title"])
     # console.log("Request sent")
@@ -68,10 +69,5 @@ def getDiv1Data():
     except():
         console.log("Error encountered")
 
-# Printing head, body,coverImg, banner
-# t1=threading.Thread(target=getDiv1Data)
-# t1.start()
 console.log("calling the function withou the thread")
-getDiv1Data()
-# t2=threading.Thread(target=getDiv2Data)
-# t3=threading.Thread(target=getDiv3Data)
+getDiv3Data()
