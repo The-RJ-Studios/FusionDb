@@ -40,10 +40,11 @@
     <py-script>
         import js
     </py-script>
+    
   </head>
 
 <body>
-
+  
     <div id="page1">
       <div id="nav">
         <a href="/index.html"><img src="/pics/new-logo-2.1png" alt="" /></a>
@@ -73,6 +74,8 @@
           <p class="Anime-Info" id="info">
             Hold-UP Loading.....
           </p>
+    <div id="Data1">placeholder1</div>
+    <div id="Data2">placeholder2</div>
         </div>
       </div>
     </div>
@@ -89,6 +92,21 @@
 
         });
     </script>
+    <script>
+    const params = window.location.search;
+    // console.log("Keys and Values: ", params);
+    const urlParams = new URLSearchParams(params);
+    const data1 = urlParams.get('type');
+    console.log(data1);
+    const data2 = urlParams.get('id');
+    console.log(data2);
+    document.getElementById('Data1').innerHTML = data1;
+    document.getElementById('Data2').innerHTML = data2;
+    console.log("Finished parsing the query");
+    
+    //console.log('Type:', type);
+    //console.log('Id:', id);
+  </script>
     <!-- <script type="module">
         let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));
         let UserInfo = JSON.parse(sessionStorage.getitem("user-info"));
@@ -115,4 +133,5 @@
 
     </script> -->
   </body>
+  
 </html>

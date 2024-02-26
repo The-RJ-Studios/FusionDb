@@ -64,7 +64,7 @@ try:
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
-        linknATag.href ="/info/index.html"
+        linknATag.href ="/info/index.php"
         linknATag.innerHTML ="Read More"
         
         # cardDiv = document.createElement('div')
