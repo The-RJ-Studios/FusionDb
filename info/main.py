@@ -1,12 +1,14 @@
 # Importing needed things 
 # from bs4 import BeautifulSoup
+import sys
 import urllib3
 import json 
 import requests
 from js import document, console
-
+# console.log(data1, data2)
+query2 = document.getElementById('Data2').innerHTML
 # Generating Request Headers
-url ='https://imdb-api.uzairshaikhking777.workers.dev/title/tt12343534'
+url ='https://imdb-api.uzairshaikhking777.workers.dev/title/'+query2
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
 req_header= {
     'User-Agent' : userAgent,
@@ -29,7 +31,9 @@ try:
     document.getElementById('info').innerHTML = data['plot']
     document.getElementById('back-cover').src= data['images'][0]
     
+    
 except():
     print("Error encountered")
 # Printing head, body,coverImg, banner
+console.log("For more info visit FusionDb on Github!")
 
