@@ -36,37 +36,39 @@ try:
     i=1
     # Loop for getting and displaying data inside the latest section    
     for item in latest:
-        # Fetching data
-        url=baseUrl+item
-        data = getData(url)
-        # Experimenting with creating a card div
-        console.log('Creating item', i)
-        outerOuterDiv = document.getElementById('latest')
-        
-        outerDiv = document.createElement('div')
-        outerOuterDiv.appendChild(outerDiv)
-        outerDiv.className = "card popi"
-        
-        imageTag = document.createElement('img')
-        outerDiv.appendChild(imageTag)
-        imageTag.className="card-img"
-        imageTag.src= data['image']
-        
-        contentCard = document.createElement('div')
-        outerDiv.appendChild(contentCard)
-        contentCard.className = "card-content"
-        
-        h2tag = document.createElement('h2')
-        contentCard.appendChild(h2tag)
-        h2tag.className ="card-title"
-        h2tag.innerHTML = data['title']
-        
-        linknATag = document.createElement('a')
-        contentCard.appendChild(linknATag)
-        linknATag.className = 'button'
-        linknATag.href ="/info/index.php"
-        linknATag.innerHTML ="Read More"
-        
+        try:
+            # Fetching data
+            url=baseUrl+item
+            data = getData(url)
+            # Experimenting with creating a card div
+            console.log('Creating item', i)
+            outerOuterDiv = document.getElementById('latest')
+            
+            outerDiv = document.createElement('div')
+            outerOuterDiv.appendChild(outerDiv)
+            outerDiv.className = "card popi"
+            
+            imageTag = document.createElement('img')
+            outerDiv.appendChild(imageTag)
+            imageTag.className="card-img"
+            imageTag.src= data['image']
+            
+            contentCard = document.createElement('div')
+            outerDiv.appendChild(contentCard)
+            contentCard.className = "card-content"
+            
+            h2tag = document.createElement('h2')
+            contentCard.appendChild(h2tag)
+            h2tag.className ="card-title"
+            h2tag.innerHTML = data['title']
+            
+            linknATag = document.createElement('a')
+            contentCard.appendChild(linknATag)
+            linknATag.className = 'button'
+            linknATag.href ="/info/index.html?type=movie&id="+ data['id']
+            linknATag.innerHTML ="Read More"
+        except():
+            continue
         # cardDiv = document.createElement('div')
         # outerDiv.appendChild(cardDiv)
         

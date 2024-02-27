@@ -1,5 +1,5 @@
 {
-    "packages": [ "requests", "certifi"]
+    "packages": [ "requests", "certifi","micropip"]
 
 }
 
