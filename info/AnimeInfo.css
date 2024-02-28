@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
 }
 #nav img {
     height: 7vw;
-    z-index: 1;
+    /* z-index: 1; */
     padding-left: 5vw;
 }
 
@@ -221,14 +221,14 @@ a:active {
     top:-10vw;
     border-radius: 0px;
     transition: 0.8s;
-    z-index: 0;
+    z-index: -1;
   
 }
 #part2{
-    height: 85vh;
+    height: 200vh;
     width: 100%;
-    margin-top: 45%;
-    z-index: 1;
+    margin-top: 90%;
+    /* z-index: 1; */
     position: relative;
     background: #FAFAFA;
 }
@@ -265,3 +265,74 @@ a:active {
     margin-inline-end: 0px;
     line-height: 2vw;
 }
+
+#Data1, #Data2{
+    opacity: none;
+    visibility: hidden;
+}
+.information-1{
+    height: 55vw;
+    z-index: 1;
+    display: flex;
+    width: 22vw;
+    /* position: absolute; */
+
+    /* padding-top: 5vw; */
+    margin-left: 5vw;
+    position: relative;
+    background: rgb(95, 95, 95);
+    gap: 10vw;
+}
+.title-in{
+    margin: 0 1.1vw;
+    padding-top: 2vw;
+    font-size: 1.6rem;
+    position: relative;
+
+    border-bottom: 0.178rem solid black;
+}
+
+.formation-info{
+    /* background: red; */
+    height: 10vh;
+    width: 15vw;
+    padding-top: 0.1vw;
+    margin-top: 2.5vw;
+    margin-right: 1vw;
+    position: relative;
+    margin-bottom: 1.5vw;
+
+}
+.extra{
+    font-size: 1.4rem;
+    margin-left: 1.9vw;
+    width: 3rem;
+}
+.extra-2{
+    margin-top: 1vw;
+    margin-left: 1.3vw;
+    font-size: 1.2rem;
+    margin-left: 3vw;
+    font-weight: 100;
+    width: 15rem;    
+    text-transform: capitalize;
+}
+iframe{
+    height: 30vw;   
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+}
+.trailer h3{
+    font-size: 2rem;
+    /* letter-spacing: 0.1rem; */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+  .allcon{
+    display: flex;
+    margin-top: 15vw;
+    justify-content: flex-start;
+    gap: 5rem;
+    
+  }
