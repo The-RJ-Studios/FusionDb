@@ -6,6 +6,7 @@ import json
 import requests
 from js import document, console
 # console.log(data1, data2)
+query1 =  document.getElementById('Data1').innerHTML
 query2 = document.getElementById('Data2').innerHTML
 # Generating Request Headers
 url ='https://imdb-api.uzairshaikhking777.workers.dev/title/'+query2
@@ -14,6 +15,7 @@ req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
+
 # The above lines should be as it is No changes should be made
 def parser(data):
     aData= list(data[0].key())
@@ -21,7 +23,8 @@ def parser(data):
 def getData():
      res = requests.get(url, headers=req_header ,verify= False)
      return res.json()
-try:   
+try:
+    
     urllib3.disable_warnings()
     data= getData()
     print(data['title'])
