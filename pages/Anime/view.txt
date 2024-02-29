@@ -1,40 +1,10 @@
-{
 popular:{
-
-Attack on Titan[tt2560140],
-One punch man[tt4508902],
-Dragon ball Z [tt0214341],
-Naruto[tt0409591],
-Bleach[tt0434665],
-One piece[tt0388629],
-My hero academia[tt5626028],
-Fairy tail[tt1528406],
-Death note[tt0877057],
-Demon slayer[tt9335498]
+'16498','21087','223','20','269','21','21459','6702','21612','162002'
 }
 
 latest:{
-Kyuujitsu no Warumono-san[tt29467317]
-Mato Seihei no Slave[tt16156736]
-Jaku-Chara Tomozaki-kun 2nd Stage[tt13103028]
-Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita[tt30644010],
-Dungeon Meshi[tt21621494]
-Kekkon Yubiwa Monogatari[tt30488398]
-Sasaki to Pii-chan[tt27524116]
-Oroka na Tenshi wa Akuma to Odoru[tt30495098]
-Shin no Nakama ja Nai to Yuusha no Party wo Oidasareta node[tt13483212], 
-Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga[tt30146725]
+'141821','143866','156851','153518','160389','152682','162244','156131','1580828'
 }
  random:{
-The Tunnel to Summer, the Exit of Goodbyes[tt17382524]
-Date a Live[tt2575684]
-Black Lagoon[tt0962826]
-Akagami no Shirayukihime[tt4542568]
-Mahoutsukai no Yome[tt7326322]
-Idoly Pride[tt13009190]
-Isekai wa Smartphone to Tomo ni[tt7088332]
-Clannad[tt1118804]
-Ao no Exorcist[tt5987956]
-Kyoukai no Kanata[tt3114376]
-}
+'142769','15583','889','21058','21688','113814','98491','2167','9919','18153'
 }

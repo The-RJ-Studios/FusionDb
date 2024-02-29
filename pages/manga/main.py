@@ -2,67 +2,68 @@
 # "beautifulsoup4",
 
 import urllib3
-# import json
 import requests
 from js import document, console
-
+popular = ['30002','30656','30657','30013','30001','30051','30642','30025','70345','34632']
 # Generating Request Headers
-console.clear()
-console.log("enter prompt")
-query = "avengers" #Query string
-url ='https://imdb-api.uzairshaikhking777.workers.dev/search?query='+ query
-print(url)
+# console.clear()
+providerQuery = '?provider=mangadex'
+baseurl ='https://manga-api-phi.vercel.app/meta/anilist-manga/info/'
+print(baseurl)
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
 req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
+def getData(inurl):
+    res = requests.get(inurl, headers=req_header ,verify= False)
+    return res.json()
 # The above lines should be as it is No changes should be made
 # def parser(data):
 #     aData= list(data[0].key())
 #     return aData # Currently not doing anything
-def getData():
-     res = requests.get(url, headers=req_header ,verify= False)
-     return res.json()
-try:   
-    urllib3.disable_warnings()
-    data= getData()
-    print("\n")
-    # <div class="card card-1 popu" id="0"> 
-    #            <img class="card-img" src="" alt="">
-    #           <div class="card-content">
-    #             <h2 class="card-title">Something awesome</h2>
-    #             <a href="/pages/Anime/animeinfo/index.html" class="button">Read More</a>
-    #           </div>
-    #         </div>
-    i=1
-    results= data["results"]
-    for item in results:
-        # Experimenting with cresting a card div
+urllib3.disable_warnings()
+
+# <div class="card popu" id="0"> 
+#            <img class="card-img" src="" alt="">
+#           <div class="card-content">
+#             <h2 class="card-title">Something awesome</h2>
+#             <a href="/info/index.html" class="button">Read More</a>
+#           </div>
+#         </div>
+
+i=1
+# Loop for getting and displaying data inside the popular section
+for item in popular:
+    try:
+        url=baseurl+item+providerQuery
+        data = getData(url)
         console.log('Creating item', i)
-        outerDiv = document.getElementById('result')
-        cardDiv = document.createElement('div')
-        outerDiv.appendChild(cardDiv)
-        cardDiv.className="media-card"
-        imageATag = document.createElement('a')
-        cardDiv.appendChild(imageATag)
-        imageATag.className='cover'
-        titleATag=document.createElement('a')
-        cardDiv.appendChild(titleATag)
-        titleATag.className = 'title'
-        titleATag.innerHTML=item['title']
-        imageATag.className="cover"
+        outerOuterDiv = document.getElementById('popular')
+        
+        outerDiv = document.createElement('div')
+        outerOuterDiv.appendChild(outerDiv)
+        outerDiv.className = "card popu"
+        
         imageTag = document.createElement('img')
-        imageATag.appendChild(imageTag)
-        imageTag.src = item['image']
-        i=i+1
-        # print(item["title"])
-    # console.log("Request sent")
-    # document.getElementById('cover').src=data['image']
-    # document.getElementById('title').innerHTML=data['title']
-    # document.getElementById('info').innerHTML = data['plot']
-    # document.getElementById('back-cover').src= data['images'][0]
-    
-except():
-    print("Error encountered")
-# Printing head, body,coverImg, banner
+        outerDiv.appendChild(imageTag)
+        imageTag.className="card-img"
+        imageTag.src= data['image']
+        
+        contentCard = document.createElement('div')
+        outerDiv.appendChild(contentCard)
+        contentCard.className = "card-content"
+        
+        h2tag = document.createElement('h2')
+        contentCard.appendChild(h2tag)
+        h2tag.className ="card-title"
+        h2tag.innerHTML = data['title']['romaji']
+        
+        linknATag = document.createElement('a')
+        contentCard.appendChild(linknATag)
+        linknATag.className = 'button'
+        linknATag.href ="/info/index.html?type=manga&id="+ data['id']
+        linknATag.innerHTML ="Read More"
+    except():
+        continue
+    i=i+1

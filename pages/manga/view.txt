@@ -1,32 +1,31 @@
-{
+
 popular:
 {
-Berserk,
-Vagabond,
-JoJo no Kimyou na Bouken Part 7: Steel Ball Run,
-One piece,
-Monster,
-Slam dunk,
-Slam dunk,
-Vinland saga,
-Fullmetal alchemist,
-Grand blue,
-Oyasumi punpun
+'30002',
+'30656',
+'88339',
+'30013',
+'30001',
+'30051',
+'30642',
+'30025',
+'70345',
+'34632'
 }
 latest:
 {
-
+'173229','160778','167022','150040','156563','162318','159655','170850','155896','170399'
 }
 random:
 {
-Chainsaw Man,
-My Hero Academia,
-A Couple of Cuckoos,
-Jujutsu Kaisen,
-One Piece,
-Blue Lock,
-Hajime no Ippo,
-Kaoru Hana wa Rin to Saku,
-Spy x Family,
-Dragon Ball Super
+'116778',
+'75989',
+'122397',
+'113138',
+'30012',
+'106130',
+'30007',
+'140475',
+'108556',
+'86508'
 }
