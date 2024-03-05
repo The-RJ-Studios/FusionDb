@@ -5,25 +5,54 @@
 import urllib3
 import requests
 from js import document, console
-
+popular=[{
+            "id":"16498",
+            "title":"Shingeki no Kyojin",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
+        },{
+            "id":"1535",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"5114",
+            "title":"Hagane no Renkinjutsushi: FULLMETAL ALCHEMIST",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-KJTQz9AIm6Wk.jpg"
+        },{
+            "id":"21087",
+            "title":"One Punch Man",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21087-UV2tu6exrfXz.jpg"
+        },{
+            "id":"53390",
+            "title":"Sword Art Online",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx11757-Q9P2zjCPICq5.jpg"
+        },{
+            "id":"21459",
+            "title":"Boku no Hero Academia",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21459-DUKLgasrgeNO.jpg"
+        },{
+            "id":"101922",
+            "title":"Kimetsu no Yaiba",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg"
+        },{
+            "id":"20",
+            "title":"Naruto",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-YJvLbgJQPCoI.jpg"
+        },{
+            "id":"11061",
+            "title":"HUNTER×HUNTER (2011)",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-sIpBprNRfzCe.png"
+        },{
+            "id":"20605",
+            "title":"Tokyo Ghoul",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20605-fmnHdfurM7m6.jpg"
+        }]
 # Generating Request Headers
 # console.clear()
-baseUrl ='https://imdb-api.uzairshaikhking777.workers.dev/title/'
-userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
-req_header= {
-    'User-Agent' : userAgent,
-    'Accept-Language': 'en-US, en;q=0.5'
-}
-popular=['tt2560140','tt4508902','tt0214341','tt0409591','tt0434665','tt0388629','tt5626028','tt1528406','tt0877057','tt9335498']
+
 # The above lines should be as it is No changes should be made
 # def parser(data):
 #     aData= list(data[0].key())
 #     return aData # Currently not doing anything
-def getData(inurl):
-     res = requests.get(inurl, headers=req_header ,verify= False)
-     return res.json()
-   
-urllib3.disable_warnings()
 
 # <div class="card popu" id="0"> 
 #            <img class="card-img" src="" alt="">
@@ -35,12 +64,11 @@ urllib3.disable_warnings()
 
 i=1
 # Loop for getting and displaying data inside the popular section
-for item in popular:
-    try:
-    # Fetching data
-        url=baseUrl+item
-        data = getData(url)
-        # Experimenting with creating a card div
+try:
+# Fetching data
+    rawData = popular
+    # Experimenting with creating a card div
+    for data in rawData:
         console.log('Creating item', i)
         outerOuterDiv = document.getElementById('popular')
         
@@ -67,13 +95,13 @@ for item in popular:
         linknATag.className = 'button'
         linknATag.href ="/info/index.html?type=anime&id="+ data['id']
         linknATag.innerHTML ="Read More"
-    except():
-        continue
-    # cardDiv = document.createElement('div')
-    # outerDiv.appendChild(cardDiv)
-    
-    i=i+1
-    # print(item["title"])
+except():
+    console.log("Error occured")
+# cardDiv = document.createElement('div')
+# outerDiv.appendChild(cardDiv)
+
+i=i+1
+# print(item["title"])
 # Loop for getting and displaying data inside the latest section    
 
 # document.getElementById('cover').src=data['image']
