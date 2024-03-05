@@ -409,10 +409,8 @@ json ={
         ]
     }
 }
+latest = json["latest"]
 
-# with open(anime, 'r') as f:
-#   data = json.load(f)
-# latest = data["latest"]["results"]
-# for results in latest:
-#     console.log(results['title'])
+for results in latest["results"]:
+    console.log(results['title'])
     
