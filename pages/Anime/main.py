@@ -2,8 +2,9 @@
 # Json Comments
 # "beautifulsoup4",
 
-import urllib3
-import requests
+# import urllib3
+# import requests
+import json
 from js import document, console
 popular=[{
             "id":"16498",
