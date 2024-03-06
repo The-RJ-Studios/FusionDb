@@ -6,9 +6,7 @@
     <title>Info</title>
     <link rel="stylesheet" href="AnimeInfo.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -38,7 +36,8 @@
       config="./pyscript.json"
       terminal
     ></script>
-    
+    <div id="Data1">placeholder1</div>
+    <div id="Data2">placeholder2</div>
   </head>
 
 <body>
@@ -72,8 +71,6 @@
           <p class="Anime-Info" id="info">
             Hold-UP Loading.....
           </p>
-    <div id="Data1">placeholder1</div>
-    <div id="Data2">placeholder2</div>
         </div>
         <div class="allcon">
         <div class="information-1">
@@ -81,41 +78,89 @@
             <h3 class="title-in">Information</h3>
             <div class="formation-info">
               <h5 class="extra">Type</h5>
-              <h6 class="extra-2">  anime </h6>
+              <h6 class="extra-2" id="type">  Loading.... </h6>
+            </div>
+            <div class="formation-info">
+              <h5 class="extra">Content Rating</h5>
+              <h6 class="extra-2" id="con-rating">  Loading.... </h6>
             </div>
             <div class="formation-info">
               <h5 class="extra">Status</h5>
-              <h6 class="extra-2">  released </h6>
+              <h6 class="extra-2" id="status">  Loading... </h6>
             </div>
             <div class="formation-info">
               <h5 class="extra">Genre</h5>
-              <h6 class="extra-2">  Romance , Action , Comedy </h6>
+              <h6 class="extra-2" id="genre">  Loading.... </h6>
             </div>
             <div class="formation-info">
               <h5 class="extra haga-ex">Release Date</h5>
-              <h6 class="extra-2">  9/11/2001 </h6>
+              <h6 class="extra-2" id="release">  Loading... </h6>
             </div>
-            <div class="formation-info">
+            <div class="formation-info" id="duration-tag">
               <h5 class="extra">Duration</h5>
-              <h6 class="extra-2">  3 hr </h6>
+              <h6 class="extra-2" id="duration">  Loading... </h6>
             </div>
             <div class="formation-info">
               <h5 class="extra">Rating</h5>
-              <h6 class="extra-2">  8.4 </h6>
+              <h6 class="extra-2" id="rating">  Loading... </h6>
             </div>
             </div>  
   
           </div>
     
-          <div class="trailer">
+          <div class="trailer" >
             <h3>Trailer</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5UB5Nq0vsoQ?si=SrzMgN3Ln7K9C_fZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe id="video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           
           </div>
         </div>  
 
       </div>
     </div>
+    <!-- <footer class="footer">
+      <div class="container2">
+        <div class="row">
+          <div class="footer-col">
+            <div class="h44">
+              <h4>Contact</h4>
+            </div>
+            <ul>
+              <li>
+                <h4>Email : - hajimenagumo421@gmail.com</h4>
+              </li>
+              <li>
+                <h4>Phone no : - 9702529149</h4>
+              </li>
+              <li>
+                <h4>
+                  Address : - Nilgiris CHS, Godrej Hills, Khadakpada, Kalyan
+                </h4>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <div class="h44">
+              <h4>follow us</h4>
+            </div>
+            <div class="social-links">
+              <h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </h4>
+              <h4>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </h4>
+              <h4>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </h4>
+              <h4>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> -->
     <script src="/pages/Anime/animeinfo/AnimeInfo.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="/pages/anime.min.js"></script>

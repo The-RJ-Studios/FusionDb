@@ -1,43 +1,57 @@
 # Json Comments
 # "beautifulsoup4",
-
-import urllib3
-import requests
 from js import document, console
-popular = ['30002','30656','30657','30013','30001','30051','30642','30025','70345','34632']
+popular =[
+    {
+            "id":"30002",
+            "title":"Berserk",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30002-7EzO7o21jzeF.jpg"
+        },{
+            "id":"53390",
+            "title":"Shingeki no Kyojin",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
+        },{
+            "id":"30013",
+            "title":"One Piece",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-tZVlfBCHbrNL.jpg"
+        },{
+            "id":"105778",
+            "title":"Chainsaw Man",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx105778-82gwrvQV6OBc.png"
+        },{
+            "id":"63327",
+            "title":"Tokyo Ghoul",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx63327-zvK2l9DjCqK4.jpg"
+        },{
+            "id":"105398",
+            "title":"Solo Leveling",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx105398-b673Vt5ZSuz3.jpg"
+        },{
+            "id":"74347",
+            "title":"One-Punch Man",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74347-O6KMkECzHPOE.jpg"
+        },{
+            "id":"34632",
+            "title":"Goodnight Punpun",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx34632-14deknANZitb.png"
+        },{
+            "id":"85486",
+            "title":"My Hero Academia",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx85486-INqnYx8gL3eX.jpg"
+        },{
+            "id":"87216",
+            "title":"Demon Slayer: Kimetsu no Yaiba",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx87216-c9bSNVD10UuD.png"
+        }]
 # Generating Request Headers
 # console.clear()
-providerQuery = '?provider=mangadex'
-baseurl ='https://manga-api-phi.vercel.app/meta/anilist-manga/info/'
-print(baseurl)
-userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
-req_header= {
-    'User-Agent' : userAgent,
-    'Accept-Language': 'en-US, en;q=0.5'
-}
-def getData(inurl):
-    res = requests.get(inurl, headers=req_header ,verify= False)
-    return res.json()
-# The above lines should be as it is No changes should be made
-# def parser(data):
-#     aData= list(data[0].key())
-#     return aData # Currently not doing anything
-urllib3.disable_warnings()
-
-# <div class="card popu" id="0"> 
-#            <img class="card-img" src="" alt="">
-#           <div class="card-content">
-#             <h2 class="card-title">Something awesome</h2>
-#             <a href="/info/index.html" class="button">Read More</a>
-#           </div>
-#         </div>
-
 i=1
 # Loop for getting and displaying data inside the popular section
-for item in popular:
-    try:
-        url=baseurl+item+providerQuery
-        data = getData(url)
+try:
+# Fetching data
+    rawData = popular
+    # Experimenting with creating a card div
+    for data in rawData:
         console.log('Creating item', i)
         outerOuterDiv = document.getElementById('popular')
         
@@ -57,13 +71,25 @@ for item in popular:
         h2tag = document.createElement('h2')
         contentCard.appendChild(h2tag)
         h2tag.className ="card-title"
-        h2tag.innerHTML = data['title']['romaji']
+        h2tag.innerHTML = data['title']
         
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
         linknATag.href ="/info/index.html?type=manga&id="+ data['id']
         linknATag.innerHTML ="Read More"
-    except():
-        continue
-    i=i+1
+except():
+    console.log("Error occured")
+# cardDiv = document.createElement('div')
+# outerDiv.appendChild(cardDiv)
+
+i=i+1
+# print(item["title"])
+# Loop for getting and displaying data inside the latest section    
+
+# document.getElementById('cover').src=data['image']
+# document.getElementById('title').innerHTML=data['title']
+# document.getElementById('info').innerHTML = data['plot']
+# document.getElementById('back-cover').src= data['images'][0]
+
+# Printing head, body,coverImg, banner

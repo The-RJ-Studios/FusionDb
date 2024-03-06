@@ -1,52 +1,60 @@
 # Json Comments
 # "beautifulsoup4",
-
-import urllib3
-# import json
-import requests
 from js import document, console
-random = ['116778','75989','122397','113138','30012','106130','30007','140475','108556','86508']
+random = [{
+            "id":"53390",
+            "title":"Shingeki no Kyojin",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"53390",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        }]
 # Generating Request Headers
 # console.clear()
-providerQuery = '?provider=mangadex'
-baseurl ='https://manga-api-phi.vercel.app/meta/anilist-manga/info/'
-print(baseurl)
-userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
-req_header= {
-    'User-Agent' : userAgent,
-    'Accept-Language': 'en-US, en;q=0.5'
-}
-def getData(inurl):
-    res = requests.get(inurl, headers=req_header ,verify= False)
-    return res.json()
-# The above lines should be as it is No changes should be made
-# def parser(data):
-#     aData= list(data[0].key())
-#     return aData # Currently not doing anything
-
-urllib3.disable_warnings()
-
-# <div class="card popu" id="0"> 
-#            <img class="card-img" src="" alt="">
-#           <div class="card-content">
-#             <h2 class="card-title">Something awesome</h2>
-#             <a href="/info/index.html" class="button">Read More</a>
-#           </div>
-#         </div>
-
-i=1
-
-# Loop for getting and displaying data inside the popular section
-for item in random:
-    try:
-        url=baseurl+item+providerQuery
-        data = getData(url)
+try:
+# Fetching data
+    rawData = random
+    # Experimenting with creating a card div
+    for data in rawData:
         console.log('Creating item', i)
         outerOuterDiv = document.getElementById('random')
         
         outerDiv = document.createElement('div')
         outerOuterDiv.appendChild(outerDiv)
-        outerDiv.className = "card popi"
+        outerDiv.className = "card popu"
         
         imageTag = document.createElement('img')
         outerDiv.appendChild(imageTag)
@@ -60,15 +68,16 @@ for item in random:
         h2tag = document.createElement('h2')
         contentCard.appendChild(h2tag)
         h2tag.className ="card-title"
-        h2tag.innerHTML = data['title']['romaji']
+        h2tag.innerHTML = data['title']
         
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
-        linknATag.href ="/info/index.html?type=manga&id="+ data['id']
+        linknATag.href ="/info/index.html?type=anime&id="+ data['id']
         linknATag.innerHTML ="Read More"
-    except():
-        continue
-        
-    
-    i=i+1
+except():
+    console.log("Error occured")
+# cardDiv = document.createElement('div')
+# outerDiv.appendChild(cardDiv)
+
+i=i+1
