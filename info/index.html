@@ -55,11 +55,13 @@
             </a>
         </div>
     </div>
+    <div class="landscape">
       <img
         id="back-cover"
         src="/pages/img/placeHolderBack.jpg"
+        class="back-img"
         alt=""
-      />
+      /></div>
       <div id="part2">
         <img
           id="cover"
@@ -161,7 +163,7 @@
         </div>
       </div>
     </footer> -->
-    <script src="/pages/Anime/animeinfo/AnimeInfo.js"></script>
+    <script src="./AnimeInfo.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="/pages/anime.min.js"></script>
     <script>
@@ -178,10 +180,11 @@
     const params = window.location.search;
     // console.log("Keys and Values: ", params);
     const urlParams = new URLSearchParams(params);
+    console.log("Parsing the query");
     const data1 = urlParams.get('type');
-    console.log(data1);
+    console.log("Type: ",data1);
     const data2 = urlParams.get('id');
-    console.log(data2);
+    console.log("ID: ",data2);
     document.getElementById('Data1').innerHTML = data1;
     document.getElementById('Data2').innerHTML = data2;
     console.log("Finished parsing the query");

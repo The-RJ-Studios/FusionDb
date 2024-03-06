@@ -118,13 +118,21 @@ elif queryType == 'anime':
         document.getElementById('type').innerHTML = data['type']
         document.getElementById('con-rating').innerHTML = str(data['rating']) + "th"
         document.getElementById('video').src = 'https://www.youtube.com/embed/'+ data['trailer']['id']+'?si=QzM0HO6WurLBI7wX'
+        genre =""
         for ele in data['genres']:
             if genre == "":
                 genre = ele
             else:
                 genre = genre + ",\n " + ele 
         document.getElementById('genre').innerHTML = genre
+        document.getElementById('status').innerHTML = data['status'] # Status
         
+        # Release
+        release = data['releaseDate'] 
+        document.getElementById('release').innerHTML = release
+        
+        document.getElementById('duration-tag').style.display ='none' # Duration
+        document.getElementById('rating').innerHTML = str(data['rating']) 
     except():
         console.log("Error encountered while retriving movie data. please reload the page or open issue on github")
         window.alert("Please check your internet connection and refresh the page")
