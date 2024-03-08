@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title id="headTitle">Document</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
@@ -22,6 +22,7 @@
       src="./main.py"
       config="./pyscript.json"
     ></script>
+    <div id="data1"></div>
   </head>
   <body onload="tope()">
     <h1 id="mkc" class="counter">
@@ -93,6 +94,25 @@
     </div>
     </div>
   </div>
+  <script>
+    document.getElementById("myForm").onsubmit = function() {request()};
+    function request(){
+      var query = new URLSearchParams();
+      query.append("query", document.getElementById('Search').innerText);
+      location.href = "2-search-params.html?" + query.toString();
+    }
+    const params = window.location.search;
+    // console.log("Keys and Values: ", params);
+    const urlParams = new URLSearchParams(params);
+    console.log("Parsing the query");
+    const data1 = urlParams.get('query');
+    console.log("Query: ",data1);
+    document.getElementById('data1').innerHTML = data1;
+    console.log("Finished parsing the query");
+    document.getElementById('headTitle').innerHTML = "Search Results for: " + data1; 
+    //console.log('Type:', type);
+    //console.log('Id:', id);
+  </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
