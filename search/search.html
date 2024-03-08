@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -44,20 +44,36 @@
     <div id="page1">
       <!-- nav section -->
       <div id="nav" class="header">
-        <img class="nav-elem" src="/pics/Logo.png" alt="" />
-        <h4 class="nav-elem"><a href="/index.html">Home</a></h4>
-        <h4 class="nav-elem"><a href="/pages/manga/index.html">Manga</a></h4>
-        <h4 class="nav-elem"><a href="/pages/movies/index.html">Movies</a></h4>
+        <a class="nav-elem logo" href="/index.html"><img src="/pics/new-logo-2.1png" alt /></a>
+        <div class="nav1">
+        <h4><a class="nav-elem hideOnMobile" href="/index.html">Home</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="/pages/Anime/index.html">Anime</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="/pages/manga/index.html">Manga</a></h4>
+        <h4><a class="nav-elem hideOnMobile" href="/pages/movies/index.html">Movies</a></h4>
+       
+        </div>
         <form id="form">
-          <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
+          <input class="nav-elem hideOnMobile" type="text" placeholder="Type to search" id="Search" />
         </form>
-        <div id="nav2">
+        <div id="nav2" class="nav-elem hideOnMobile">
           <a class="nav-elem" href="/pages/registration/register.html">
-            <button class="Nav_btn" class="nav-elem"><span>Register</span></button>
-            <!-- <i class="fa-solid fa-circle-user"></i> -->
+            <button class="Nav_btn" class="nav-elem hideOnLap"><span>Register</span></button>
           </a>
         </div>
-    </div>
+        <h4  onclick= showSidebar()><svg  class="svg-clr nav-elem Menu-Btn" xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      </div>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a><svg class="svg-clr" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="/index.html"> Home</li></a>
+        <li><a href="/pages/Anime/index.html"> Anime</li></a>
+        <li><a href="/pages/movies/index.html"> Movies</li></a>
+        <li><a href="/pages/manga/index.html"> Manga</li></a>
+      </ul>
+    </nav>
+    <form id="form">
+      <input class="nav-elem onmob hideOnLap" type="text" placeholder="Type to search" id="Search" />
+    </form>
     <div class="page-content">
       <div class="container">
         <div class="result" id="result">
