@@ -33,4 +33,5 @@ The Database for all your entertainment needs. (Is Work in Progress)
 [![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-hipsters.svg)](https://forthebadge.com)
+
 For only dev and backup: https://fusiondb.pages.dev/
