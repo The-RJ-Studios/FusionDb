@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 html,
 body {
 
@@ -215,8 +214,12 @@ a:active {
 }
 
 #back-cover{
-    position: absolute; 
+    position: absolute;
      /* margin-top: 12.8rem;  */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    object-fit: fill;
     width: 100%;
     top:-10vw;
     border-radius: 0px;

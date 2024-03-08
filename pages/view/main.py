@@ -1,4 +1,6 @@
-{
+from js import document, console
+
+json ={
     "popular":
     {
         "results":[{
@@ -407,3 +409,8 @@
         ]
     }
 }
+latest = json["latest"]
+
+for results in latest["results"]:
+    console.log(results['title'])
+    

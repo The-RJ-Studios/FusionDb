@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+.query{
+    display: none;
+}
 
 html,
 body {

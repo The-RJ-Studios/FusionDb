@@ -8,45 +8,36 @@ from js import document, console
 
 # Generating Request Headers
 # console.clear()
-baseUrl ='https://imdb-api.uzairshaikhking777.workers.dev/title/'
+
+# The above lines should be as it is No changes should be made
+# def parser(data):
+#     aData= list(data[0].key())
+#     return aData # Currently not doing anything
+url = 'https://fusiondb.pages.dev/pages/Anime/list.json'
 userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
 req_header= {
     'User-Agent' : userAgent,
     'Accept-Language': 'en-US, en;q=0.5'
 }
-latest=['tt29467317','tt16156736','tt13103028','tt30644010','tt21621494','tt30488398','tt27524116','tt30495098','tt13483212','tt30146725']
-# The above lines should be as it is No changes should be made
-# def parser(data):
-#     aData= list(data[0].key())
-#     return aData # Currently not doing anything
 def getData(inurl):
      res = requests.get(inurl, headers=req_header ,verify= False)
      return res.json()
-try:   
+i=1
+try:
+# Fetching data
     urllib3.disable_warnings()
+    data = getData(url)
+    rawData = data['latest']['results']
     
-    # <div class="card popu" id="0"> 
-    #            <img class="card-img" src="" alt="">
-    #           <div class="card-content">
-    #             <h2 class="card-title">Something awesome</h2>
-    #             <a href="/info/index.html" class="button">Read More</a>
-    #           </div>
-    #         </div>
-    
-    i=1
-    # Loop for getting and displaying data inside the latest section    
-    for item in latest:
-        try:
-            # Fetching data
-            url=baseUrl+item
-            data = getData(url)
-            # Experimenting with creating a card div
+    # Experimenting with creating a card div
+    for data in rawData:
+        if (i!=10):
             console.log('Creating item', i)
             outerOuterDiv = document.getElementById('latest')
             
             outerDiv = document.createElement('div')
             outerOuterDiv.appendChild(outerDiv)
-            outerDiv.className = "card popi"
+            outerDiv.className = "card popu"
             
             imageTag = document.createElement('img')
             outerDiv.appendChild(imageTag)
@@ -67,12 +58,10 @@ try:
             linknATag.className = 'button'
             linknATag.href ="/info/index.html?type=anime&id="+ data['id']
             linknATag.innerHTML ="Read More"
-        except():
-            continue    
-        # cardDiv = document.createElement('div')
-        # outerDiv.appendChild(cardDiv)
-        
-        i=i+1
-        # print(item["title"])
+            i=i+1
+        else:
+            break
 except():
-    print("Error encountered")
+    console.log("Error occured")
+    # cardDiv = document.createElement('div')
+    # outerDiv.appendChild(cardDiv)

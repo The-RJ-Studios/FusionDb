@@ -2,78 +2,85 @@
 # Json Comments
 # "beautifulsoup4",
 
-import urllib3
-import requests
+# import urllib3
+# import requests
 from js import document, console
 
-# Generating Request Headers
-# console.clear()
-baseUrl ='https://imdb-api.uzairshaikhking777.workers.dev/title/'
-userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
-req_header= {
-    'User-Agent' : userAgent,
-    'Accept-Language': 'en-US, en;q=0.5'
-}
-random=['tt17382524','tt2575684','tt0962826','tt4542568','tt7326322','tt13009190','tt7088332','tt1118804','tt5987956','tt3114376']
-# The above lines should be as it is No changes should be made
-# def parser(data):
-#     aData= list(data[0].key())
-#     return aData # Currently not doing anything
-def getData(inurl):
-     res = requests.get(inurl, headers=req_header ,verify= False)
-     return res.json()
-try:   
-    urllib3.disable_warnings()
-    
-    # <div class="card popu" id="0"> 
-    #            <img class="card-img" src="" alt="">
-    #           <div class="card-content">
-    #             <h2 class="card-title">Something awesome</h2>
-    #             <a href="/info/index.html" class="button">Read More</a>
-    #           </div>
-    #         </div>
-    
-    i=1
-    # Loop for getting and displaying data inside the random section
-    for item in random:
-        try:
-            # Fetching data
-            url=baseUrl+item
-            data = getData(url)
-            # Experimenting with creating a card div
-            console.log('Creating item', i)
-            outerOuterDiv = document.getElementById('random')
-            
-            outerDiv = document.createElement('div')
-            outerOuterDiv.appendChild(outerDiv)
-            outerDiv.className = "card popo"
-            
-            imageTag = document.createElement('img')
-            outerDiv.appendChild(imageTag)
-            imageTag.className="card-img"
-            imageTag.src= data['image']
-            
-            contentCard = document.createElement('div')
-            outerDiv.appendChild(contentCard)
-            contentCard.className = "card-content"
-            
-            h2tag = document.createElement('h2')
-            contentCard.appendChild(h2tag)
-            h2tag.className ="card-title"
-            h2tag.innerHTML = data['title']
-            
-            linknATag = document.createElement('a')
-            contentCard.appendChild(linknATag)
-            linknATag.className = 'button'
-            linknATag.href ="/info/index.html?type=anime&id=" + data['id']
-            linknATag.innerHTML ="Read More"
-        except():
-            continue
-        # cardDiv = document.createElement('div')
-        # outerDiv.appendChild(cardDiv)
+random = [{
+            "id":"6702",
+            "title":"Fairy Tail",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6702-4cW6E5AqQqqB.png"
+        },{
+            "id":"21355",
+            "title":"Re:ZERO -Starting Life in Another World",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21355-IHaS50pvLYd0.jpg"
+        },{
+            "id":"11757",
+            "title":"Sword Art Online",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx11757-Q9P2zjCPICq5.jpg"
+        },{
+            "id":"20605",
+            "title":"Tokyo Ghoul",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20605-fmnHdfurM7m6.jpg"
+        },{
+            "id":"21087",
+            "title":"One Punch Man",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        },{
+            "id":"20",
+            "title":"NARUTO",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-YJvLbgJQPCoI.jpg"
+        },{
+            "id":"1",
+            "title":"Cowboy Bebop",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-CXtrrkMpJ8Zq.png"
+        },{
+            "id":"43",
+            "title":"GHOST IN THE SHELL: Koukaku Kidoutai",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx43-LMGXobx4D6in.png"
+        },{
+            "id":"1535",
+            "title":"DEATH NOTE",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1535-lawCwhzhi96X.jpg"
+        },{
+            "id":"21459",
+            "title":"My Hero Academia",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21459-DUKLgasrgeNO.jpg"
+        }]
+try:
+# Fetching data
+    rawData = random
+    # Experimenting with creating a card div
+    for data in rawData:
+        console.log('Creating item', i)
+        outerOuterDiv = document.getElementById('random')
         
-        i=i+1
-        # print(item["title"])
-    # console.log("Request sent")
+        outerDiv = document.createElement('div')
+        outerOuterDiv.appendChild(outerDiv)
+        outerDiv.className = "card popu"
+        
+        imageTag = document.createElement('img')
+        outerDiv.appendChild(imageTag)
+        imageTag.className="card-img"
+        imageTag.src= data['image']
+        
+        contentCard = document.createElement('div')
+        outerDiv.appendChild(contentCard)
+        contentCard.className = "card-content"
+        
+        h2tag = document.createElement('h2')
+        contentCard.appendChild(h2tag)
+        h2tag.className ="card-title"
+        h2tag.innerHTML = data['title']
+        
+        linknATag = document.createElement('a')
+        contentCard.appendChild(linknATag)
+        linknATag.className = 'button'
+        linknATag.href ="/info/index.html?type=anime&id="+ data['id']
+        linknATag.innerHTML ="Read More"
 except():
-    print("Error encountered")
+    console.log("Error occured")
+# cardDiv = document.createElement('div')
+# outerDiv.appendChild(cardDiv)
+
+i=i+1

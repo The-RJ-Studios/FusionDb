@@ -1,52 +1,60 @@
 # Json Comments
 # "beautifulsoup4",
-
-import urllib3
-# import json
-import requests
 from js import document, console
-latest = ['173229','160778','167022','150040','156563','162318','159655','170850','155896','170399']
+latest = [{
+            "id":"5163733",
+            "title":"Netorare Manga no Kuzu Otoko ni Tensei Shita Hazu ga Heroine ga Yotte Kuru Ken",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx163733-DmPHIGCLQC62.png"
+        },{
+            "id":"115620",
+            "title":"Erotical Wizard to 12-nin no Hanayome",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx115620-8hkYWhjEiUW5.jpg"
+        },{
+            "id":"169354",
+            "title":"Two on Ice",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx169354-Uj6NebUoMcrU.jpg"
+        },{
+            "id":"171081",
+            "title":"Shadow Eliminators",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b171081-UNik9vPHpMpu.png"
+        },{
+            "id":"163497",
+            "title":"Nue no Onmyouji",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx163497-HNrC3KDTVxW5.jpg"
+        },{
+            "id":"169100",
+            "title":"Mama Yuuyuu",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx169100-tQHWydcxdMVy.jpg"
+        },{
+            "id":"163495",
+            "title":"Kill Ao",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx163495-tCWQW0kSvfjO.jpg"
+        },{
+            "id":"169355",
+            "title":"Kagurabachi",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx169355-0MQ2NLOj1mL3.jpg"
+        },{
+            "id":"171004",
+            "title":"Green Green Greens",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/b171004-AhskbBVc3NXO.jpg"
+        },{
+            "id":"169904",
+            "title":"Ogami Tsumiki to Kinichijou.",
+            "image":"https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+        }]
 # Generating Request Headers
 # console.clear()
-providerQuery = '?provider=mangadex'
-baseurl ='https://manga-api-phi.vercel.app/meta/anilist-manga/info/'
-print(baseurl)
-userAgent ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.3"
-req_header= {
-    'User-Agent' : userAgent,
-    'Accept-Language': 'en-US, en;q=0.5'
-}
-def getData(inurl):
-    res = requests.get(inurl, headers=req_header ,verify= False)
-    return res.json()
-# The above lines should be as it is No changes should be made
-# def parser(data):
-#     aData= list(data[0].key())
-#     return aData # Currently not doing anything
-
-urllib3.disable_warnings()
-
-# <div class="card popu" id="0"> 
-#            <img class="card-img" src="" alt="">
-#           <div class="card-content">
-#             <h2 class="card-title">Something awesome</h2>
-#             <a href="/info/index.html" class="button">Read More</a>
-#           </div>
-#         </div>
-
-i=1
-
-# Loop for getting and displaying data inside the popular section
-for item in latest:
-    try:
-        url=baseurl+item+providerQuery
-        data = getData(url)
+try:
+# Fetching data
+    rawData = latest
+    # Experimenting with creating a card div
+    for data in rawData:
         console.log('Creating item', i)
         outerOuterDiv = document.getElementById('latest')
         
         outerDiv = document.createElement('div')
         outerOuterDiv.appendChild(outerDiv)
-        outerDiv.className = "card popo"
+        outerDiv.className = "card popu"
         
         imageTag = document.createElement('img')
         outerDiv.appendChild(imageTag)
@@ -60,15 +68,16 @@ for item in latest:
         h2tag = document.createElement('h2')
         contentCard.appendChild(h2tag)
         h2tag.className ="card-title"
-        h2tag.innerHTML = data['title']['romaji']
+        h2tag.innerHTML = data['title']
         
         linknATag = document.createElement('a')
         contentCard.appendChild(linknATag)
         linknATag.className = 'button'
         linknATag.href ="/info/index.html?type=manga&id="+ data['id']
         linknATag.innerHTML ="Read More"
-        i=i+1
-    except():
-        continue
+except():
+    console.log("Error occured")
+# cardDiv = document.createElement('div')
+# outerDiv.appendChild(cardDiv)
 
-
+i=i+1
