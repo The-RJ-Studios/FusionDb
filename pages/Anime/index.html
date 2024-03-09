@@ -75,7 +75,9 @@
             <h4><a class="nav-elem hideOnMobile" href="/index.html">Home</a></h4>
             <h4><a class="nav-elem hideOnMobile" href="/pages/movies/index.html">Movies</a></h4>
             <h4><a class="nav-elem hideOnMobile" href="/pages/manga/index.html">Manga</a></h4>
-    </div>
+            <form id="form" action="#" onsubmit="request(); return false">
+              <input class="nav-elem hideOnMobile" type="text" placeholder="Type to search" id="Search" />
+            </form>    </div>
             <a href="/pages/registration/register.html">
               <button class="Nav_btn nav-elem hideOnMobile"><span>Register</span></button>
             </a>
@@ -92,7 +94,7 @@
             <li><a href="/pages/manga/index.html"> Manga</li></a>
             <li><a href="/pages/registration/register.html"> Register</li></a>
             <li><a href="/pages/registration/login.html"> Login</li></a>
-  
+
           </ul>
         </nav>
       <div class="container mov-vid">
@@ -248,6 +250,13 @@
       //   duration: .1,
         
       // })
+    </script>
+    <script type="text/javascript">
+      function request(){
+        var para = document.getElementById('Search').value;
+        location.href = "/search/search.html?query=" + para
+        console.log(para)
+      }
     </script>
     <script>
       anime({

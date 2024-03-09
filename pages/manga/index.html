@@ -102,7 +102,11 @@
             <h4><a class="nav-elem hideOnMobile" href="/index.html">Home</a></h4>
             <h4><a class="nav-elem hideOnMobile" href="/pages/Anime/index.html">Anime</a></h4>
             <h4><a class="nav-elem hideOnMobile" href="/pages/movies/index.html">Movies</a></h4>
+            
     </div>
+    <form id="form" action="#" onsubmit="request(); return false">
+      <input class="nav-elem hideOnMobile" type="text" placeholder="Type to search" id="Search" />
+    </form>
           <!-- <form id="form">
             <input class="nav-elem" type="text" placeholder="Type to search" id="Search" />
           </form> -->
@@ -298,6 +302,13 @@
           easing: "linear"
 
         });
+    </script>
+    <script type="text/javascript">
+      function request(){
+        var para = document.getElementById('Search').value;
+        location.href = "/search/search.html?query=" + para
+        console.log(para)
+      }
     </script>
     <script type="module">
       let UserCreds= JSON.parse(sessionStorage.getItem("user-creds"));

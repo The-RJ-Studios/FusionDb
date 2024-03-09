@@ -67,7 +67,7 @@ try:
     # document.getElementById('info').innerHTML = data['plot']
     # document.getElementById('back-cover').src= data['images'][0]
     del results
-except():
+except(KeyError, ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError):
     window.alert('Error occurred. Please refresh the page or open console for more info.')
     console.log("Error encountered, please contacts the devs on Github repository. Open a pull request on: https://github.com/The-RJ-Studios/FusionDb ")
 # Printing head, body,coverImg, banner
@@ -108,7 +108,7 @@ try:
     
      
     del results
-except():
+except(KeyError, ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError):
     window.alert('Error occurred. Please refresh the page or open console for more info.')
     console.log('Error encountered, please contacts the devs on Github repository. Open a pull request on: https://github.com/The-RJ-Studios/FusionDb ')
 # Printing Manga Data
@@ -147,6 +147,6 @@ try:
     
     
     del results
-except():
+except(KeyError, ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError):
     window.alert('Error occurred. Please refresh the page or open console for more info.')
     console.log('Error encountered, please contacts the devs on Github repository. Open a pull request on: https://github.com/The-RJ-Studios/FusionDb ')

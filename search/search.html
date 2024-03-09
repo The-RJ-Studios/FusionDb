@@ -9,7 +9,22 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap"
       rel="stylesheet"
-    />
+    /><script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/search/script.js"></script>
+    <script src="/pages/anime.min.js"></script>
     <link
       rel="stylesheet"
       href="https://pyscript.net/releases/2024.1.1/core.css"
@@ -54,12 +69,14 @@
         <h4><a class="nav-elem hideOnMobile" href="/pages/movies/index.html">Movies</a></h4>
        
         </div>
-        <form id="form">
+        <form id="form" action="#" onsubmit="request(); return false">
           <input class="nav-elem hideOnMobile" type="text" placeholder="Type to search" id="Search" />
         </form>
+
+
         <div id="nav2" class="nav-elem hideOnMobile">
           <a class="nav-elem" href="/pages/registration/register.html">
-            <button class="Nav_btn" class="nav-elem hideOnLap"><span>Register</span></button>
+            <button class="Nav_btn nav-elem hideOnLap"><span>Register</span></button>
           </a>
         </div>
         <h4  onclick= showSidebar()><svg  class="svg-clr nav-elem Menu-Btn" xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
@@ -96,12 +113,6 @@
     </div>
   </div>
   <script>
-    document.getElementById("myForm").onsubmit = function() {request()};
-    function request(){
-      var query = new URLSearchParams();
-      query.append("query", document.getElementById('Search').innerText);
-      location.href = "2-search-params.html?" + query.toString();
-    }
     const params = window.location.search;
     // console.log("Keys and Values: ", params);
     const urlParams = new URLSearchParams(params);
@@ -114,22 +125,14 @@
     //console.log('Type:', type);
     //console.log('Id:', id);
   </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="/search/script.js"></script>
-    <script src="/pages/anime.min.js"></script>
+  <script type="text/javascript">
+    function request(){
+      var para = document.getElementById('Search').value;
+      location.href = "/search/search.html?query=" + para
+      console.log(para)
+    }
+  </script>
+    
     <script>
       anime({
         targets: "#demo",

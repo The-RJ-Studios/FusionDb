@@ -49,6 +49,9 @@
           <h4><a href="/index.html">Home</a></h4>
           <h4><a href="/pages/Anime/index.html">Anime</a></h4>
         </div>
+        <form id="form" action="#" onsubmit="request(); return false">
+          <input class="nav-elem hideOnMobile" type="text" placeholder="Type to search" id="Search" />
+        </form>
         <div id="nav2">
             <a href="/pages/registration/register.html">
                 <i class="fa-solid fa-circle-user"></i>
@@ -217,6 +220,13 @@
         signOutBtn.addEventListener('click',Signout); 
 
     </script> -->
+    <script type="text/javascript">
+      function request(){
+        var para = document.getElementById('Search').value;
+        location.href = "/search/search.html?query=" + para
+        console.log(para)
+      }
+    </script>
   </body>
   
 </html>
