@@ -31,11 +31,12 @@ def getData(inUrl):
 
 # Movie data insertion
 if queryType=='movie':
-    url ='https://imdb-api.uzairshaikhking777.workers.dev/title/'+queryId
-
+    url ='https://imdb-api.uzairshaikhking777.workers.dev/title/'
+    searchurl ='https://imdb-api.uzairshaikhking777.workers.dev/search?query='+queryId
     try:
         
         urllib3.disable_warnings()
+        searchData= get 
         data= getData(url)
         console.log(data['title'])
         # console.log("Request sent")
