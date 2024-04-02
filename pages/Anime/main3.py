@@ -51,6 +51,7 @@ try:
 # Fetching data
     rawData = random
     # Experimenting with creating a card div
+    i=1
     for data in rawData:
         console.log('Creating item', i)
         outerOuterDiv = document.getElementById('random')
