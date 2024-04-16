@@ -831,7 +831,7 @@ ul {
   }
 }
 
-@media (min-width:411px) and (max-width: 600px) {
+@media (min-width:0px) and (max-width: 600px) {
 
   .Menu-Btn {
     display: block;
