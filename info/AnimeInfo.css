@@ -20,7 +20,8 @@ body {
     overflow-x: hidden;
     /* background-color: #c9d6ff;
       background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
-    background: #0B0C2A;
+    background: #F3E5AB;
+    /* background: #0B0C2A; */
 }
 body::-webkit-scrollbar {
     display: none;
@@ -108,7 +109,6 @@ body::-webkit-scrollbar {
 #nav {
     height: 70px;
     width: 100%;
-    margin-top: .5rem;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -116,8 +116,9 @@ body::-webkit-scrollbar {
     font-weight: 400;
     position: absolute;
     justify-content: flex-start;
-    top: 0;
-    gap: 30vw;
+    top: -1rem;
+    gap: 150px;
+    /* gap: 30vw; */
     color: #292b23;
     z-index: 5;
     border-bottom: .0625rem solid #42433d;
@@ -126,10 +127,11 @@ body::-webkit-scrollbar {
  display: flex;
  align-items: center;
  justify-content: space-evenly;
- gap: 150px;
+ gap: 100px;
 }
+
 #nav img {
-    height: 7vw;
+    height: 7rem;
     /* z-index: 1; */
     padding-left: 5vw;
 }
@@ -142,33 +144,34 @@ body::-webkit-scrollbar {
 }
 
 #nav h4 :hover {
-    color: white;
+    color: rgb(255, 255, 255);
     transition: all linear 0.5s;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
 
 }
 
 a:active {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 a:link {
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:visited {
-    color: #D3D3ED;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:active {
-    color: #D3D3ED;
+    color: #ffffff;
     text-decoration: none;
 }
 
 #Search {
     background-color: transparent;
-    border: 1px solid #292b23;
+    border: 1px solid #e0e0e0;
     border-radius: 50px;
     font-size: 1rem;
     font-family: inherit;
@@ -191,8 +194,8 @@ a:active {
 }
 
 #nav i {
-    font-size: 3vw;
-    color: #292b23;
+    font-size: 2.5rem;
+    color: #ffffff;
 }
 
 #nav i:hover {
@@ -215,13 +218,14 @@ a:active {
 
 #back-cover{
     position: absolute;
+filter: brightness(50%);
      /* margin-top: 12.8rem;  */
     max-width: 100%;
     max-height: 100%;
     overflow: hidden;
     object-fit: fill;
     width: 100%;
-    top:-10vw;
+    top: -2.5rem;
     border-radius: 0px;
     transition: 0.8s;
     z-index: -1;
@@ -230,7 +234,7 @@ a:active {
 #part2{
     height: 200vh;
     width: 100%;
-    margin-top: 90%;
+    margin-top: 86%;
     /* z-index: 1; */
     position: relative;
     background: #FAFAFA;
@@ -283,7 +287,7 @@ a:active {
     /* padding-top: 5vw; */
     margin-left: 5vw;
     position: relative;
-    background: rgb(95, 95, 95);
+    background: #faf1cd;
     gap: 10vw;
 }
 .title-in{
@@ -309,7 +313,7 @@ a:active {
 .extra{
     font-size: 1.4rem;
     margin-left: 1.9vw;
-    width: 3rem;
+    width: 10rem;
 }
 .extra-2{
     margin-top: 1vw;
