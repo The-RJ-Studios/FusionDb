@@ -638,7 +638,7 @@ video {
 
 .slide-button {
   position: absolute;
-  top: 172%;
+  top: 165%;
   height: 40px;
   width: 40px;
   color: #000000;
@@ -657,7 +657,7 @@ video {
 
 #prev-slide {
   left: 1rem;
-  z-index: 100;
+  z-index: 4;
   display: none;
 }
 
@@ -668,7 +668,7 @@ video {
 
 .slide-button-2 {
   position: absolute;
-  top: 258%;
+  top: 247%;
   height: 40px;
   width: 40px;
   color: #000000;
