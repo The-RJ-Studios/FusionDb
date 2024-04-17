@@ -8,7 +8,7 @@ The Database for all your entertainment needs. (Is Work in Progress)
 
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com)
 
-This was our Final year project for the college. We were just eager to make this so we hyped this so much, but in the end as I am writing this 2nd of April 2024No team members are willing to work for it or even maintain it. The team is no longer together, so the maintainance is purely dependent on the contributers and me.
+This was our Final year project for the college. We were just eager to make this so we hyped this so much, but in the end as I am writing this 2nd of April 2024 No team members are willing to work for it or even maintain it. The team is no longer together, so the maintainance is purely dependent on the contributers and me.
 
 [![logo](/pics/pfp/114636049.jpeg)](https://github.com/Rj2537)
 
@@ -57,6 +57,10 @@ Here are some screenshots!
 [![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
 
 ---
+
+## Ending notes
+
+[![CodeQL](https://github.com/The-RJ-Studios/FusionDb/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/The-RJ-Studios/FusionDb/actions/workflows/github-code-scanning/codeql)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-hipsters.svg)](https://forthebadge.com)
 
