@@ -287,11 +287,7 @@ filter: brightness(50%);
     /* padding-top: 5vw; */
     margin-left: 5vw;
     position: relative;
-<<<<<<< Updated upstream
     background: #faf1cd;
-=======
-    background: rgba(177, 176, 176, 0.419);
->>>>>>> Stashed changes
     gap: 10vw;
 }
 .title-in{
